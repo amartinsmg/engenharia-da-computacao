@@ -6,19 +6,20 @@
 - **Quantitativos**: identifica características que podem ser medidas com diferentes intensidades. Se subdividem em:
   - **Discretos**: assumem valores numéricos naturais e representam contagem.
   - **Contínuos**: podem assumir quaisquer valores numéricos reais, associados a uma escala contínua, representando mensuração (medida).  
-    O conjunto de indivíduos estudados em uma pesquisa é chamado de **população**, cujos subconjuntos são chamados de **amostra**. A coleção de dados relativos a todos os elementos de uma população é chamado de **censo**.
+
+O conjunto de indivíduos estudados em uma pesquisa é chamado de **população**, cujos subconjuntos são chamados de **amostra**. A coleção de dados relativos a todos os elementos de uma população é chamado de **censo**.
 
 ### Ferramentas Gráficas
 
 Dentre as ferramentas que utilizamos para a análise e apresentação dos dados estão os **gráficos**, que nos permitem compilar de maneria clara o **comportamento e a relação das variáveis estudadas**. Dentre os tipos de ferramentas que mais utilizamos temos:
 
-- **Histograma**: utilizado para a analise da frequência (absoluta ou relativa) de dados quatitativos, distribuidos em classes, os quais podem ser representados em barras ou colunas
-- **Polígono de frequência**: gráfico de linha obtido através da conexão dos pontos médios de cada uma das classes de um histograma
-- **Ogiva**: gráfico de linha que exibe a frequência acumulada das classes de um histograma
+- **Histograma**: utilizado para a analise da frequência (absoluta ou relativa) de dados quatitativos, distribuidos em classes, os quais podem ser representados em barras ou colunas.
+- **Polígono de frequência**: gráfico de linha obtido através da conexão dos pontos médios de cada uma das classes de um histograma.
+- **Ogiva**: gráfico de linha que exibe a frequência acumulada das classes de um histograma.
 - **Gráfico de barras**:: utilizados para a análise de dados qualitativos, apresentados no eixo vertical, cuja frequência (absoluta ou relativa) é dada no eixo horizontal.
-- **Gráfico de colunas**: muito semelhante ao gráfico de barras, com a diferença que os dados qualitativos analisados são apresentados no eixo horizontal, enquanto que a sua frequência é dada no eixo vertical
+- **Gráfico de colunas**: muito semelhante ao gráfico de barras, com a diferença que os dados qualitativos analisados são apresentados no eixo horizontal, enquanto que a sua frequência é dada no eixo vertical.
 - **Gráfico de setores (ou de pizza)**: utilizado para a análise de dados qualitativos representados por cada setor, cuja área representa a frequência relativa deste dado.
-- **Gráfico de dispersão**: utilizado para a análise de dados quantitativos, no qual cada eixo representa uma variável diferente
+- **Gráfico de dispersão**: utilizado para a análise de dados quantitativos, no qual cada eixo representa uma variável diferente.
 
 ### Medidas de Tendência Central
 
@@ -42,24 +43,24 @@ $$
 - **Variância**: mostra o **quão distante cada valor está do valor médio** (média) do conjunto. É dada pelas seguintes fórmulas, onde $\mu$ representa a média e $x_{i}$ cada valor do conjunto de dados:
 
 $$
-	\text{Variância da amostra:}\\
+	\text{Variância da amostra: }\\
 	{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n-1}
 $$
 
 $$
-	\text{Variância da população:}\\
+	\text{Variância da população: }\\
 	{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n}
 $$
 
 - **Desvio Padrão**: mostra o **quão “confiável” é a média**, i.e., mostra o “erro” dela ao representar o conjunto de dados. Quanto maior o desvio padrão, menos “confiável” é a média, i.e., mais distantes os dados estão dela. É dado pelas seguintes fórmulas, onde $\mu$ representa a média e $x_{i}$ cada valor do conjunto de dados:
 
 $$
-	\text{Desvio Padrão da amostra:}\\
+	\text{Desvio Padrão da amostra: }\\
 	{\sigma} = \sqrt{\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n - 1}}
 $$
 
 $$
-	\text{Desvio Padrão da população:}\\
+	\text{Desvio Padrão da população: }\\
 	{\sigma} = \sqrt\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n}
 $$
 
