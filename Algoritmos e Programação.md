@@ -27,11 +27,11 @@ Trata-se da descrição dos passos para a solução de um problema utilizando **
 
 
 
-![Exemplo de flugrama para escrever uma saudação na tela](fluxograma.png)
+![Exemplo de flugrama para escrever uma saudação na tela](imgs/fluxograma.png)
 
 Exemplo de flugrama para escrever uma saudação na tela
 
-![Simbologia utilizada em fluxogramas](fluxograma-1.png)
+![Simbologia utilizada em fluxogramas](imgs/fluxograma-1.png)
 
 Simbologia utilizada em fluxogramas
 
