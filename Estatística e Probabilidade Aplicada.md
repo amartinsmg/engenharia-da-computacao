@@ -43,7 +43,10 @@ $$
 
 $$
 	\text{Variância da amostra:}\\
-	{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n-1}\\\space\\
+	{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n-1}
+$$
+
+$$
 	\text{Variância da população:}\\
 	{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n}
 $$
@@ -52,7 +55,10 @@ $$
 
 $$
 	\text{Desvio Padrão da amostra:}\\
-	{\sigma} = \sqrt{\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n - 1}}\\\space\\
+	{\sigma} = \sqrt{\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n - 1}}
+$$
+
+$$
 	\text{Desvio Padrão da população:}\\
 	{\sigma} = \sqrt\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n}
 $$
@@ -97,12 +103,12 @@ $$
 - Quando os elementos de um evento correspodem ao próprio espaço amostral dizemos que trata-se de um **evento certo.**
 - Dizemos que dois eventos são **complementares** quando a intersecção entre eles forma um conjunto vazio e a união deles resulta no próprio espaço amostral, i.e., quando eles não possum elementos em comum, mas todos os possíveis resultados do experimento pertencem a um destes eventos.
 
-**Cálculo da probabilidade de um evento** $A$ ( $P(A)$): é dado pela **razão do número de elementos do evento** $A$ **pelo número de elementos do espaço amostral**. O resultado sempre será um número maior ou igual a zero e menor ou igual a um, sendo um evento com probabilidade igual a 0, um evento impossível, e o evento com probabilidade igual a 1, um evento certo.  
+**Cálculo da probabilidade de um evento** $A$ ( $P(A)$ ): é dado pela **razão do número de elementos do evento** $A$ **pelo número de elementos do espaço amostral**. O resultado sempre será um número maior ou igual a zero e menor ou igual a um, sendo um evento com probabilidade igual a 0, um evento impossível, e o evento com probabilidade igual a 1, um evento certo.  
   
 $$  
-	{P(A)}=\\frac{n(A)}{n(\\Omega)}\\ \\text{onde }{0}\\ge{P(A)}\\le{1}\\\\space\\  
-	\\text{se } A = \\varnothing \\text{ então } {P(A)} = 0\\  
-	\\text{se } A = \\Omega \\text{ então } {P(A)} = 1  
+	{P(A)}=\\frac{n(A)}{n(\\Omega)}\\ \\text{onde }{0}\\ge{P(A)}\\le{1}\\  
+	\\text{ se } A = \\varnothing \\text{ então } {P(A)} = 0\\  
+	\\text{ se } A = \\Omega \\text{ então } {P(A)} = 1  
 $$
 
 #### Probabilidade Condicional
