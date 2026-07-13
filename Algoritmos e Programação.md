@@ -153,7 +153,7 @@ Seguem a seguinte ordem de precedência:
 
 Permitem a comparação entre dois valores:
 
-- **Igualdade** (= ou ==): verifica se dois valores são iguais;
+- **Igualdade** (= ou \==): verifica se dois valores são iguais;
 - **Desigualdade** (<> ou !=): verifica se dois valores são diferentes;
 - **Maior que** (>): verifica se o valor à sua esquerda é maior que o valor à sua direita;
 - **Menor que** (<): verifica se o valor à sua esquerda é menor que o valor à sua direita;
@@ -200,7 +200,7 @@ END.
 
 ### Estrutura Sequencial
 
-Quando um algoritmo é executado, este segue uma **estrura linea**r, de cima para baixo e da esquerda para a direita, i.e., **as ações são executadas na mesma ordem em que foram escritas.** **Cada ação é separada da próxima por um ponto e vírgula** (;), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
+Quando um algoritmo é executado, este segue uma **estrura linear**, de cima para baixo e da esquerda para a direita, i.e., **as ações são executadas na mesma ordem em que foram escritas.** **Cada ação é separada da próxima por um ponto e vírgula** (;), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
 
 
 Esta ordem seguêncial de execução do algoritmo pode, no entanto, ser alterada, permitindo que um determinado bloco de código seja executado somente se uma condição for safisteita, ou que que outro bloco seja repetido diversas vezes.
