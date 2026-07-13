@@ -46,13 +46,11 @@ INICIO
 FIMALGORITMO
 ```
 
-
 ### Linguagens de Programação e Programas
 
 Uma linguagem de programação é um **método padronizado por regras sintáticas e semânticas de implementação de um código fonte** para a criação de um programa de computador.
 Um programa de computador nada mais é do que um **conjunto de instruções a serem seguidas** pelo computador para a realização de uma tarefa, i.e., é a **implementação de um algoritmo** em alguma linguagem de programação.
 Esse exemplo da saudação pode ser transcrito para linguagens de programação como Pascal, C ou Java, como é possível ver nos exemplos a seguir:
-
 
 ```pascal
   PROGRAM OlaMundo;
@@ -62,8 +60,8 @@ Esse exemplo da saudação pode ser transcrito para linguagens de programação 
 ```
 
 ```c
-    #include <stdio.h>
-    
+#include <stdio.h>
+
 int main()
 {
     printf("Olá, Mundo! \n");
@@ -78,8 +76,6 @@ public class OlaMundo{
     }
 }
 ```
-
-
 ### Entrada e Saída
 
 - Os **dados que serão inseridos** no computador para que ele possa processá-los são a nossa **entrada**. Para a obtenção desses dados são utilizados os **comandos de entrada**.
@@ -218,7 +214,6 @@ IF (a > 10)
     ELSE WRITELN('a é menor ou igual a 10');
 ```
 
-
 ### Estrutura de Seleção Aninhada
 
 -É caracterizada pelo agrupamento de várias seleções, sendo normalmente utilizado quando uma combinação de condições deve ser safisteita para que o bloco de código seja executado.
@@ -232,7 +227,6 @@ BEGIN
 END
 ELSE WRITELN('a não é maior que b');
 ```
-
 
 ### Estrutura de Seleção de Múltipla Escolha
 
@@ -293,7 +287,6 @@ WHILE a < 100
     DO a := 2 * a;
 WRITELN(a); // 128
 ```
-
 
 ### Estrutura FAÇA/ ENQUANTO
 
