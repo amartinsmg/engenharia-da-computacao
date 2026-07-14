@@ -10,9 +10,6 @@ Podemos dividi-los em 3 classes principais: CPU (Unidade Central de Processament
 
 #### Unidades de Entrada e Saída
 
-> Os dispositivos de E/S (Entrada e Saída) são constituídos, geralmente, de
-> duas partes: o controlador e o dispositivo propriamente dito. O controlador é um chip ou um conjunto de chips que controla fisicamente o dispositivo; ele recebe comandos do sistema operacional (software), por exemplo, para ler dados dos dispositivos e para enviá-los (TANEMBAUM, 2003).
-
 As **unidades de entrada** (*input*) são os dispositivos físicos que capturam os dados a serem processados. Estes dados podem ser do tipo texto, imagem, áudio, sinais de um sensor etc. Dentre eles cabe citar: mouse, teclado, *scanner*, microfone, dentre outros.
 
 As **unidades de saída** (*output*) apresentam os resultados finais do processamento dos dados. Podemos citar: monitor, auto-falante, impressoras, *plotters* e outros.
@@ -43,6 +40,8 @@ A CPU é composta pelos seguintes componentes:
 
 - **ULA** – Unidade Lógica e Aritmética (*Arithmetic and Logic Unit*): responável por todas as operações aritméticas – soma, subtração, multiplicação etc –, relacionais – se um número é menor, maior ou igual a outro – e lógicas (boolianas) que um computador realiza.
 - **UC** – Unidade de Controle (*Control Unit*): responsável por controlar as buscas das instruções e sincronizar a execução.
+
+![Representação da comunicação entre os componentes de hardware de um computador](./imgs/arquitetura-maquina-von-newmann.png)
 
 ### Componentes de *Software*
 
@@ -290,3 +289,12 @@ Esta é a tabela com os caractéres imprimíveis:
 
 ---
 
+## Unidade Central de Processamento (CPU)
+
+
+
+---
+## Dispositivos de Entrada/ Saída (E/S)
+
+
+> Os dispositivos de E/S (Entrada e Saída) são constituídos, geralmente, de duas partes: o controlador e o dispositivo propriamente dito. O controlador é um chip ou um conjunto de chips que controla fisicamente o dispositivo; ele recebe comandos do sistema operacional (software), por exemplo, para ler dados dos dispositivos e para enviá-los (TANEMBAUM, 2003).
