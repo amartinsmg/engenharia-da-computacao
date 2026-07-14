@@ -43,7 +43,6 @@ A CPU é composta pelos seguintes componentes:
 
 - **ULA** – Unidade Lógica e Aritmética (*Arithmetic and Logic Unit*): responável por todas as operações aritméticas – soma, subtração, multiplicação etc –, relacionais – se um número é menor, maior ou igual a outro – e lógicas (boolianas) que um computador realiza.
 - **UC** – Unidade de Controle (*Control Unit*): responsável por controlar as buscas das instruções e sincronizar a execução.
-- Registradores: armazenam temporariamente as instruções e dados do processamento.
 
 ### Componentes de *Software*
 
@@ -79,19 +78,39 @@ Podemos citar:
 - Gerenciadores de Banco de Dados
 - E muitos outros...
 
+![Representação da estrutura de um sistema computacional](./imgs/system-structure.jpg)
+
+### Níveis de Programação
+
+Há três diferentes **níveis de abstração** na programação de computadores: linguagem de máquina, linguagem de montagem, linguagem de alto nível. Quanto mais subimos o nível de abstração, mais a linguagem se torna próxima à da lógica humana e mais afastada dos detalhes físicos do hardware.
+
+#### Linguagem de máquina
+
+É a linguagem nativa do computador, formada por instruções em código binárias embutidas na própria arquitetura. Por ser tão dependente da arquitetura do computador, ela apresenta baixa portabilidade, com um código em linguagem de máquina escrito para determinada arquitetura só podendo ser usado em computadores que compartilham a mesma arquitetura.
+
+#### Linguagem de montagem (_Assembly_)
+
+Utiliza representações mnemônicas (palavras curtas, normalmente em inglês) para representar instruções binárias. Cada instrução em _Assembly_ corresponde a uma instrução em linguagem de máquina, sendo por isso também dependente da arquitetura do computador. Contudo, como a máquina não executa diretamente o _Assembly_ é necessário um _software_ chamado de **_Assembler_** (montador) que traduz este código para instruções de máquina.
+
+#### Linguagens de alto nível (_High Level Languages_ - HLL)
+
+São as linguagens que os programadores utilizam no dia a dia, como C, Java e Python. São muito mais próximas da linguagem e da lógica humana e possui termos em inglês estruturados (como  `if`, `while`, `function`). Precisam passar por um processo de tradução feito por **compiladores** ou **interpretadores**  que transformam o código escrito em HLL em linguagem de máquina (passando ou não pelo _Assembly_ no meio do caminho). Por não serem dependentes de arquitetura, são altamente portáveis, podendo ser executados em computadores _desktop_, dispositivos móveis e até mesmo em sistemas embarcados.
+
+![Representação dos níveis de abstração da programação](./imgs/niveis-de-abstracao.webp)
+
 ---
 
 ## Surgimento e Evolução dos Computadores
 
 Os primeiros dispositivos adotados pelo ser humano com intuito de trabalhar com informações era puramente mecânicos. Antes do advento da eletricidade, apenas engrenagens e outros dispositivos mecânicos era conhecidos, e sua produção contudo era demasiado complexa e cara.
 
-### Máquina de Anticítera (séc. I a.C.)
+### Máquina de Anticítera
 
 Um computador analógico datado de 87 a.C. capaz de prever eventos astronômicos de forma razoavelmente precisa. Era composto de 37 engrenagens de bronze e foi recuperado em 1901 de um naugráfio próximo à costa da ilha grega de Anticítera
 
-### Máquina Analítica (1834-1837)
+### Máquina Analítica
 
-Conceito elaborado pelo matemático britânico Charles Babbage – a partir de um projeto anterior que ele mesmo havia idealizado, a Máquina Diferencial – que é considerado o primeiro projeto conceitual de um **computador de uso geral**. Foi desenvolvido para reolve qualquer tipo de problema matemático e executar operações lógicas complexas.
+Conceito elaborado pelo matemático britânico Charles Babbage, entre 1834 e 1837, a partir de um projeto anterior que ele mesmo havia idealizado – a Máquina Diferencial. É considerado o primeiro projeto conceitual de um **computador de uso geral**. Foi desenvolvido para reolve qualquer tipo de problema matemático e executar operações lógicas complexas.
 
 O projeto incorporava uma unidade lógica aritmética, memória interna e controle de fluxo, e introduzia a programação através de cartões perfurados. Embora não tenha chegado a ser construído, sua descrição ganhou muita notoriedade na época, com a versão inglesa sendo extensivamente anotada pela matemática Ada Lovelace. A partir dela, Ada desenvolveu o **primeiro algoritimo**, um método de cálculo de números de Bernoulli.
 
@@ -103,7 +122,7 @@ Desenvolvida durante a Segunda Guerra Mundial – no ano de 1940 –, a "Bombe" 
 
 O ENIAC (_Electronic Numerical Integrator Computer_) foi desenvolvido entre 1943 e 1945 tinha como objetivo o cálculo rápido de trajetórias balisticas com parte do esforço de guerra dos aliados. Ele era composto por 18,000 **vávulas termiônicas** (tubos de vácuo) e consumia cerca de 160 kW. Tinha poder de processamento para realizar 5,000 adições, 357 multiplicações e 38 divisões por segundo. Sua programação contudo era feita via hardware através do rearranjamento de interruptores e conexões de cabos.
 
-### IAS, ou Máquina de von Newmann
+### IAS ou Máquina de von Newmann
 
 Contruído pelo Instituto de Estudos Avançados de Princeton (IAS), com projeto e supervisão do matmático John von Newmann, entrou em operação em 1952.  É conhecido por ser um dos primeiros computadores com o conceito de "programa armazenado", no qual as intruções e os dados dividem a mesma memória. A chamada "Máquina de von Newmann" é o modelo teórico que serve como base para o projeto de praticamente todos os computadores atuais.
 
