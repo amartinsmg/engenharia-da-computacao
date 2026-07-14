@@ -81,7 +81,45 @@ Podemos citar:
 
 ---
 
-## Gerações e Evolução dos Computadores
+## Surgimento e Evolução dos Computadores
+
+Os primeiros dispositivos adotados pelo ser humano com intuito de trabalhar com informações era puramente mecânicos. Antes do advento da eletricidade, apenas engrenagens e outros dispositivos mecânicos era conhecidos, e sua produção contudo era demasiado complexa e cara.
+
+### Máquina de Anticítera (séc. I a.C.)
+
+Um computador analógico datado de 87 a.C. capaz de prever eventos astronômicos de forma razoavelmente precisa. Era composto de 37 engrenagens de bronze e foi recuperado em 1901 de um naugráfio próximo à costa da ilha grega de Anticítera
+
+### Máquina Analítica (1834-1837)
+
+Conceito elaborado pelo matemático britânico Charles Babbage – a partir de um projeto anterior que ele mesmo havia idealizado, a Máquina Diferencial – que é considerado o primeiro projeto conceitual de um **computador de uso geral**. Foi desenvolvido para reolve qualquer tipo de problema matemático e executar operações lógicas complexas.
+
+O projeto incorporava uma unidade lógica aritmética, memória interna e controle de fluxo, e introduzia a programação através de cartões perfurados. Embora não tenha chegado a ser construído, sua descrição ganhou muita notoriedade na época, com a versão inglesa sendo extensivamente anotada pela matemática Ada Lovelace. A partir dela, Ada desenvolveu o **primeiro algoritimo**, um método de cálculo de números de Bernoulli.
+
+### Máquina de Turing
+
+Desenvolvida durante a Segunda Guerra Mundial – no ano de 1940 –, a "Bombe" foi um dispositivo eletromecânico desenvolvido por Alan Turing, utilizado com o objetivo de decodificar as mensagens criptografadas do exército alemão. O dispositivo testava bilhões de configurações diariamente para descobrir a chave de segurança das mensagens.
+
+### ENIAC
+
+O ENIAC (_Electronic Numerical Integrator Computer_) foi desenvolvido entre 1943 e 1945 tinha como objetivo o cálculo rápido de trajetórias balisticas com parte do esforço de guerra dos aliados. Ele era composto por 18,000 **vávulas termiônicas** (tubos de vácuo) e consumia cerca de 160 kW. Tinha poder de processamento para realizar 5,000 adições, 357 multiplicações e 38 divisões por segundo. Sua programação contudo era feita via hardware através do rearranjamento de interruptores e conexões de cabos.
+
+### IAS, ou Máquina de von Newmann
+
+Contruído pelo Instituto de Estudos Avançados de Princeton (IAS), com projeto e supervisão do matmático John von Newmann, entrou em operação em 1952.  É conhecido por ser um dos primeiros computadores com o conceito de "programa armazenado", no qual as intruções e os dados dividem a mesma memória. A chamada "Máquina de von Newmann" é o modelo teórico que serve como base para o projeto de praticamente todos os computadores atuais.
+
+### Transistores
+
+Os computadores baseados em válvulas termiônicas tinham três desvantagens principais: a baixa confiabilidade – causada por falhas nos contatos ou mesmo queima das válvulas –, alto custo energético e grande volume ocupado. Estes problemas foram resolvidos com a invenção e adoção do **transistor** durante a década de 1950.
+
+Os computadores transistorados trouxeram algumas novdades, dentre as quais os registradores de índices para controle de _loops_ e as unidadas de ponto flutuante (para cálculos de números fracionais). Contudo, eram demasiadamente caros, sendo possuídos apenas por setores governamentais e universidades.
+
+### Circuitos Integrados (CI)
+
+Os **circuitos integrados** (CI), chamados popularmente de _chips_, correspondem ao encapsulamento de diversos transistores numa única pastilha de silício. Foram introduzidos no final da década de 60 e permitiram uma redução ainda maior do tamanho e do gasto energético dos computadores. Com isso se tornaram compactos o suficiente para as empresas de médio porte,.
+
+### Microprocessadores
+
+Em novembro de 1971, a Intel lançou o 4004, o **primeiro microprocessador comercial do mundo**. Ele contava com 2,300 transistores, sendo capaz de executar entre 46,300 e 92,600 intruções por segundo. Isso marcou a integração de toda a CPU num único chip de silício e perimitu o surgimento dos **computadores pessoais** (PCs) usados atualmente.
 
 ---
 
@@ -190,7 +228,7 @@ Como os algoritmos envolvendo as operações com ponto flutuante (adição, mult
 
 #### Tabela ASCII
 
-Os números também podem ser utilizados para representar outros símbolos como letras ou caracteres esperciais. Para isso são utilizados os métodos de codificação, nos quais cada símbolo (caratere) de nossa linguagem é atribuído a um conjunto de _bits_ que o identifica de forma única.
+Os números também podem ser utilizados para representar outros símbolos como letras ou caracteres esperciais. Para isso são utilizados os métodos de codificação, nos quais cada símbolo (caractere) de nossa linguagem é atribuído a um conjunto de _bits_ que o identifica de forma única.
 
 O **Código Padrão Americano para o Intercâmbio de Informação** (_American Standard Code for Information Interchange_ - ASCII) é um destes métodos de codificação que utiliza 7 *bits* para representar 128 sinais: 95 sinais imprimíveis (letras do alfabeto lation, algarísmos arábicos, sinais de pontuação e sinais matemáticos) e 33 sinais de controle.
 
@@ -230,3 +268,6 @@ Esta é a tabela com os caractéres imprimíveis:
 | **61** | 3D  |    `=`     | **93** | 5D  | `]`  | **125** | 7D  |   `}`   |
 | **62** | 3E  |    `>`     | **94** | 5E  | `^`  | **126** | 7E  |   `~`   |
 | **63** | 3F  |    `?`     | **95** | 5F  | `_`  |         |     |         |
+
+---
+
