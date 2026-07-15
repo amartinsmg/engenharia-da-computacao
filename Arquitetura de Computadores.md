@@ -76,11 +76,9 @@ Para representar informações mais complexas, os *bits* são combinados em um c
 
 A CPU (*Central Processing Unit*), microprocessador ou processador é o componente que executa as instruções contidas na memória para realizar o processamento dos dados.
 
-> O ciclo básico de execução de qualquer CPU é buscar a primeira instrução da memória, decodificá-la para determinar seus operandos e qual operação executar com os mesmos, executá-la e então buscar, decodificar e executar a instrução subsequente (TANEMBAUM, 2003).
-
 A CPU é composta pelos seguintes componentes:
 
-- **ULA** – Unidade Lógica e Aritmética (*Arithmetic and Logic Unit*): responável por todas as operações aritméticas – soma, subtração, multiplicação etc –, relacionais – se um número é menor, maior ou igual a outro – e lógicas (boolianas) que um computador realiza.
+- **ULA** – Unidade Lógica e Aritmética (*Arithmetic and Logic Unit*): responável por todas as operações aritméticas, relacionais e lógicas que um computador realiza.
 - **UC** – Unidade de Controle (*Control Unit*): responsável por controlar as buscas das instruções e sincronizar a execução.
 
 ![Representação da comunicação entre os componentes de hardware de um computador](./imgs/arquitetura-maquina-von-newmann.png)
@@ -143,6 +141,26 @@ São as linguagens que os programadores utilizam no dia a dia, como C, Java e Py
 
 ## Unidade Central de Processamento (CPU)
 
+Dentre as operações realizadas por uma CPU podemos citar:
+
+- **Operações aritméticas e lógicas** : soma, subtração, divisão, multiplicação, comparação entr números e operações de lógica booleana.
+- **Operações de movimentação de dados**: mover um dado de um local de armazenamento para outro.
+- **Operações de entrada e saída**: transferir valores para um dispositivo de saída ou a partir de um dispositivo de entrada para o processador.
+
+> O ciclo básico de execução de qualquer CPU é buscar a primeira instrução da memória, decodificá-la para determinar seus operandos e qual operação executar com os mesmos, executá-la e então buscar, decodificar e executar a instrução subsequente (TANEMBAUM, 2003).
+> 
+
+Para executar uma instrução, um computador realiza as seguintes operações:
+
+- **Busca da instrução** na memória;
+- **Interpretação da intrução**, i.e., a instrução é decodificada para determinar que ação deve ser executada;
+- **Obtenção dos dados** da memória ou de um dispositivo de entrada, quando necessário;
+- **Processamento dos dados** por operações aritméticas e lógicas;
+- **Gravação dos daods** na memória ou num dispositivo de saída.
+
+### Sinal de _clock_
+
+É um pulso digital – i.e., uma alternação entre tensões altas e baixas – que serve para sincronizar todas as atividades do sistema. a frequência do *clock* é medida em hertz (Hz) ou **ciclos por segundos**. Um sinal de 1Hz alterna uma vez por segundo, um de 1,000,000 Hz (ou 1 MHz) alterna 1,000,000 por segundo. O período do sinal de *clock* é inverso à frequência e representa a menor unidade de tempo perceptível num sistema. Ou seja, todas as ações ocorrem em intervalos de tempo múltiplos inteiros do período de *clock*.
 
 
 ---
