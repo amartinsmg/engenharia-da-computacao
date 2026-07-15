@@ -1,4 +1,3 @@
-
 ## Surgimento e Evolução dos Computadores
 
 Os primeiros dispositivos adotados pelo ser humano com intuito de trabalhar com informações era puramente mecânicos. Antes do advento da eletricidade, apenas engrenagens e outros dispositivos mecânicos era conhecidos, sua produção contudo era demasiado complexa e cara.
@@ -168,16 +167,48 @@ Responsável pelas operações de soma, subtração, multiplicação, divisão e
 
 ### Unidade de Controle (UC)
 
-Responsável pela **busca e decodificação** das instruções a serem realizadas pela CPU an memória princiapla, e pelo fluxo de dados entre a CPU e os demais componentes do sistema.
+Responsável pela **busca e decodificação** das instruções a serem realizadas pela CPU na memória principal, e pelo fluxo de dados entre a CPU e os demais componentes do sistema.
 
 ### Registradores
 
+São posições de memória dentro do processador que armazenam temporariamente os dados processados e algumas informações de controle necessárias para o funcionamento da CPU.
+
+Os registradores podem ser:
+
+- **De uso geral**: sua finalidade é decidida pelo próprio programador ou pelo compilador. Podem armazenar dados ou endereços na memória
+- **Acumulador** (ACC – *Accumulator*): responsável por armazenar os resultados da última operação (matemática ou lógica) realizada pela ULA.
+- **Contador de Programas** (PC – *Program Couter*): contém o endereço da próxima instrução a ser executada.
+- **Registrador de Instrução** (RI ou IR – *Instruction Register*): contém a instrução que está sendo executada.
+- **Registrador de Endereço de Memória** (REM ou MAR – *Memory Address Register*): contém o endereço de uma posição na memória.
+- **Registrador de Dados de Memória** (RDM ou MBR - *Memory Beffer Register*): armazena um dado que acabou de ser lido ou está esperando para ser escrito na memória.
+- **_Flags_ ou estado do programa** (PSW – *Program Status Word*): contém a informação do estado do programa e da última operação matemática ou lógica.
 
 
 ![Esquema simplificado de uma CPU](imgs/esquema-simplificado-cpu.png)
 
+### Barramentos
+
+São linhas de **comunicação** entre os componentes de um sistema computacional. Fisicamente são componentes metálicos que permitem que a eletricidade passe de um componente para outro. A comunicação entre os próprios componentes internos da CPU acontece pelo **_datapath_ interno**.
+
+A comunicação entre a CPU e os demais componentes do sistema ocorre por três barramentos:
+
+- **Barramento de dados** – através dele trafegam os dados transmitidos entre CPU e a memória ou os dispositivos de entrada/saída.
+- **Barramento de endereços** – carrega os dados do endereço a ser acessado no dispositivo com o qual a CPU está se comunicando.
+- **Barramento de controle** – contém diversos sinais de controle operacional entre os dispositivos que compõem o sistema. Os principais sinais do barramento de controle são:
+	- indicar se a operação se referre à memória ou a E/S (I/O);
+	- indicar se é uma operação de leitura (_read_);
+	- indicar se é uma operação de escrita (*write*);
+	-  indicar uma **interrupção**, i.e., quando um dispositivo de baixa prioridade requer acesso à CPU;
+	- indicar que a CPU aceitou o pedido de interrupção;
+	- indicar se um dispositivo requer acesso ao barramento de dados;
+	- indicar se a CPU garantiu acesso ao barramento de dados;
+	- realizar um *hard reboot* (*reset*) do sistema;
+	- dentre outros.
+
+![Representação dos barramentos do sistema](imgs/barramentos-cpu.png)
+
 ---
-## Dispositivos de Entrada/ Saída (E/S)
+## Dispositivos de Entrada/Saída (E/S)
 
 
 > Os dispositivos de E/S (Entrada e Saída) são constituídos, geralmente, de duas partes: o controlador e o dispositivo propriamente dito. O controlador é um chip ou um conjunto de chips que controla fisicamente o dispositivo; ele recebe comandos do sistema operacional (software), por exemplo, para ler dados dos dispositivos e para enviá-los (TANEMBAUM, 2003).
