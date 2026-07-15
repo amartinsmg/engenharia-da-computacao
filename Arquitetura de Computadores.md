@@ -162,6 +162,19 @@ Para executar uma instrução, um computador realiza as seguintes operações:
 
 É um pulso digital – i.e., uma alternação entre tensões altas e baixas – que serve para sincronizar todas as atividades do sistema. a frequência do *clock* é medida em hertz (Hz) ou **ciclos por segundos**. Um sinal de 1Hz alterna uma vez por segundo, um de 1,000,000 Hz (ou 1 MHz) alterna 1,000,000 por segundo. O período do sinal de *clock* é inverso à frequência e representa a menor unidade de tempo perceptível num sistema. Ou seja, todas as ações ocorrem em intervalos de tempo múltiplos inteiros do período de *clock*.
 
+### Unidade Lógica Aritmética (ULA)
+
+Responsável pelas operações de soma, subtração, multiplicação, divisão e demais cálculos matemáticos, comprações entre números e operações booleanas que o processador realiza.
+
+### Unidade de Controle (UC)
+
+Responsável pela **busca e decodificação** das instruções a serem realizadas pela CPU an memória princiapla, e pelo fluxo de dados entre a CPU e os demais componentes do sistema.
+
+### Registradores
+
+
+
+![Esquema simplificado de uma CPU](imgs/esquema-simplificado-cpu.png)
 
 ---
 ## Dispositivos de Entrada/ Saída (E/S)
