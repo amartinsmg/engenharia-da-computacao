@@ -207,6 +207,41 @@ A comunicação entre a CPU e os demais componentes do sistema ocorre por três 
 
 ![Representação dos barramentos do sistema](imgs/barramentos-cpu.png)
 
+
+### Arquitetura do Conjunto de Intruções - ISA
+
+### Desempenho, *Multicore* e *Pipeline*
+
+O desempenho de uma CPU depende basicamente de dois fatores: o número de **intruções por ciclo** (IPC) e da **frequência de _clock_**.
+
+$$
+Desempenho = IPC \cdot \text{freqência de clock}
+$$
+
+Onde o IPC mede basicamente quantas instruções a CPU consegue executar a cada ciclo de *clock*, permitindo assim, mensurar a eficiência da sua microarquitetura.
+
+Com isso, é possível afirmarmos que o aumento da frequência de *clock* gera um aumento proporcional no desempenho do sistema. Porém, esse aumento esbarra no limite da capacidade de **dissipação de calor**, pois, o aumento da frequência de _clock_ tem como consequência o aumento da potência elétrica necessária para o funcionamento do circuito.
+
+Para tentar aumentar o desempenho de um sistema sem aumentar a frequência de *clock*, a indústria vem adotando algumas estratégias, dentre as quais:
+
+- Aumento de _bits_ da CPU;
+- Utilização de memória *cache*;
+- Utilização de *pipelines*;
+- Tecnologias de _multithreading_;
+- Processadores _multicore_.
+
+O aumento do número de *bits* de um processador é um estratégia que busca aumentar o tamanho de cada **palavra** (*word*) processada por ele, i.e.,  qual o número de *bits* de dados que a CPU consegue processar numa única operação. Ela altera a largura dos registradores, do barramento de dados e do espaço de endereçamento do sistema. O que por sua vez, aumenta o número de dados processados pro cada ciclo.
+
+A utilização de **memória *cache*** permite diminuir o número de acessos à memória principal do sistema. Ela é composta por uma hierarquia de memória que armazena os dados e instruções processados mais recentemente e aqueles que estão próximos. Como a velocidade de acesso a esta memória é bem superior à da memória principal, isto reduz o tempo que a CPU precisa dicar osciosa esperando que os dados e instruções sejam buscados.
+
+O termo **_pipeline_** se refere a uma técnica que permite que várias instruções sejam sobrepostas e executadas simultaneamente. Como cada instrução depende de tarefas distintas – como a busca na memória, decodificação, processamento –, esta técnica permite que cada uma delas seja executada por uma parte diferente do *hardware* de forma paralela.
+
+A utilização de **_Multithreading_ Simultâneo** (SMT) consiste em utilizar um único núcleo de processamento (*core*) para gerenciar multíplas linhas de execução. A nível de *hardware*, esta técnica dobra o número de registradores de uma CPU, mas mantém uma ULA e uma UC. Isto permite que, enquanto uma *thread* (tarefa) A aguarda dados serem buscados na memória principal, por exemplo, o *core* possa alternar para outra *thread* B que já tem os dados carregados, diminuindo assim o tempo que a CPU passa ociosa.
+
+Posteriormente, foram criados os **processadores multinúcleo** (*multicore*). Sua filosofia era, dividir as tarefas entre dois ou mais núcleos computacionais, i.e., entre mais de uma CPU no mesmo CI. Como a adoção desta estratégia causou um aumento na densidade de componentes no mesmo CI, para manter a capacidade de dissipação de calor, foi necessário o uso de *clocks* mais baixos. Embora a estratégia de *multicores* consiga trazer uma melhora de desempenho, ela não melhora o tempo de execução de cada núcleo, mas consegue melhorar a distribuição da carga entre os núcleos, conseguindo assim, uma melhora no desempenho.
+
+[Vídeo sobre barreira de potência e multicores.](https://youtu.be/0FK13IR3P9M?si=OH4YG7OyUDUH14hJ)
+
 ---
 ## Dispositivos de Entrada/Saída (E/S)
 
