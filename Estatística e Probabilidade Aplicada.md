@@ -51,8 +51,8 @@ $$
 
 $$
 \text{Variância da amostra:}\\
-{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n-1}\\\space\\
-\text{Variância da população:}\\
+{\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n-1}\\
+\text{ Variância da população:}\\
 {\sigma}^{2} = \frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n}
 $$
     
@@ -60,8 +60,8 @@ $$
 
 $$
 \text{Desvio Padrão da amostra:}\\
-{\sigma} = \sqrt{\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n - 1}}\\\space\\
-\text{Desvio Padrão da população:}\\
+{\sigma} = \sqrt{\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n - 1}}\\
+\text{ Desvio Padrão da população:}\\
 {\sigma} = \sqrt\frac{\sum_{i=1}^{n} {({x}_{i}-{\mu})}^{2}}{n}
 $$
 
@@ -115,9 +115,9 @@ $$
 **Cálculo da probabilidade de um evento** $A$ ( $P(A)$): é dado pela **razão do número de elementos do evento $A$ pelo número de elementos do espaço amostral**. O resultado sempre será um número maior ou igual a zero e menor ou igual a um, sendo um evento com probabilidade igual a 0, um evento impossível, e o evento com probabilidade igual a 1, um evento certo.
 
 $$
-{P(A)}=\frac{n(A)}{n(\Omega)}\\ \text{onde }{0}\ge{P(A)}\le{1}\\\space\\
-\text{se } A = \varnothing \text{ então } {P(A)} = 0\\
-\text{se } A = \Omega \text{ então } {P(A)} = 1
+{P(A)}=\frac{n(A)}{n(\Omega)}\\ \text{ onde }{0}\ge{P(A)}\le{1}\\
+\text{ se } A = \varnothing \text{ então } {P(A)} = 0\\
+\text{ se } A = \Omega \text{ então } {P(A)} = 1
 $$
 
 
@@ -132,8 +132,8 @@ $$
  Se $A$ e $B$ são eventos **independentes**, i.e., se a ocorrência de um NÃO afeta a chance da ocorrência de outro, temos que:
 
 $$
-{P({A}\cap{B})}={P(A)}\cdot{P(B)}\\\space\\
-\text{Logo }{P(A|B)} = {P(A)}
+{P({A}\cap{B})}={P(A)}\cdot{P(B)}\\
+\text{ logo }{P(A|B)} = {P(A)}
 $$
 
 ---
@@ -170,8 +170,12 @@ Onde $n$ é o número de tentativas realizadas, $p$ é a probabilidade de sucess
 Para esse tipo de distribuição temos que:
 
 $$
-\mu = np\\
-\sigma^2 = npq\\
+\mu = np
+$$
+$$
+\sigma^2 = npq
+$$
+$$
 \sigma = \sqrt{npq}
 $$ 
 
@@ -226,7 +230,7 @@ Esta distribuição de probabilidade é muito utilizada para descrever fenômeno
 
 $$
 z = \frac{x - \mu}{\sigma}\\
-\space\\
+$$$$
 x = \mu + z \cdot \sigma
 $$
 
