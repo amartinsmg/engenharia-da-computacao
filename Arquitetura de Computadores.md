@@ -208,11 +208,39 @@ A comunicação entre a CPU e os demais componentes do sistema ocorre por três 
 ![Representação dos barramentos do sistema](imgs/barramentos-cpu.png)
 
 
-### Arquitetura do Conjunto de Intruções - ISA
+### Arquitetura do Conjunto de Intruções – ISA
+
+A *Instruction Set Architecture* – ISA é um modelo abstrato que define como **_software_ e _hardware_ se comunicam** em um computador, i.e., define as regras para codificar e interpretar as instruções de máquina.  
+
+![Representação de como hardware e software se comunicam através da ISA](./imgs/isa.png)
+
+É ela que define as:
+- **Conjunto de instruções**:  todas as instruções que uma CPU pode realizar (operações aritméticas, lógicas, controle de E/S, operações na memória);
+- **Formato das intruções**: o *layout* que define – a nível de *bit* – *opcodes*, operandos and modos de acesso;
+-  **Registradores**: número, tipo e função (propósito geral, porno-flutuante, função específica);
+- **Tipos de dados**: como inteiros, ponto-flutuante, vetores etc;
+- **Arquitetura de memória**: modos de endereçamento, *endianness* (modo como um computador organiza na memória pedaços de dados formados por mais de um *byte*), proteção de memória e suporte a memória virtual;
+- **Gerenciamento de interrupções e de exceções**: usados para gerenciar eventos assíncronos e condições de falha.
+
+Mesmo possuindo diferentes microarquiteturas, duas CPUs que compartilham a mesma ISA são capazes de executar os mesmos softwares, o que permite uma maior **portabilidade e abstração de *hardware***. Uma ISA pode ser extendida para suportar novas capacidades enquanto mantém **retrocompatibilidade** – permitindo melhora no *design* das CPUs sem quebrar os *softwares* já existentes.
+#### CISC *vs* RISC
+
+De acordo com o tipo de instrução, um computador pode ser:
+
+- **_Complex Instruction Set Computer_** (Computador de Conjunto de Instruções Complexo – CISC) – são baseados em **microprogramação**, uma técnica que utiliza um conjunto de instruções internos que traduz as instruções de máquina em tarefas que são efetivamente realizadas pelos circuitos da CPU. Cada instrução do código de máquina corresponde a várias instruções num nível ainda mais baixo.
+- **_Reduced Instruction Set Computer_** (Computador de Conjunto de Instruções Reduzido – RISC) – possuem um conjunto de instruções mais simples e menor, com cada instrução levando aproximadamente o mesmo tempo para ser executada. Não possuem microprogramação e cada instrução de máquina é diretamente executada pelo *hardware*. Como as intruções ativam os circuitos diretamente por portas lógicas (sem intermediários), sua execução torna-se mais rápida.
+
+Muitos processadores modernos adotam uma implementação híbrida, na qual as instruções CISC são quebradas em micro-operações mais simples, executadas por núcleos internos no estilo RISC.
+
+#### Microaquitetura
+
+Também chamada de organização do computador, a **microaquitetura** é a forma como a ISA é implementada fisicamente numa CPU específica. É o *design* interno do processador, como ele transforma as instruções em execução real.
+
+É ela que define como será a ULA, o **_datapath_** (caminho de dados – forma como os dados são transportados e processados dentro do processador), **memória cache**, **decodificação das intruções**, **_pipeline_**, **_branch prediction_** (predições de desvios), **execução _out-of-order_** (fora de ordem), dentre outros.
 
 ### Desempenho, *Multicore* e *Pipeline*
 
-O desempenho de uma CPU depende basicamente de dois fatores: o número de **intruções por ciclo** (IPC) e da **frequência de _clock_**.
+O desempenho de uma CPU depende basicamente de dois fatores: o número de **instruções por ciclo** (IPC) e da **frequência de _clock_**.
 
 $$
 Desempenho = IPC \cdot \text{freqência de clock}
@@ -238,12 +266,16 @@ O termo **_pipeline_** se refere a uma técnica que permite que várias instruç
 
 A utilização de **_Multithreading_ Simultâneo** (SMT) consiste em utilizar um único núcleo de processamento (*core*) para gerenciar multíplas linhas de execução. A nível de *hardware*, esta técnica dobra o número de registradores de uma CPU, mas mantém uma ULA e uma UC. Isto permite que, enquanto uma *thread* (tarefa) A aguarda dados serem buscados na memória principal, por exemplo, o *core* possa alternar para outra *thread* B que já tem os dados carregados, diminuindo assim o tempo que a CPU passa ociosa.
 
-Posteriormente, foram criados os **processadores multinúcleo** (*multicore*). Sua filosofia era, dividir as tarefas entre dois ou mais núcleos computacionais, i.e., entre mais de uma CPU no mesmo CI. Como a adoção desta estratégia causou um aumento na densidade de componentes no mesmo CI, para manter a capacidade de dissipação de calor, foi necessário o uso de *clocks* mais baixos. Embora a estratégia de *multicores* consiga trazer uma melhora de desempenho, ela não melhora o tempo de execução de cada núcleo, mas consegue melhorar a distribuição da carga entre os núcleos, conseguindo assim, uma melhora no desempenho.
+Posteriormente, foram criados os **processadores multinúcleo** (*multicore*). Sua filosofia era, dividir as tarefas entre dois ou mais núcleos computacionais, i.e., entre mais de uma CPU no mesmo CI. Como a adoção desta estratégia causou um aumento na densidade de componentes no mesmo CI, para manter a capacidade de dissipação de calor, foi necessário o uso de *clocks* mais baixos. Embora a estratégia de *multicores* consiga trazer uma melhora de desempenho, ela não melhora o tempo de execução de cada núcleo, mas consegue melhora a **vazão** (*throughput*) do sistema  – i.e., o número de tarefas realiadas num dado intervalo de tempo.
 
 [Vídeo sobre barreira de potência e multicores.](https://youtu.be/0FK13IR3P9M?si=OH4YG7OyUDUH14hJ)
 
 ---
-## Dispositivos de Entrada/Saída (E/S)
+## Memória
 
+
+
+---
+## Dispositivos de Entrada/Saída (E/S)
 
 > Os dispositivos de E/S (Entrada e Saída) são constituídos, geralmente, de duas partes: o controlador e o dispositivo propriamente dito. O controlador é um chip ou um conjunto de chips que controla fisicamente o dispositivo; ele recebe comandos do sistema operacional (software), por exemplo, para ler dados dos dispositivos e para enviá-los (TANEMBAUM, 2003).
