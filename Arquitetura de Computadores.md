@@ -238,6 +238,8 @@ Também chamada de organização do computador, a **microaquitetura** é a forma
 
 É ela que define como será a ULA, o **_datapath_** (caminho de dados – forma como os dados são transportados e processados dentro do processador), **memória cache**, **decodificação das intruções**, **_pipeline_**, **_branch prediction_** (predições de desvios), **execução _out-of-order_** (fora de ordem), dentre outros.
 
+[Arquitetura MIPS](./pdfs/arquitetura-mips.pdf)
+
 ### Desempenho, *Multicore* e *Pipeline*
 
 O desempenho de uma CPU depende basicamente de dois fatores: o número de **instruções por ciclo** (IPC) e da **frequência de _clock_**.

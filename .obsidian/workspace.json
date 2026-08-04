@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f7985c55fbccb6f0",
+        "id": "019672a8dfafdfa6",
         "type": "tabs",
         "children": [
           {
-            "id": "d5de528c0abd4a0b",
+            "id": "b8e08a6cd31863fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de arquivos"
@@ -184,11 +186,16 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "d5de528c0abd4a0b",
+  "active": "b8e08a6cd31863fe",
   "lastOpenFiles": [
     "pdfs/arquitetura-mips.pdf",
+    "Arquitetura de Computadores.md",
+    "Sem título.md",
+    "--.md",
+    "imgs/isa.png",
+    "pdfs/Tabela_da_Distribuio_Normal_Padro.pdf",
+    "Estatística e Probabilidade Aplicada.md",
     "Algoritmos e Programação.md",
-    "imgs/barramentos-cpu.png",
-    "Arquitetura de Computadores.md"
+    "imgs/barramentos-cpu.png"
   ]
 }
