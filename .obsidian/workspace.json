@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arquitetura de Computadores.md",
+                "file": "Técnicas de Programação.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arquitetura de Computadores"
+              "title": "Técnicas de Programação"
+            }
+          },
+          {
+            "id": "1e2802278aaa0888",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmos e Programação.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmos e Programação"
             }
           }
         ]
@@ -80,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "cfa4940f0b6853cc",
@@ -188,14 +201,15 @@
   },
   "active": "b8e08a6cd31863fe",
   "lastOpenFiles": [
-    "pdfs/arquitetura-mips.pdf",
+    "Algoritmos e Programação.md",
+    "Técnicas de Programação.md",
+    "Sistemas Digitais.md",
     "Arquitetura de Computadores.md",
-    "Sem título.md",
+    "Estatística e Probabilidade Aplicada.md",
+    "pdfs/arquitetura-mips.pdf",
     "--.md",
     "imgs/isa.png",
     "pdfs/Tabela_da_Distribuio_Normal_Padro.pdf",
-    "Estatística e Probabilidade Aplicada.md",
-    "Algoritmos e Programação.md",
     "imgs/barramentos-cpu.png"
   ]
 }
