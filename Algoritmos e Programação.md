@@ -1,10 +1,8 @@
-## 1 - Introdução à Lógica de Programação
+## Introdução à Lógica de Programação
 
 O termo lógica está profundamente ligado à **coerência** e à **racionalidade**, sendo uma de suas responsabilidades, **determinar se uma operação é ou não é válida**. A lógica de programação utiliza esta estrutura de pensamento na **programação de computadores**, principalmente através da construção de **algoritmos**.
 
-
 Os **algoritmos** são **conjuntos finitos de etapas** que devem ser executadas para a realização de uma **tarefa**, e.g., uma receita de bolo que traz os ingredientes e os passos para o seu preparo.
-
 
 No contexto da programação de computadores, os algoritmos são utilizados para dizer ao computador as **instruções** que devem ser realizadas para que um determinado problema seja resolvido. Sua finalidade é a **representação** mais fiel **do raciocínio envolvido na lógica de programação**.
 
@@ -56,10 +54,10 @@ Um programa de computador nada mais é do que um **conjunto de instruções a se
 Esse exemplo da saudação pode ser transcrito para linguagens de programação como Pascal, C ou Java, como é possível ver nos exemplos a seguir:
 
 ```pascal
-  PROGRAM OlaMundo;
-  BEGIN
-    WRITELN('Olá, Mundo! ');
-  END. 
+PROGRAM OlaMundo;
+BEGIN
+	WRITELN('Olá, Mundo! ');
+END. 
 ```
 
 ```c
@@ -207,7 +205,7 @@ Esta ordem seguêncial de execução do algoritmo pode, no entanto, ser alterada
 
 ---
 
-## 2 - Estruturas de Seleção
+## Estruturas de Seleção
 
 As estruturas de seleção **nos permitem escolher executar um determinado bloco de código quando uma condição**, representada por expressões lógicas ou relacionais, **é ou não satisfeita**, i.e., elas permitem decidir qual caminho nosso algoritmo seguirá com base em um teste lógico.
 
@@ -289,7 +287,7 @@ switch (c)
 
 ---
 
-## 3 - Estruturas de Repetição
+## Estruturas de Repetição
 
 As estruturas de repetição **permitem que um mesmo bloco de código seja executado mais de uma vez**, com o número de repetições podendo ser fixo ou estar vinculado a uma deteminada condição, podendo ser **indeterminado**, mas **não infinito**. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou *loops*.
 
@@ -346,7 +344,7 @@ WRITELN(a); // 128
 
 ---
 
-## 4 - Vetores e Matrizes
+## Vetores e Matrizes
 
 Um vetor ou array é uma **sequência de valores do mesmo tipo, referenciadas por um identificador** (nome) **único**.
 
