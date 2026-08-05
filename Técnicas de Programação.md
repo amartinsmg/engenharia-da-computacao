@@ -98,4 +98,44 @@ O programa começa rodando num interpretador, porém, o motor JIT o monitora em 
 >São exemplos de compiladores JIT a JVM (Java Virtual Machine) – que executa *bytecode* Java – e Engine V8, presente no Chrome e no Node.js – que executa JavaScript.
 
 ---
-## Sistema de Tipos
+## Sistema de Tipos (*Type System*)
+
+É o conjunto de regras de uma linguagem de programação que nos permite categorizar valores, variáveis e expressões e controlar como serão manipulados e armazenados na memória.
+
+### Tipos de Dados (*Data Types*)
+
+Um sistema de tipos é baseado nos **tipos de dados**, que representa o conjunto de valores e operações  que podem ser realizadas com estes valores.
+
+#### Tipos Primitivos
+
+São os tipos mais fundamentais fornecidos pela linguagem e suportados, na maioria das vezes, pelo próprio conjunto de instruções da CPU. São eles:
+
+- **Inteiro**: representam números sem parte fracionária. Normalmente podem ter 8, 16, 32 ou 64 *bits* dedicados a sua representação. Podem ser assinados (*signed* – suportando números negativos) ou não assinados (*unsigned*);
+- **Ponto Flutuante** (*Floating-point*): representam números reais (podendo ou não conter parte fracionária). Normalmente tem 32 (*single precision*) ou 64 (*double precision*) *bits* de precisão, sendo representados seguindo as normas da IEEE 754 – que define como os *bits* são divididos para representar sinal, expoente e mantissa;
+- **Booleanos**: representam valores lógicos – verdadeiro ou falso, *true* ou *false*;
+- **Caracteres**: representam símbolos individuais – que podem ser codificados em ASCII, UTF-8, UTF-16 etc – podendo representar sinais gráficos ou de controle (como quebra de linha, tabulação e outros).
+
+#### Tipos Estruturados ou Derivados
+
+São criados a partir da combinação de tipos primitivos:
+
+- **_Arrays_ /  Vetores**: representam uma sequência **contínua** de elementos do **mesmo tipo** na memória;
+- ***Strings***: um tipo especial de vetor dedicado a representar uma cadeia de **caracteres**;
+- **Ponteiros** (*pointers*): armazenam um valor que "aponta para" um dado armazenado na memória usando seu endereço;
+- **Tipos definidos pelo usuário** (*struct*|*enum*|*class*): permitem ao programador comninar tipos de dados primitivos para atender a alguma necessidade específica.
+
+#### Tipo de Dado Abstrato (ADT - *Abstract Data Type*)
+
+Conceito **puramente teórico e abstrato** presente nas HLL mais modernas que define um tipo de dado não pela sua implementação interna (o que ele é), mas pelo seu comportamento (o que ele faz). Em outras palavras o que define um tipo de dado é a interface – i.e., o conjunto das operações – que nos permite interagir com ele.
+
+### Tipagem
+
+Nas diferentes HLL, uma variável pode ter seu tipo de dado associado diretamente a ela ou não. Chamamos de tipagem **estática** (*static*) quando uma variável é asociada a um tipo específico de valores. Por exemplo, uma variável associada ao tipo inteiro só pode armazenar este tipo de dado – como ocorre em C, C++, Rust, Pascal, Java, TypeScript. É muito comum em linguagens compiladas, permitindo que a verificação de tipos seja análisada já durante a fase da análise semântica e permitem um melhor desempenho.
+
+Quando o tipo não está associado diretamente à variável, mas aos próprios valores armazenados por elas, dizemos que a tipagem é **dinâmica** (*dynamic*). Neste caso, a variável é apenas um rótulo e o tipo de dado armazenado por ela pode ser alterado ao longo do programa. São exemplos de linugagens que usam tipagem dinâmica Python, JavScript, Ruby, Julia e PHP. Este tipo de tipagem é mais comum em linguagens interpretadas e permite uma maior flexibilidade.
+
+Quanto à atribuição do tipo de uma variável, a tipagem pode ser explicita ou inferida. Nas linguagens com tipagem **explícita** (*explixit*) ou *manifesst* – como C, Pascal, Java (tradicional) – o programador é obrigado a escrever (explicitamente) o tipo de dado que uma variável irá armazenar. Já na tipagem **inferida** (*inferred*), o próprio compilador ou interpretador deduz (infere) o tipo de dado da variável com base na primeira atribuição. A tipagem *inferred* está presente em linguagens como TypeScript, Java (moderno – `var`), Julia e Rust.
+
+### Segurança de Tipos (*Type Safety*)
+
+É uma garantia de que o programa não tentará realizar operações inválidas.
