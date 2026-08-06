@@ -1,6 +1,6 @@
 ## Linguagens de Programação
 
-As **linguagens de programação** são projetadas com um conjunto de **regras sintáticas e semânticas** para permitirem que *software* seja escrito de uma maneira legível para seres humanos (*human readble*).
+As **linguagens de programação** são projetadas com um conjunto de **regras sintáticas e semânticas** para permitirem que *software* seja escrito de uma maneira legível para seres humanos (*human readable*).
 
 Um leque bem grande dentro das linguagens de programação é o das **linguagens de alto-nível** (HLL  – *High-Level Programming Languages*) que trazem uma maior abstração das particularidades do *hardware* que as linguagens de baixo nível (*low-level*). Normalmente elas usam elementos da linguagem natural e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
 
@@ -26,7 +26,7 @@ Restante da conversão
 
 #### Análise Léxica (*Lexing*)
 
-Lê o código-fonte caractere a caractere e separa as unidades mínimas com singnificado – os **_Tokens_**. Este processo é análogo ao de separar as palavras de uma frase em uma linguagem natural e é feito pelo componente chamado ***lexer*** ou ***scanner***.
+Lê o código-fonte caractere a caractere e separa as unidades mínimas com significado – os **_Tokens_**. Este processo é análogo ao de separar as palavras de uma frase em uma linguagem natural e é feito pelo componente chamado ***lexer*** ou ***scanner***.
 
 ```text
 Exemplo:
@@ -72,11 +72,11 @@ Exemplo:
 
 #### Análise Semântica
 
-Analisa a AST para garantir que seguem as **regras semânticas** da linguagem – i.e., garantir que tenham um singnificado lógico no contexto do programa. Dentre as verificações feitas nesta etapa são as de **escopo das variáveis** e a **verificação de tipos**. Comparando às linguagens naturais, é semelhante à verificação de um conjunto de frases formarem um texto lógico e coerente. Após esta análise é que a AST com as anotações semânticas é entregue para ser interpretada ou compilada.
+Analisa a AST para garantir que seguem as **regras semânticas** da linguagem – i.e., garantir que tenham um significado lógico no contexto do programa. Dentre as verificações feitas nesta etapa são as de **escopo das variáveis** e a **verificação de tipos**. Comparando às linguagens naturais, é semelhante à verificação de um conjunto de frases formarem um texto lógico e coerente. Após esta análise é que a AST com as anotações semânticas é entregue para ser interpretada ou compilada.
 
 ### Linguagens Interpretadas
 
-São linguagens cujo resultado do *pipeline* de análise é entrgue a um programa chamado **interpretador** que processa os blocos de código – linha a linha – **durante a execução**. Como o código-fonte precisa obrigatoriamnete de um **ambiente de execução** (*runtime environment*), isso acaba resultando num maior consumo de recursos durante a execução, porém o torna bastante portável.
+São linguagens cujo resultado do *pipeline* de análise é entregue a um programa chamado **interpretador** que processa os blocos de código – linha a linha – **durante a execução**. Como o código-fonte precisa obrigatoriamente de um **ambiente de execução** (*runtime environment*), isso acaba resultando num maior consumo de recursos durante a execução, porém o torna bastante portável.
 
 > São exemplos de linguagens interpretadas: Python, Perl,  PHP, Rust e JavaScript
 ### Linguagens Compiladas
@@ -122,7 +122,7 @@ São criados a partir da combinação de tipos primitivos:
 - **_Arrays_ /  Vetores**: representam uma sequência **contínua** de elementos do **mesmo tipo** na memória;
 - ***Strings***: um tipo especial de vetor dedicado a representar uma cadeia de **caracteres**;
 - **Ponteiros** (*pointers*): armazenam um valor que "aponta para" um dado armazenado na memória usando seu endereço;
-- **Tipos definidos pelo usuário** (*struct*|*enum*|*class*): permitem ao programador comninar tipos de dados primitivos para atender a alguma necessidade específica.
+- **Tipos definidos pelo usuário** (*struct*|*enum*|*class*): permitem ao programador combinar tipos de dados primitivos para atender a alguma necessidade específica.
 
 ##### Tipo de Dado Abstrato (ADT - *Abstract Data Type*)
 
@@ -130,11 +130,11 @@ Conceito **puramente teórico e abstrato** presente nas HLL mais modernas que de
 
 #### Tipagem
 
-Nas diferentes HLL, uma variável pode ter seu tipo de dado associado diretamente a ela ou não. Chamamos de tipagem **estática** (*static*) quando uma variável é asociada a um tipo específico de valores. Por exemplo, uma variável associada ao tipo inteiro só pode armazenar este tipo de dado – como ocorre em C, C++, Rust, Go, Pascal, Java, TypeScript. É muito comum em linguagens compiladas, permitindo que a verificação de tipos seja análisada já durante a fase da análise semântica e permitem um melhor desempenho.
+Nas diferentes HLL, uma variável pode ter seu tipo de dado associado diretamente a ela ou não. Chamamos de tipagem **estática** (*static*) quando uma variável é associada a um tipo específico de valores. Por exemplo, uma variável associada ao tipo inteiro só pode armazenar este tipo de dado – como ocorre em C, C++, Rust, Go, Pascal, Java, TypeScript. É muito comum em linguagens compiladas, permitindo que a verificação de tipos seja analisada já durante a fase da análise semântica e permitem um melhor desempenho.
 
-Quando o tipo não está associado diretamente à variável, mas aos próprios valores armazenados por elas, dizemos que a tipagem é **dinâmica** (*dynamic*). Neste caso, a variável é apenas um rótulo e o tipo de dado armazenado por ela pode ser alterado ao longo do programa. São exemplos de linugagens que usam tipagem dinâmica Python, JavScript, Ruby, Julia e PHP. Este tipo de tipagem é mais comum em linguagens interpretadas e permite uma maior flexibilidade.
+Quando o tipo não está associado diretamente à variável, mas aos próprios valores armazenados por elas, dizemos que a tipagem é **dinâmica** (*dynamic*). Neste caso, a variável é apenas um rótulo e o tipo de dado armazenado por ela pode ser alterado ao longo do programa. São exemplos de linguagens que usam tipagem dinâmica Python, JavaScript, Ruby, Julia e PHP. Este tipo de tipagem é mais comum em linguagens interpretadas e permite uma maior flexibilidade.
 
-Quanto à atribuição do tipo de uma variável, a tipagem pode ser explicita ou inferida. Nas linguagens com tipagem **explícita** (*explixit*) ou *manifest* – como C, Pascal, Java (tradicional) – o programador é obrigado a escrever (explicitamente) o tipo de dado que uma variável irá armazenar. Já na tipagem **inferida** (*inferred*), o próprio compilador ou interpretador deduz (infere) o tipo de dado da variável com base na primeira atribuição. A tipagem *inferred* está presente em linguagens como TypeScript, Java (moderno – `var`), Julia e Rust.
+Quanto à atribuição do tipo de uma variável, a tipagem pode ser explicita ou inferida. Nas linguagens com tipagem **explícita** (*explicit*) ou *manifest* – como C, Pascal, Java (tradicional) – o programador é obrigado a escrever (explicitamente) o tipo de dado que uma variável irá armazenar. Já na tipagem **inferida** (*inferred*), o próprio compilador ou interpretador deduz (infere) o tipo de dado da variável com base na primeira atribuição. A tipagem *inferred* está presente em linguagens como TypeScript, Java (moderno – `var`), Julia e Rust.
 
 Nas linguagens com tipagem estática, o modo como um compilador ou interpretador precisa verificar se dois tipos são iguais ou compatíveis para realizar determinada operação. Na tipagem nominal (_nominative_) dois tipos são iguais somente se tiverem o mesmo “nome” ou se houver alguma declaração explícita – como acontece em linguagens como Java, C++ e Julia. Já na tipagem estrutural (*structural*), dois tipos são considerados iguais se tiverem a mesma estrutura, i.e., se tiverem o mesmo conteúdo –  está presente em TypeScript, Rust e Go.
 
@@ -142,7 +142,7 @@ Já nas linguagens dinâmicas há a presença do chamado *duck typing*, no qual 
 
 #### Segurança de Tipos (*Type Safety*)
 
-Pode ser definida como o grau que uma linguagem desoncoraja ou previne **erros de tipos** (*type erros*), garantindo que um programa não tentará realizar operações inválidas sobre os dados – como tentar somar uma *string* e um inteiro. Uma linguagem com maior segurança de tipos – também chamada de **fortemente tipada** (*strong typing*)  – não permite que operações com dados incompatíveis sejam realizadas, lançando uma exceção na compilação – como é o caso do Java, Rust, Go e TypeScript – ou execução do código – Python, Rust e Julia. 
+Pode ser definida como o grau que uma linguagem desencoraja ou previne **erros de tipos** (*type erros*), garantindo que um programa não tentará realizar operações inválidas sobre os dados – como tentar somar uma *string* e um inteiro. Uma linguagem com maior segurança de tipos – também chamada de **fortemente tipada** (*strong typing*)  – não permite que operações com dados incompatíveis sejam realizadas, lançando uma exceção na compilação – como é o caso do Java, Rust, Go e TypeScript – ou execução do código – Python, Rust e Julia. 
 
 Em linguagens consideradas  **fracamente tipadas** – também chamadas de *type-unsafe* – tentam "adivinhar" o resultado esperado e realizam conversões de tipo automáticas, como o JavaScript e o PHP. Outras linguagens como C/C++ permitem manipulações de endereços brutos de memória (ponteiros), permitindo fazer *casting* (coerção) sem nenhuma verificação de tipos. Quanto maior a tipagem de uma linguagem, menor a chance de gerar resultados imprevisíveis e quebrar o programa.
 
@@ -150,10 +150,10 @@ Algumas linguagens como Rust e Go tem uma segurança de tipos ainda maior a nív
 
 ### Propósitos de Uso e Paradigmas de Programação
 
-Quanto ao propósito, exitem basicamente dois tipos de linguagens de programação:
+Quanto ao propósito, existem basicamente dois tipos de linguagens de programação:
 
 - **Linguagens de Propósito General** (GPL – *general-purpose languages*) – capazes de serem usadas para desenvolver *software* em diferentes domínios de aplicação. Sendo caracterizadas por serem **_Turing complete_** , i.e., podendo computar qualquer algoritmo teoricamente possível. São exemplos: C/C++, Java, Python, JavaScript, Rust, Go, Julia, dentre outros.
-- **Linguagens de Domínio Específco** (DSL – *domain-specifc language*) – feitas para resolver algum problema num domínio particular. São exemplos: SQL HTML, CSS, Expressões Regulares (Regex) e LaTex. Não são *Turing complete* e são consideradas puramente declarativas – indicando apenas o que deve ser feito.
+- **Linguagens de Domínio Específico** (DSL – *domain-specific language*) – feitas para resolver algum problema num domínio particular. São exemplos: SQL HTML, CSS, Expressões Regulares (Regex) e LaTex. Não são *Turing complete* e são consideradas puramente declarativas – indicando apenas o que deve ser feito.
 
 Já quanto ao paradigma, as linguagens de programação se dividem em dois ramos principais:
 
@@ -172,20 +172,20 @@ Já quanto ao paradigma, as linguagens de programação se dividem em dois ramos
 
 #### Paradigmas Imperativos
 
-Focam no modo como o problema deve ser resolvido, através de comandos que manipual estados (variáveis, memória) de um processo. Ou seja, ele descreve  – passo a passo – o controle de fluxo (*control flow*) do programa.  São subtipos:
-- **Estruturado**: segue os princípios do paradigma imperativo, mas organiza o código em uma estrutuda de blocos para organizar o *control flow*. Ele usa sequência, seleção (`if` – `else`) e interação (*loops*) para eliminar saltos randômicos ao longo do programa (`goto`).
+Focam no modo como o problema deve ser resolvido, através de comandos que manipulam estados (variáveis, memória) de um processo. Ou seja, ele descreve  – passo a passo – o controle de fluxo (*control flow*) do programa.  São subtipos:
+- **Estruturado**: segue os princípios do paradigma imperativo, mas organiza o código em uma estrutura de blocos para organizar o *control flow*. Ele usa sequência, seleção (`if` – `else`) e interação (*loops*) para eliminar saltos randômicos ao longo do programa (`goto`).
 - **Procedural**: segue os princípios do paradigma estruturado, organizando o código em procedimentos (*procedures*), também chamados de funções ou sub-rotinas, capazes de chamar uns aos outros e serem reutilizados.
-- **Orientado a Objetos**: deriva do procedural e se baseia em objetos que agrupam dados (atributos) e procedimentos (métodos). São seus pilares: encapsulamento, herança, polimorfismo e asbtração.
+- **Orientado a Objetos**: deriva do procedural e se baseia em objetos que agrupam dados (atributos) e procedimentos (métodos). São seus pilares: encapsulamento, herança, polimorfismo e abstração.
 
 #### Paradigmas Declarativos
 
-Estas linguagens focam em descrever a lógica do programa sem descreverem o *control flow*. Trata-se da abstração de um programa além da ordem de execução, descevendo o resultado esperado ou a lógica da solução de um problema.
+Estas linguagens focam em descrever a lógica do programa sem descreverem o *control flow*. Trata-se da abstração de um programa além da ordem de execução, descrevendo o resultado esperado ou a lógica da solução de um problema.
 - **Funcional**: deriva do declarativo aplicando o conceito de função matemática, sem alterações de estados e sem efeitos colaterais (uma função pura retorna o mesmo resultado para os mesmos argumentos). Funções aqui são consideradas "cidadãos de primeira classe", podendo ser passadas como argumento para outras funções e/ou retornadas por elas.
 - **Lógica**: também deriva do paradigma declarativo aplicando a lógica matemática, através de fatos e regras de inferência lógica.
 
 #### Linguagens Multiparadigma  e Paradigmas Transversais
 
-As HLL que temos hoje são, em sua maioria, multiparadigma, suporta diversos paradigmas – com uma mesma linguagem podendo ser imperativa, orientada a objetos e funcional. Com isso, temos também outros paradigmas, chamados de transversais, cujas características podem se aplicar a qualquer paradigma:
-- **PConcorrente/ Paralela**: foca na execução de múltiplos fluxos de execução (*threads* ou processos) que ocorrem de maneira simultâne ou intercalada (ex: C/C++ com a lib OpenMP, Java a partir da versão 8).
+As HLL que temos hoje são, em sua maioria, multiparadigma, suportando diversos paradigmas – como Python que é imperativa, orientada a objetos e funcional. Com isso, temos também outros paradigmas, chamados de transversais, cujas características podem se aplicar a qualquer paradigma:
+- **Concorrente / Paralela**: foca na execução de múltiplos fluxos de execução (*threads* ou processos) que ocorrem de maneira simultânea ou intercalada (ex: C/C++ com a lib OpenMP, Java a partir da versão 8).
 - **Orientada a Eventos** (*Event-Driven*): o *control flow* é determinado por **eventos externos** e *callbacks* (ex: JavaScript esperando uma requisição HTTP, uma interface gráfica).
 - **Modular**: divide um sistema grande em partes menores, independentes e reutilizáveis chamadas de **módulos** – presente em praticamente todas as linguagens hoje em dia.
