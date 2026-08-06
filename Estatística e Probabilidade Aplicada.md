@@ -9,8 +9,8 @@ O conjunto de indivíduos estudados em uma pesquisa é chamado de **população*
 
 ## Ferramentas Gráficas
 
-Dentre as ferramentas que utilizamos para a análise e apresentação dos dados estão os **gráficos**, que nos permitem compilar de maneria clara o **comportamento e a relação das variáveis estudadas**. Dentre os tipos de ferramentas que mais utilizamos temos:
-- **Histograma**: utilizado para a analise da frequência (absoluta ou relativa) de dados quatitativos, distribuidos em classes, os quais podem ser representados em barras ou colunas
+Dentre as ferramentas que utilizamos para a análise e apresentação dos dados estão os **gráficos**, que nos permitem compilar de maneira clara o **comportamento e a relação das variáveis estudadas**. Dentre os tipos de ferramentas que mais utilizamos temos:
+- **Histograma**: utilizado para a analise da frequência (absoluta ou relativa) de dados quatitativos, distribuídos em classes, os quais podem ser representados em barras ou colunas
 - **Polígono de frequência**: gráfico de linha obtido através da conexão dos pontos médios de cada uma das classes de um histograma
 - **Ogiva**: gráfico de linha que exibe a frequência acumulada das classes de um histograma
 - **Gráfico de barras**:: utilizados para a análise de dados qualitativos, apresentados no eixo vertical, cuja frequência (absoluta ou relativa) é dada no eixo horizontal.
@@ -72,7 +72,7 @@ $$
 
 ## Princípio Fundamental da Contagem
 
-A forma mais básica de realizarmos uma análise de possíveis ocorrências de um determinado fenômeno é através do **Princípio Fundamental da Contagem**, segundo o qual, se um evento é composto por duas ou mais etapas sucessivas e independentes, o número de combinações possíveis é dado pelo produto entre as possíbilidades de cada conjunto.
+A forma mais básica de realizarmos uma análise de possíveis ocorrências de um determinado fenômeno é através do **Princípio Fundamental da Contagem**, segundo o qual, se um evento é composto por duas ou mais etapas sucessivas e independentes, o número de combinações possíveis é dado pelo produto entre as possibilidades de cada conjunto.
 
 ## Permutações, Arranjos e Combinações
 
@@ -99,13 +99,13 @@ $$
 
 É utilizada quando desejamos mensurar a **chance de ocorrência** de algo. Para podermos trabalhar melhor com ela precisamos conhecer alguns conceitos:
 
-**Experimento aleatório:** é aquele experimento que tem um conjunto bem determinado de resultados possíveis, **não podendo ter seu resultado previsto antes de sua realização. E**m cotraposição existem os eventos determinísticos, cujo resultado é sempre o mesmo, conservando-se a condição ou estado inicial.
+**Experimento aleatório:** é aquele experimento que tem um conjunto bem determinado de resultados possíveis, **não podendo ter seu resultado previsto antes de sua realização. ** Em cotraposição existem os eventos determinísticos, cujo resultado é sempre o mesmo, conservando-se a condição ou estado inicial.
 
 **Espaço Amostral ($\Omega$)**: conjunto de todos os resultados possíveis de um experimento aleatório.
 
 **Evento**: é qualquer subconjunto contido do espaço amostral.
 - Quando um evento é composto por um conjunto vazio ele é chamado de **evento impossível.**
-- Quando os elementos de um evento correspodem ao próprio espaço amostral dizemos que trata-se de um **evento certo.**
+- Quando os elementos de um evento correspondem ao próprio espaço amostral dizemos que trata-se de um **evento certo.**
 - Dizemos que dois eventos são **complementares** quando a intersecção entre eles forma um conjunto vazio e a união deles resulta no próprio espaço amostral, i.e., quando eles não possum elementos em comum, mas todos os possíveis resultados do experimento pertencem a um destes eventos.
 
 $$
@@ -157,7 +157,7 @@ $$
 É a distribuição discreta que representa o número de sucessos numa sequência de $n$ tentativas,  tais que:
 - Cada tentativa têm apenas dois resultados possíveis: sucesso ou fracasso;
 - Cada tentativa é independente;
-- A probabilidade de sucesso ($p$) , premanece constante em todas as tentativas;
+- A probabilidade de sucesso ($p$) , permanece constante em todas as tentativas;
 - O número de tentativas é finito.
 Se a variável aleatória $x$ tem essa distribuição temos que:
 
@@ -226,7 +226,7 @@ Esta distribuição de probabilidade é muito utilizada para descrever fenômeno
 
 - Para cada valor $x$ com distribuição de probabilidade normal, temos um **escore-**$z$  correspondente, que indica quantos **desvios padrão** este valor **dista da média**.
 - Quando uma distribuição normal possui média nula ($\mu = 0$) e desvio padrão unitário ($\sigma = 1$) esta é chamada de **distribuição normal padrão**. Para esse tipo de distribuição, o valor de $x$ é igual ao do escore-$z$ correspondente ($x = z$).
-- Para distribuições normais não padronizadas, i.e., com média não nula ($\mu \ne 0$) ou desvio padrão não uniátio ($\sigma \ne 1$), podemos utilizar as seguintes fórmulas para convertermos um valor de uma variável aleatória $x$ distribuída normalmente em escore-$z$ ou vice-versa:
+- Para distribuições normais não padronizadas, i.e., com média não nula ($\mu \ne 0$) ou desvio padrão não unitário ($\sigma \ne 1$), podemos utilizar as seguintes fórmulas para convertermos um valor de uma variável aleatória $x$ distribuída normalmente em escore-$z$ ou vice-versa:
 
 $$
 z = \frac{x - \mu}{\sigma}\\

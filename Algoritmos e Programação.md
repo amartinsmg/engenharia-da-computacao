@@ -6,7 +6,7 @@ Os **algoritmos** são **conjuntos finitos de etapas** que devem ser executadas 
 
 No contexto da programação de computadores, os algoritmos são utilizados para dizer ao computador as **instruções** que devem ser realizadas para que um determinado problema seja resolvido. Sua finalidade é a **representação** mais fiel **do raciocínio envolvido na lógica de programação**.
 
-### Contrução de Algoritmos
+### Construção de Algoritmos
 
 A construção de algoritmos é um **passo importante**, pois uma vez compreendido seu funcionamento, este pode ser **traduzido para qualquer linguagem de programação**. Para se construir um algoritmo, devem ser seguidos os seguintes passos:
 
@@ -26,9 +26,9 @@ Consiste em analisar o programa e descrever os passos a serem seguidos para sua 
 
 Trata-se da descrição dos passos para a solução de um problema utilizando **símbolos gráficos pré-estabelecidos**. Ex:
 
-![Exemplo de flugrama para escrever uma saudação na tela](imgs/fluxograma.png)
+![Exemplo de fluxograma para escrever uma saudação na tela](imgs/fluxograma.png)
 
-Exemplo de flugrama para escrever uma saudação na tela
+Exemplo de fluxograma para escrever uma saudação na tela
 
 ![Simbologia utilizada em fluxogramas](imgs/fluxograma-1.png)
 
@@ -36,7 +36,7 @@ Simbologia utilizada em fluxogramas
 
 #### Pseudocódigo
 
-Trata-se da descrição dos passos para a resolução de um problema utilizando-se **regras prefedinidas**. É o método que nos permite representar o fluxo de execução do nosso algoritmo com **maior clareza**. Um exemplo desse tipo de pseudocódido é o Portugol. Ex:
+Trata-se da descrição dos passos para a resolução de um problema utilizando-se **regras predefinidas**. É o método que nos permite representar o fluxo de execução do nosso algoritmo com **maior clareza**. Um exemplo desse tipo de pseudocódido é o Portugol. Ex:
 
 ```text
 ALGORITMO "OlaMundo"
@@ -86,7 +86,7 @@ public class OlaMundo{
 
 ### Tipos de Dados
 
-Do ponto de vista computacional oa dados se dividem em três tipos:
+Do ponto de vista computacional os dados se dividem em três tipos:
 
 - **Tipo numérico**: se subdivide em:
   - **Tipo inteiro**: aceita dados numéricos **inteiros**: positivos, negativos ou zero. Ex: 1, -34, 720;
@@ -144,7 +144,7 @@ Permitem a realização de operações aritméticas, como adição, subtração,
 Seguem a seguinte ordem de precedência:
 
 - Operações entre parênteses;
-- Mutiplicação, Divisão e Módulo da Divisão;
+- Multiplicação, Divisão e Módulo da Divisão;
 - Adição e Subtração.
 
 #### Operadores Relacionais
@@ -198,10 +198,10 @@ END.
 
 ### Estrutura Sequencial
 
-Quando um algoritmo é executado, este segue uma **estrura linear**, de cima para baixo e da esquerda para a direita, i.e., **as ações são executadas na mesma ordem em que foram escritas.** **Cada ação é separada da próxima por um ponto e vírgula** (;), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
+Quando um algoritmo é executado, este segue uma **estutura linear**, de cima para baixo e da esquerda para a direita, i.e., **as ações são executadas na mesma ordem em que foram escritas.** **Cada ação é separada da próxima por um ponto e vírgula** (;), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
 
 
-Esta ordem seguêncial de execução do algoritmo pode, no entanto, ser alterada, permitindo que um determinado bloco de código seja executado somente se uma condição for safisteita, ou que que outro bloco seja repetido diversas vezes.
+Esta ordem sequencial de execução do algoritmo pode, no entanto, ser alterada, permitindo que um determinado bloco de código seja executado somente se uma condição for satisfeita, ou que outro bloco seja repetido diversas vezes.
 
 ---
 
@@ -229,7 +229,7 @@ IF (a > 10)
 
 ### Estrutura de Seleção Aninhada
 
-É caracterizada pelo agrupamento de várias seleções, sendo normalmente utilizado quando uma combinação de condições deve ser safisteita para que o bloco de código seja executado.
+É caracterizada pelo agrupamento de várias seleções, sendo normalmente utilizado quando uma combinação de condições deve ser satisfeita para que o bloco de código seja executado.
 
 ```pascal
 IF (a > b) THEN
@@ -243,7 +243,7 @@ ELSE WRITELN('a não é maior que b');
 
 ### Estrutura de Seleção de Múltipla Escolha
 
-É utilizada quando um programa possui diversas opções de execução. Este tipo de seleção pode ser feita através da sucessão de estruturas de seleção SE ou através da estrutura CASO (*CASE*), que permite testar um valor definindo alvos a serem atingidos para que cada opção de código possa ser executada, podendo-se também adicionar uma instrução a ser executada caso senhum dos alvos seja atingido.
+É utilizada quando um programa possui diversas opções de execução. Este tipo de seleção pode ser feita através da sucessão de estruturas de seleção SE ou através da estrutura CASO (*CASE*), que permite testar um valor definindo alvos a serem atingidos para que cada opção de código possa ser executada, podendo-se também adicionar uma instrução a ser executada caso nenhum dos alvos seja atingido.
 
 ```pascal
 // Sucessão de SE'S
@@ -289,7 +289,7 @@ switch (c)
 
 ## Estruturas de Repetição
 
-As estruturas de repetição **permitem que um mesmo bloco de código seja executado mais de uma vez**, com o número de repetições podendo ser fixo ou estar vinculado a uma deteminada condição, podendo ser **indeterminado**, mas **não infinito**. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou *loops*.
+As estruturas de repetição **permitem que um mesmo bloco de código seja executado mais de uma vez**, com o número de repetições podendo ser fixo ou estar vinculado a uma determinada condição, podendo ser **indeterminado**, mas **não infinito**. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou *loops*.
 
 ### Estrutura ENQUANTO
 
@@ -378,7 +378,7 @@ printf("%d\n", nums[0]); // 1
 printf("%d\n", nums[4]); // 5
 ```
 
-Outras linguagens, como a Lua, tem seus elementos indexados a partir da posição 1, sendo o primeiro item acessado pelo índice 1 e o último pelo índice $n$, em um vetor com $n$ elementos. Outras como o Pascal permitem indexar um array com qualquer tipo de dado enumerado, permitindo-nos escolher o indíce inicial do vetor.
+Outras linguagens, como a Lua, tem seus elementos indexados a partir da posição 1, sendo o primeiro item acessado pelo índice 1 e o último pelo índice $n$, em um vetor com $n$ elementos. Outras como o Pascal permitem indexar um array com qualquer tipo de dado enumerado, permitindo-nos escolher o índice inicial do vetor.
 
 ```pascal
 VAR

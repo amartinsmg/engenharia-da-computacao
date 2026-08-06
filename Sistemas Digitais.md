@@ -1,6 +1,6 @@
 ## Matemática Computacional e Representação de Dados
 
-No nosso mundo, toda informação pode assumir qualquer valor compreendido entre  - ∞ e + ∞, muitas vezes também com infinitos valores intermediários, isto é o que chamamos de valores **analógicos**. Computadores, no entanto, lidam apenas com informações **digitais** – que são por definição discretas, i.e., os dados só podem assumir os valores contidos num conjunto finito. Toda informação manipulada por um computador deve ser reperesentada por ***bits***, que podem assumir os valores `0` e `1`, basicamente, ligado ou desligado.
+No nosso mundo, toda informação pode assumir qualquer valor compreendido entre  - ∞ e + ∞, muitas vezes também com infinitos valores intermediários, isto é o que chamamos de valores **analógicos**. Computadores, no entanto, lidam apenas com informações **digitais** – que são por definição discretas, i.e., os dados só podem assumir os valores contidos num conjunto finito. Toda informação manipulada por um computador deve ser representada por ***bits***, que podem assumir os valores `0` e `1`, basicamente, ligado ou desligado.
 
 ### Sistemas de Numeração
 
@@ -40,7 +40,7 @@ Como o sistema decimal possui apenas 10 dígitos foram adotadas 6 letras para re
 > 3F5 = 3 \* 16² + 15 \* 16¹ + 5 \* 16⁰ = 768 + 240 + 5 = 1013
 
 Assim temos que o valor hexadecimal 3F5 equivale ao valor decimal 1013.
-Para conversão entre binário e hexadecimal, cada digíto hexadecimal corresponde a 4 dígitos binários, assim, voltando ao exemplo acima:
+Para conversão entre binário e hexadecimal, cada dígito hexadecimal corresponde a 4 dígitos binários, assim, voltando ao exemplo acima:
 
 | 3    | F    | 5    |
 |------|------|------|
@@ -51,13 +51,13 @@ Como o agrupamento mais comum de *bits* usado é o *byte*, que corresponde a 8 *
 
 #### Conjuntos numéricos
 
-Números binários podem representar qualquer número real (R). Contudo, sua representação pode variar em razão do seu tipo. O conunto dos número naturais (N) pode ser representado do omo como visto anteriormente. No entrato ouros conjuntos como o dos numeros inteiros (Z) negativos, racionais (Q) e irracionais (I) requerem representações específicas – que, nas linguagens  de programação, ficam à escolha do programador.
+Números binários podem representar qualquer número real (R). Contudo, sua representação pode variar em razão do seu tipo. O conjunto dos número naturais (N) pode ser representado do modo visto anteriormente. No entanto, outros conjuntos, como o dos números inteiros (Z) negativos, racionais (Q) e irracionais (I), requerem representações específicas – que, nas linguagens  de programação, ficam à escolha do programador.
 
 #### Números Negativos
 
 Para representarmos números negativos utiliza-se normalmente a notação conhecida como **"Complemento de 2"**. Neste sistema o bit mais significativo – i.e., aquele mais à esquerda do número – identifica o sinal. O valor `1` indica que o número é negativo, enquanto `0` identifica um valor positivo.
 
-Para representarmos um número negativo qualquer, subtraímos 1 do valor positivo corresponcente e invertemos todos os bits. O processo inverso envolve inverter todos os bits e somar 1.
+Para representarmos um número negativo qualquer, subtraímos 1 do valor positivo correspondente e invertemos todos os bits. O processo inverso envolve inverter todos os bits e somar 1.
 
 Por exemplo, para representarmos o número -73 utilizando um único 8 *bits* utilizamos o seguinte método:
 
@@ -85,7 +85,7 @@ A forma mais simples de representarmos número fracionários é através de um n
 
 Contudo, é comum precisarmos utilizar números onde a vírgula pode se deslocar, de forma a permitir a representação de mais dígitos significativos. Para isso utilizamos **notação científica**, representando números fracionários em duas partes: **mantissa** (os dígitos significativos do número) e **expoente**. Tanto a mantissa quanto o expoente podem ser positivos ou negativos, no caso dos números negativos adota-se a notação de complemento de 2. Nesse caso, a **precisão** é dada pela quantidade de bits para a representação da mantissa, já a faixa de números que pode ser representada é dada pelo número de bits do expoente.
 
-Este tipo de representação permite que a vírgula "flutue" para se ajustar a números muito grandes ou muito pequenos sendo por isso chamada de notação de **ponto flutuante**. Pela padronização criada pela IEEE (Instituto de Engenheiros Elétricos e Eletônicos - *Institute of Electrical and Electronics Engineers*) para a representação de números de ponto flutuante com computadores – a IEEE 754 –, temos que o *bit* mais significativo é reservado para a representação do sinal, em seguida vêm os _bits_ destinados à representação do expoente (que deve sempre ser um número inteiro). Os _bits_ menos siginicativos são reservados para a representação da mantissa.
+Este tipo de representação permite que a vírgula "flutue" para se ajustar a números muito grandes ou muito pequenos sendo por isso chamada de notação de **ponto flutuante**. Pela padronização criada pela IEEE (Instituto de Engenheiros Elétricos e Eletrônicos - *Institute of Electrical and Electronics Engineers*) para a representação de números de ponto flutuante com computadores – a IEEE 754 –, temos que o *bit* mais significativo é reservado para a representação do sinal, em seguida vêm os _bits_ destinados à representação do expoente (que deve sempre ser um número inteiro). Os _bits_ menos significativos são reservados para a representação da mantissa.
 
 Este é o padrão para a representação de números de ponto flutuante de precisão simples – usando 32 _bits_ – ou dupla precisão – 64 _bits_.
 
@@ -99,15 +99,15 @@ Este é o padrão para a representação de números de ponto flutuante de preci
 
 Um caso curioso ocorre com as **dízimas**, uma vez que números que são dízimas em uma base podem não ser em outra. Um exemplo é o número 0.1 na base decimal, que não pode ser representado em binário com um número finito de dígitos. Isso causa certos erros de aproximação, que quando acumulados podem comprometer a exatidão do resultado final.
 
-Como os algoritmos envolvendo as operações com ponto flutuante (adição, multiplicação, divisão...) podem ser muito complexas existem unidades aritméticas especializadas nestes cáculos, as chamadas Unidades de Ponto Flutuante (_Floating Point Units_). Este tipo de unidade já vem integrada em cada núcleo dos processadores modernos.
+Como os algoritmos envolvendo as operações com ponto flutuante (adição, multiplicação, divisão...) podem ser muito complexas existem unidades aritméticas especializadas nestes cálculos, as chamadas Unidades de Ponto Flutuante (_Floating Point Units_). Este tipo de unidade já vem integrada em cada núcleo dos processadores modernos.
 
 #### Tabela ASCII
 
-Os números também podem ser utilizados para representar outros símbolos como letras ou caracteres esperciais. Para isso são utilizados os métodos de codificação, nos quais cada símbolo (caractere) de nossa linguagem é atribuído a um conjunto de _bits_ que o identifica de forma única.
+Os números também podem ser utilizados para representar outros símbolos como letras ou caracteres especiais. Para isso são utilizados os métodos de codificação, nos quais cada símbolo (caractere) de nossa linguagem é atribuído a um conjunto de _bits_ que o identifica de forma única.
 
-O **Código Padrão Americano para o Intercâmbio de Informação** (_American Standard Code for Information Interchange_ - ASCII) é um destes métodos de codificação que utiliza 7 *bits* para representar 128 sinais: 95 sinais imprimíveis (letras do alfabeto lation, algarísmos arábicos, sinais de pontuação e sinais matemáticos) e 33 sinais de controle.
+O **Código Padrão Americano para o Intercâmbio de Informação** (_American Standard Code for Information Interchange_ - ASCII) é um destes métodos de codificação que utiliza 7 *bits* para representar 128 sinais: 95 sinais imprimíveis (letras do alfabeto latino, algarismos arábicos, sinais de pontuação e sinais matemáticos) e 33 sinais de controle.
 
-Esta é a tabela com os caractéres imprimíveis:
+Esta é a tabela com os caracteres imprimíveis:
 
 | Dec    | Hex |    Char    | Dec    | Hex | Char | Dec     | Hex |  Char   |
 | :----- | :-- | :--------: | ------ | :-- | :--: | :------ | :-- | :-----: |
