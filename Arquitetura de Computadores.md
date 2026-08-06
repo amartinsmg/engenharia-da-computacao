@@ -223,6 +223,7 @@ A *Instruction Set Architecture* – ISA é um modelo abstrato que define como *
 - **Gerenciamento de interrupções e de exceções**: usados para gerenciar eventos assíncronos e condições de falha.
 
 Mesmo possuindo diferentes microarquiteturas, duas CPUs que compartilham a mesma ISA são capazes de executar os mesmos softwares, o que permite uma maior **portabilidade e abstração de *hardware***. Uma ISA pode ser estendida para suportar novas capacidades enquanto mantém **retrocompatibilidade** – permitindo melhora no *design* das CPUs sem quebrar os *softwares* já existentes.
+
 #### CISC *vs* RISC
 
 De acordo com o tipo de instrução, um computador pode ser:
@@ -231,14 +232,72 @@ De acordo com o tipo de instrução, um computador pode ser:
 - **_Reduced Instruction Set Computer_** (Computador de Conjunto de Instruções Reduzido – RISC) – possuem um conjunto de instruções mais simples e menor, com cada instrução levando aproximadamente o mesmo tempo para ser executada. Não possuem microprogramação e cada instrução de máquina é diretamente executada pelo *hardware*. Como as instruções ativam os circuitos diretamente por portas lógicas (sem intermediários), sua execução torna-se mais rápida.
 
 Muitos processadores modernos adotam uma implementação híbrida, na qual as instruções CISC são quebradas em micro-operações mais simples, executadas por núcleos internos no estilo RISC.
+#### Modelos de Organização dos Operandos
+
+Define o modo como a CPU busca os daods (operandos) para fazer uma operação e onde ele armazena o resultado.
+
+![Modelos de Organização dos Operandos](./imgs/modelos-organizacao-operandos.png)
+
+##### Pilha  (*Stack*)
+
+Neste modelo os dados ficam no topo de uma estrutura de dados do tipo **Pilha (LIFO)** na memória ou em registradores especiais. Nela as instruções não precisam declarar endereços ou registradores. Uma operação como `ADD` remove automaticamente os dois items do topo da pilha, faz a soma e coloca o resultado de volta no topo.
+
+Exemplo de código para a operação $C = A + B$ :
+
+```assembly
+PUSH A  ; Coloca o valor de A na pilha
+PUSH B  ; Coloca o valor de B na pilha
+ADD     ; Remove A e B, soma, e coloca o resultado na pilha
+POP C   ; Remove o resultado da pilha e salva em C
+```
+##### Acumulador (*accumulator* – ACC)
+
+Usa um registrador dedicado chamado **acumulador (ACC)**. Toda operação usa implicitamente o ACC como um dos operandos e também como o destino dos resultados.
+
+```assembly
+LOAD A  ; Copia o valor de A da memória para o ACC (ACC = A)
+ADD B   ; Soma o valor de B da memória com o ACC (ACC = ACC + B)
+STORE C ; Salva o valor atual do ACC na memória na posição C
+```
+
+##### Memória-Memória
+
+Nessa abordagem, todos os operandos vêm direto da memória e o resultado é escrito de volta na memória.
+
+```assembly
+ADD C, A, B  ; Busca A e B na memória, soma, e salva direto em C na memória
+```
+
+##### Registrador-Registrador (*Load/Store*)
+
+É o padrão de arquitetura modernas **RISC** (como ARM, MIPS e RISC-V). As operações ocorrem exclusivamente entre os registradores internos da CPU.
+
+```assembly
+LOAD R1, A   ; Carrega o valor da memória A no registrador R1
+LOAD R2, B   ; Carrega o valor da memória B no registrador R2
+ADD R3, R1, R2 ; Soma R1 com R2 e guarda o resultado em R3 (puramente interno)
+STORE C, R3  ; Salva o valor de R3 na posição de memória C
+```
+
+##### Registrador-Memória
+
+Permite que um dos operandos venha da memória enquanto o outro está em um registrador.
+
+```assembly
+LOAD R1, A  ; Coloca A no registrador R1
+ADD R1, B   ; Busca B na memória, soma com R1 e atualiza R1 (R1 = R1 + B)
+STORE C, R1 ; Salva R1 na memória na posição C
+```
+
+Exemplo de implementação de uma ISA com MIPS:
+
+![Slideshow sobre a arquitetura MIPS](./pdfs/arquitetura-mips.pdf)
 
 #### Microaquitetura
 
 Também chamada de organização do computador, a **microaquitetura** é a forma como a ISA é implementada fisicamente numa CPU específica. É o *design* interno do processador, como ele transforma as instruções em execução real.
 
 É ela que define como será a ULA, o **_datapath_** (caminho de dados – forma como os dados são transportados e processados dentro do processador), **memória cache**, **decodificação das instruções**, **_pipeline_**, **_branch prediction_** (predições de desvios), **execução _out-of-order_** (fora de ordem), dentre outros.
-
-[Slideshow sobre a arquitetura MIPS](./pdfs/arquitetura-mips.pdf)
 
 ### Desempenho, *Multicore* e *Pipeline*
 
@@ -270,7 +329,7 @@ A utilização de **_Multithreading_ Simultâneo** (SMT) consiste em utilizar um
 
 Posteriormente, foram criados os **processadores multinúcleo** (*multicore*). Sua filosofia era, dividir as tarefas entre dois ou mais núcleos computacionais, i.e., entre mais de uma CPU no mesmo CI. Como a adoção desta estratégia causou um aumento na densidade de componentes no mesmo CI, para manter a capacidade de dissipação de calor, foi necessário o uso de *clocks* mais baixos. Embora a estratégia de *multicores* consiga trazer uma melhora de desempenho, ela não melhora o tempo de execução de cada núcleo, mas consegue melhora a **vazão** (*throughput*) do sistema  – i.e., o número de tarefas realizadas num dado intervalo de tempo.
 
-[Vídeo sobre barreira de potência e multicores.](https://youtu.be/0FK13IR3P9M?si=OH4YG7OyUDUH14hJ)
+![Vídeo sobre barreira de potência e multicores.](https://youtu.be/0FK13IR3P9M?si=OH4YG7OyUDUH14hJ)
 
 ---
 ## Memória
