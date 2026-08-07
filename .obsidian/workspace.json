@@ -35,8 +35,7 @@
               "title": "Compiladores"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,10 +199,10 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "d5fa0a9a43d6d0f0",
+  "active": "07708d24554e1768",
   "lastOpenFiles": [
-    "Técnicas de Programação.md",
     "Compiladores.md",
+    "Técnicas de Programação.md",
     "Estatística e Probabilidade Aplicada.md",
     "Arquitetura de Computadores.md",
     "imgs/modelos-organizacao-operandos.png",
