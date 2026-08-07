@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Compiladores.md",
+                "file": "Linguagens e Compiladores.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Compiladores"
+              "title": "Linguagens e Compiladores"
             }
           }
         ]
@@ -187,9 +187,10 @@
   },
   "active": "07708d24554e1768",
   "lastOpenFiles": [
-    "Técnicas de Programação.md",
-    "Compiladores.md",
     "Estatística e Probabilidade Aplicada.md",
+    "Linguagens e Compiladores.md",
+    "Linugagens e Compiladores.md",
+    "Técnicas de Programação.md",
     "Arquitetura de Computadores.md",
     "imgs/modelos-organizacao-operandos.png",
     "imgs/Captura de tela 2026-08-06 113331.png",
