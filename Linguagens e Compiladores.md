@@ -254,11 +254,7 @@ Exemplo:
 
 ### *Middle-End* – Geração, Análise e Otimização da IR
 
- Nesta fase, o compilador trabalha com a IR – um código abstrato de mais baixo nível – e faz uma nova fase de análise e de otmizações que independem da arquitetura. É nesta fase que o **grafo de fluxo de controle**  (CFG – *control-flow graph*) é gerado usando *labels* (rótulos) e *jumps* (desvios) para representar as estruturas de blocos estruturados presentes nas HLL. Dentre as otimizações realizadas nesta fase, estão:
- 
-  - expansão de funções (`inline`),
-  - eliminação de código-morto (*dead-code*),
-  - otimização de *loops* e paralelismo automático.
+ Nesta fase, o compilador trabalha com a IR – um código abstrato de mais baixo nível – e faz uma nova fase de análise e de otmizações que independem da arquitetura. É nesta fase que o **Grafo de Fluxo de Controle**  (CFG – *Control-Flow Graph*) é gerado usando *labels* (rótulos) e *jumps* (desvios) para representar as estruturas de blocos estruturados presentes nas HLL. 
 
 Atualmente, a infraestrutura de compiladores mais usada no mundo é a LLVM, que está presente em compiladores de diversas linguagens – como C/C++ (Clang), Rust, Swift – e permite a geração de código de máquina para diversas paltaformas com arquiteturas diferentes.
 
@@ -324,7 +320,7 @@ int fibonacci(int n) {
 }
 ```
 
-A representação em  LLVM IR seria:
+teremos a seguinte representação em  LLVM IR:
 
 ```llvm
 define i32 @fibonacci(i32 %n) {
@@ -362,7 +358,7 @@ loop.end:
 }
 ```
 
-Nesta fase, estruturas de alto nível (`if`, `while`, `for`) é transformada num CFG composto por blocos básicos (*basic blocks*) ligados por saltos (`br`).  Seu comportamento final é muito semelhante ao de um código não estruturado – como o abaixo – já que o compilador não precisa saber da intenção e estrutura, diferente dos programadores humanos.
+Nesta fase, estruturas de alto nível (`if`, `while`, `for`) é transformada num CFG composto por blocos básicos (*basic blocks*) ligados por saltos (`br`).  Seu comportamento final é muito semelhante ao de um código não estruturado – como o abaixo – já que o compilador não precisa dessas etruturas usadas para transmitir intenção e organização do código por programadores humanos.
 
 ```c
 int fibonacci(int n) {
@@ -387,3 +383,88 @@ ret_one:
     return 1;
 }
 ```
+
+As otimizações realizadas nesta fase são indentendes do *hardware* (*Target-Independent*), dentre elas estão:
+ 
+  - **Expansão de funções** (`inline`): removendo o custo de chamada das funções;
+  - **Eliminação de código-morto** (*dead-code*): como blocos de código não usados ou váriaveis redundantes;
+  - **Propagação e dobramento de constantes** (*constant propagation/folding*): com avaliação de prévia de expressões matemáticas (`2 + 2` vira `4`)
+  - **Otimização de *loops***: evitando um *overhead* de instruções de salto em laços curtos;
+  -  **Simplificação de fluxo** (*SimplifyCFG*): eliminação de saltos condicionais redundantes e união de blocos com apenas um salto entre si;
+  - **Vetorização automática** (SIMD – *Single Instruction, Multiple Data* ou Instrução Única, Multiplos Dados).
+
+É durante esta fase que as flags de otimização `-O2` e `-O3` são aplicadas.
+
+### *Back-End* – Otimizações Dependentes da Máquina e Geração de Código Objeto
+
+Nesta etapa, a IR é convertida na linguagem de saída, normalmente **código de máquina nativo** do sistema. Para isso, o compilador verifica a arquitetura da máquina alvo, dentre as quais, número de registradores, conjunto de instruções, modo de endereçamento e outras características da ISA (*Instruction Set Architecture*).
+
+O exemplo da função de Fibonnaci ficaria assim na arquitetura x86:
+
+```x86asm
+fibonacci:
+    cmp   edi, 0
+    jle   .L_zero           ; Se n <= 0, salta para .L_zero
+    cmp   edi, 1
+    je    .L_one            ; Se n == 1, salta para .L_one
+
+    xor   eax, eax          ; a = 0
+    mov   ecx, 1            ; b = 1
+
+.L_loop:
+    lea   edx, [rax + rcx]  ; temp = a + b (usando 'lea' para somar sem afetar FLAGS)
+    mov   eax, ecx          ; a = b
+    mov   ecx, edx          ; b = temp
+    dec   edi               ; n--
+    cmp   edi, 1
+    jg    .L_loop           ; Se n > 1, continua o loop
+
+    mov   eax, ecx          ; Resultado final vai para eax (b)
+    ret
+
+.L_zero:
+    xor   eax, eax          ; Retorna 0
+    ret
+
+.L_one:
+    mov   eax, 1            ; Retorna 1
+    ret
+```
+
+Outro exemplo seria com a arquitetura MIPS:
+
+```mipsasm
+fibonacci:
+    blez  $a0, .L_zero      ; Se n <= 0, vai para .L_zero
+    li    $t0, 1
+    beq   $a0, $t0, .L_one   ; Se n == 1, vai para .L_one
+
+    li    $t0, 0            ; a = 0
+    li    $t1, 1            ; b = 1
+
+.L_loop:
+    add   $t2, $t0, $t1     ; temp = a + b
+    move  $t0, $t1          ; a = b
+    move  $t1, $t2          ; b = temp
+    addi  $a0, $a0, -1      ; n--
+    li    $t3, 1
+    bgt   $a0, $t3, .L_loop ; Se n > 1, volta para .L_loop
+
+    move  $v0, $t1          ; Copia o resultado (b) para $v0
+    jr    $ra               ; Retorna da função
+
+.L_zero:
+    li    $v0, 0            ; Retorna 0
+    jr    $ra
+
+.L_one:
+    li    $v0, 1            ; Retorna 1
+    jr    $ra
+```
+
+Nesta fase, são feitas otimizações depenentes de hardware (*Target-Dependent*), como:
+
+- **Alocação de Registradores** (*Register Allocation*) – diferente da IR que possui registradores virtuais ilimitados, o chip de uma CPU tem uma limitação física quanto ao número dos seus registradores físicos gerais, então o compilador precisa uar algoritmos (como coloração de grafos – *graph coloring*) para decidir quais variáveis ficarão nos registradores da CPU e quais ficarão temporariamente na memória principal.
+- **Seleção e Combinação de Instruções** (*Instruction Selection*) – uma CPU pode ter instruções especiais "2-em-1" ou "3-em-1" que executam mais de uma tarefa num mesmo ciclo. Ex: em vez de gerar duas instruções `mov` para copiar um dado e `add` para somar, o *back-end* pode usar a instrução x86 `lea` (*Load Effective Address*) para fazer a soma e o movimento ao mesmo tempo.
+- **Agendamento de Instruções** (*Instruction Scheduling*) – o back-end utiliza do paralelismo presente nos processadores modernos para reorganizar a ordem das instruções, e assim evitar as chamadas "bolhas" no *pipeline*. Isso permite que a CPU faça outros cálculos úteis enquanto espera um acesso à memória principal, por exemplo.
+- **Otimização de Janela** (*Peephole Otimization*) – analisa um pequena janela (ou "buraco de fechadura" - *peephole*) de 3 ou 4 instruções consecutivas e substitui por isntruções mais eficientes. Por excemplo subtituindo a instrução `mov eax, 0` (de 5 *bytes*) pela instrução `xor eax, eax`, que acaba no mesmo resultado com uma instrução mais curta (2 *bytes*).
