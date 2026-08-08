@@ -298,11 +298,92 @@ Atualmente, a infraestrutura de compiladores mais usada no mundo é a LLVM, que 
 
 Exemplo de LLVM IR para uma função que soma 2 inteiros:
 
-```asm
+```llvm
 define i32 @somar(i32 %a, i32 %b) {
 entry:
-  %0 = add nsw i32 %a, %b
-  ret i32 %0
+  %c = add nsw i32 %a, %b
+  ret i32 %c
 }
 ```
 
+Para uma função mais complexa, com *loops* e desvios condicionais, como a seguinte função de Fibonacci (retornando o $n$-ésimo termo da sequência) com o seguinte código-fonte:
+
+```c
+int fibonacci(int n) {
+    if (n <= 0) return 0;
+    if (n == 1) return 1;
+
+    int a = 0, b = 1;
+    while (n > 1) {
+        int temp = a + b;
+        a = b;
+        b = temp;
+        n--;
+    }
+    return b;
+}
+```
+
+A representação em  LLVM IR seria:
+
+```llvm
+define i32 @fibonacci(i32 %n) {
+entry:
+  %cmp0 = icmp sle i32 %n, 0                       ; Checa se n <= 0
+  br i1 %cmp0, label %return.zero, label %check.one
+
+return.zero:
+  ret i32 0
+
+check.one:
+  %cmp1 = icmp eq i32 %n, 1                        ; Checa se n == 1
+  br i1 %cmp1, label %return.one, label %loop.entry
+
+return.one:
+  ret i32 1
+
+loop.entry:
+  br label %loop.body
+
+loop.body:
+  ; phi escolhe o valor inicial (se veio de loop.entry) ou atualizado (se veio de loop.body)
+  %a = phi i32 [ 0, %loop.entry ], [ %b, %loop.body ]
+  %b = phi i32 [ 1, %loop.entry ], [ %temp, %loop.body ]
+  %curr_n = phi i32 [ %n, %loop.entry ], [ %n_next, %loop.body ]
+
+  %temp = add i32 %a, %b                           ; temp = a + b
+  %n_next = sub i32 %curr_n, 1                     ; n--
+
+  %cmp.loop = icmp sgt i32 %n_next, 1             ; Checa se n > 1
+  br i1 %cmp.loop, label %loop.body, label %loop.end
+
+loop.end:
+  ret i32 %temp
+}
+```
+
+Nesta fase, estruturas de alto nível (`if`, `while`, `for`) é transformada num CFG composto por blocos básicos (*basic blocks*) ligados por saltos (`br`).  Seu comportamento final é muito semelhante ao de um código não estruturado – como o abaixo – já que o compilador não precisa saber da intenção e estrutura, diferente dos programadores humanos.
+
+```c
+int fibonacci(int n) {
+    if (n <= 0) goto ret_zero;
+    if (n == 1) goto ret_one;
+
+    int a = 0, b = 1;
+    int temp;
+
+loop_body:
+    temp = a + b;
+    a = b;
+    b = temp;
+    n--;
+    if (n > 1) goto loop_body;
+    return b;
+
+ret_zero:
+    return 0;
+
+ret_one:
+    return 1;
+}
+```
