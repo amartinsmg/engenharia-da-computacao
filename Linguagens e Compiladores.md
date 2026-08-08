@@ -5,9 +5,9 @@ Teoria da Ciência da Computação que serve de base para compiladores, processa
 ### Conceitos Básicos
 
 - **Alfabetos** ( $\Sigma$ ): um conjunto finito de símbolos. P.ex.: $\Sigma = \{a,b,c\}$ ou $\Sigma = \{0,1\}$.
-- **Palavra (*string*)**: uma sequência finita de símbolos de um alfabeto (ex: $1001$ ou $abb$).
-- **Linugagem**: conjunto de palavras formadas a partir de um alfabeto.
-- **Gramática**: conjunto de regras para formar *strings* válidas de uma linguagem.
+- **Palavra ou cadeia (*string*)**: uma sequência finita de símbolos de um alfabeto (ex: $1001$ ou $abb$).
+- **Linguagem**: conjunto de palavras formadas a partir de um alfabeto.
+- **Gramática**: conjunto de regras para formar *strings* válidas em uma linguagem.
 - **Autômatos**: máquinas abstratas (modelos matemáticos) capazes de verificar se uma *string* pertence ou não a determinada linguagem.
 
 ### Hierarquia de Chomsky
@@ -17,12 +17,12 @@ Criada pelo linguista Noam Chomsky no final da década de 1950 e organiza as lin
 ![Hierarquia de Chomsky](./imgs/Hierarquia_de_Chomsky.png)
 
 
-| **Tipo** | **O que reconhece**                   | **Modelo**                          | **Memória**                       | **Não reconhece**                                                     | Usos                                                          |
-| -------- | ------------------------------------- | ----------------------------------- | --------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Tipo 3   | Linguagens regulares                  | Autômato Finito (AFD / AFN)         | Nenhuma (apenas o estado atual)   | aⁿbⁿ (contagem ilimitada)                                             | Expressões regulares (Regex), análise léxicos em compiladores |
-| Tipo 2   | Linguagens livres de contexto         | Autômato com Pilha (PDA)            | Uma pilha (LIFO ilimitada)        | aⁿbⁿcⁿ (duas contagens simultâneas)                                   | Análise sintática em compiladores                             |
-| Tipo 1   | Linuguagens sensíveis ao contexto     | Autômato Linearmente Limitado (LBA) | Fita de comprimento finito        | Possui memória finita e proporcional ao tamanho da entrada            | Análise de linguagens naturais simples                        |
-| Tipo 0   | Linguagens recursivamente enumeráveis | Máquina de Turing                   | Fita ilimitada, leitura e escrita | Nenhuma linguagem computável — mas o Problema da Parada é indecidível | Computadores modernos e algoritmos gerais                     |
+| **Tipo** | **O que reconhece**                   | **Modelo**                          | **Memória**                       | **Não reconhece**                                                       | Usos                                                          |
+| -------- | ------------------------------------- | ----------------------------------- | --------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Tipo 3   | Linguagens regulares                  | Autômato Finito (AFD / AFN)         | Nenhuma (apenas o estado atual)   | aⁿbⁿ (contagem ilimitada)                                               | Expressões regulares (Regex), análise léxicos em compiladores |
+| Tipo 2   | Linguagens livres de contexto         | Autômato com Pilha (PDA)            | Uma pilha (LIFO ilimitada)        | aⁿbⁿcⁿ (duas contagens simultâneas)                                     | Análise sintática em compiladores                             |
+| Tipo 1   | Linuguagens sensíveis ao contexto     | Autômato Linearmente Limitado (LBA) | Fita de comprimento finito        | Linguagens com crescimento exponencial (L = { ${a}^{2^n}$ \| $n\geq0$}) | Análise de linguagens naturais simples                        |
+| Tipo 0   | Linguagens recursivamente enumeráveis | Máquina de Turing                   | Fita ilimitada, leitura e escrita | Nenhuma linguagem computável — mas o Problema da Parada é indecidível   | Computadores modernos e algoritmos gerais                     |
 
 ### Apostila Explicativa
 
@@ -32,13 +32,15 @@ Criada pelo linguista Noam Chomsky no final da década de 1950 e organiza as lin
 ---
 ## Linguagens de Programação
 
-As **linguagens de programação** são projetadas com um conjunto de **regras sintáticas e semânticas** para permitirem que *software* seja escrito de uma maneira legível para seres humanos (*human readable*).
+Uma **limguagem de programação** é um conjunto de **regras sintáticas e semânticas** que permitirem implementar um software. O primeiro tipo linguagem de programação a surgir foram as **linguagens de baixo nível** (*low-level*) que mapeiam exatamente as instruções de um determinado tipo de hardware. Se subdividem nas linguagens de pimeira geração (1GL) e de segunda geração (2GL). As 1GL são o próprio código de máquina, que para ser escrito diretamente é necessaŕio o uso de um editor hexadeciamal.
 
-Um leque bem grande dentro das linguagens de programação é o das **linguagens de alto-nível** (HLL  – *High-Level Programming Languages*) que trazem uma maior abstração das particularidades do *hardware* que as linguagens de baixo nível (*low-level*). Normalmente elas usam elementos da linguagem natural e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
+Para solucionar a a complexidade da escrita e interpretabiliade das 1GL foram criadas as 2GL. Também chamdas de **linguagem de montagem** (*Assembly*), elas mapeiam as instruções  das 1GL num conjunto de símbolos chamado de **mnemônicos**. Cada instrução das 2GL mapeiam exatamente uma instrução executada pelo hardware. Contudo, como os sistemas computacionais entendem apenas linguagem de máquina, o *Assembly* precisa passar por um programa chamado **montador** (*Assembler*) que converte esses mnemônicos em código binário.
+
+O próximo passo foi dado com o surgimento das linugagens de terceira geração (3GL) e seguintes, que permitem abstrair as instruções em um formato mais legível para humanos (*human readable*). Também chamadas de **linguagens programação de alto-nível** (HLL  – *High-Level Programming Languages*), trazem uma maior abstração das particularidades do *hardware* e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
 
 > Exemplos: C, C++, Fortran, Java, Python, Rust, Perl, JavaScript
 
-Contudo, como os sistemas computacionais não conseguem compreender diretamente estas linguagens, elas precisam passar por algum processo de conversão  – tradução  – para a **linguagem de máquina** (linguagem binária). Com isto, as HLL se dividem em compiladas e interpretadas.
+Contudo, como os sistemas computacionais não conseguem compreender diretamente estas linguagens, elas precisam passar por algum processo de conversão ou tradução. Com isto, as HLL se dividem em **compiladas** e **interpretadas**.
 
 ### Linguagens Interpretadas
 
@@ -397,7 +399,7 @@ As otimizações realizadas nesta fase são indentendes do *hardware* (*Target-I
 
 ### *Back-End* – Otimizações Dependentes da Máquina e Geração de Código Objeto
 
-Nesta etapa, a IR é convertida na linguagem de saída, normalmente **código de máquina nativo** do sistema. Para isso, o compilador verifica a arquitetura da máquina alvo, dentre as quais, número de registradores, conjunto de instruções, modo de endereçamento e outras características da ISA (*Instruction Set Architecture*).
+Nesta etapa, a IR é convertida na linguagem de saída, normalmente **código de máquina nativo** do sistema. Para isso, o compilador verifica a arquitetura da máquina alvo: número de registradores, conjunto de instruções, modo de endereçamento e outras características da ISA (*Instruction Set Architecture*).
 
 O exemplo da função de Fibonnaci ficaria assim na arquitetura x86:
 
@@ -431,7 +433,7 @@ fibonacci:
     ret
 ```
 
-Outro exemplo seria com a arquitetura MIPS:
+E assim em arquitetura MIPS:
 
 ```asm
 fibonacci:
@@ -464,7 +466,11 @@ fibonacci:
 
 Nesta fase, são feitas otimizações depenentes de hardware (*Target-Dependent*), como:
 
-- **Alocação de Registradores** (*Register Allocation*) – diferente da IR que possui registradores virtuais ilimitados, o chip de uma CPU tem uma limitação física quanto ao número dos seus registradores físicos gerais, então o compilador precisa uar algoritmos (como coloração de grafos – *graph coloring*) para decidir quais variáveis ficarão nos registradores da CPU e quais ficarão temporariamente na memória principal.
+- **Alocação de Registradores** (*Register Allocation*) – diferente da IR que possui registradores virtuais ilimitados, o chip de uma CPU tem uma limitação física quanto ao número dos seus registradores físicos gerais, então o compilador precisa usar algoritmos (como o de coloração de grafos – *graph coloring*) para decidir quais variáveis ficarão nos registradores da CPU e quais ficarão temporariamente na memória principal.
 - **Seleção e Combinação de Instruções** (*Instruction Selection*) – uma CPU pode ter instruções especiais "2-em-1" ou "3-em-1" que executam mais de uma tarefa num mesmo ciclo. Ex: em vez de gerar duas instruções `mov` para copiar um dado e `add` para somar, o *back-end* pode usar a instrução x86 `lea` (*Load Effective Address*) para fazer a soma e o movimento ao mesmo tempo.
 - **Agendamento de Instruções** (*Instruction Scheduling*) – o back-end utiliza do paralelismo presente nos processadores modernos para reorganizar a ordem das instruções, e assim evitar as chamadas "bolhas" no *pipeline*. Isso permite que a CPU faça outros cálculos úteis enquanto espera um acesso à memória principal, por exemplo.
-- **Otimização de Janela** (*Peephole Otimization*) – analisa um pequena janela (ou "buraco de fechadura" - *peephole*) de 3 ou 4 instruções consecutivas e substitui por isntruções mais eficientes. Por excemplo subtituindo a instrução `mov eax, 0` (de 5 *bytes*) pela instrução `xor eax, eax`, que acaba no mesmo resultado com uma instrução mais curta (2 *bytes*).
+- **Otimização de Janela** (*Peephole Otimization*) – analisa um pequena janela (ou "buraco de fechadura" - *peephole*) de 3 ou 4 instruções consecutivas e substitui por instruções mais eficientes. Por excemplo subtituindo a instrução `mov eax, 0` (de 5 *bytes*) pela instrução `xor eax, eax`, que acaba no mesmo resultado com uma instrução mais curta (2 *bytes*).
+
+Após aplicar estas otimizações, o programa é então convertido no **arquivo objeto**. Alguns compiladores convertem o programa para o Assembly desta arquitetura, que percisa então passar pelo **montador** para ser convertido em lingugem de máquina nativa do *hardware* alvo.
+
+Adicionalmente, para se tornar um arquivo executável – i.e., um programa que pode ser rodado diretamente pelo SO – ou num arquivo de biblioteca (*library*), o arquivo objeto precisa passar por outro programa, o **Ligador** (*Linker*) ou **Editor de Ligações**.  Ele cria um único arquivo final a partir de um ou mais arquivos obejtos e arquivos de biblioteca.

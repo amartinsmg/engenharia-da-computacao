@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "80fb48adb87a87be",
+        "id": "b34aaa90f01c178c",
         "type": "tabs",
         "children": [
           {
-            "id": "07708d24554e1768",
+            "id": "dae0e4213bda779c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Estatística e Probabilidade Aplicada.md",
+                "file": "Linguagens e Compiladores.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Estatística e Probabilidade Aplicada"
+              "title": "Linguagens e Compiladores"
             }
           }
         ]
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de arquivos"
+              "title": "Files"
             }
           },
           {
@@ -176,29 +176,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir a troca rápida": false,
-      "graph:Abrir visualização em gráfico": false,
-      "canvas:Criar novo canvas": false,
-      "daily-notes:Abrir a nota de hoje": false,
-      "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Criar nova base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "07708d24554e1768",
+  "active": "dae0e4213bda779c",
   "lastOpenFiles": [
+    "Técnicas de Programação.md",
+    "Sistemas Digitais.md",
     "Linguagens e Compiladores.md",
+    "Estatística e Probabilidade Aplicada.md",
     "imgs/processo-de-compilacao.png",
     "imgs/Captura de tela 2026-08-07 221507.png",
     "Algoritmos e Programação.md",
-    "Técnicas de Programação.md",
     "Arquitetura de Computadores.md",
-    "Estatística e Probabilidade Aplicada.md",
     "imgs/Hierarquia_de_Chomsky.png",
     "imgs/Unconfirmed 124390.crdownload",
     "pdfs/Apostila_Linguagens_Formais_Automatos.pdf",
     "pdfs/lu63085k3k64.tmp",
-    "Sistemas Digitais.md",
     "Linugagens e Compiladores.md",
     "imgs/modelos-organizacao-operandos.png",
     "imgs/Captura de tela 2026-08-06 113331.png",
