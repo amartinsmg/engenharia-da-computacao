@@ -1,3 +1,35 @@
+## Linguagens Formais e Autômatos
+
+Teoria da Ciência da Computação que serve de base para compiladores, processadores de texto, e até para a compreensão dos limites das máquinas em processar informações.
+
+### Conceitos Básicos
+
+- **Alfabetos** ( $\Sigma$ ): um conjunto finito de símbolos. P.ex.: $\Sigma = \{a,b,c\}$ ou $\Sigma = \{0,1\}$.
+- **Palavra (*string*)**: uma sequência finita de símbolos de um alfabeto (ex: $1001$ ou $abb$).
+- **Linugagem**: conjunto de palavras formadas a partir de um alfabeto.
+- **Gramática**: conjunto de regras para formar *strings* válidas de uma linguagem.
+- **Autômatos**: máquinas abstratas (modelos matemáticos) capazes de verificar se uma *string* pertence ou não a determinada linguagem.
+
+### Hierarquia de Chomsky
+
+Criada pelo linguista Noam Chomsky no final da década de 1950 e organiza as linguagens numa hierarquia de 4 níveis:
+
+![Hierarquia de Chomsky](./imgs/Hierarquia_de_Chomsky.png)
+
+
+| **Tipo** | **O que reconhece**                   | **Modelo**                          | **Memória**                       | **Não reconhece**                                                     | Usos                                                          |
+| -------- | ------------------------------------- | ----------------------------------- | --------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Tipo 3   | Linguagens regulares                  | Autômato Finito (AFD / AFN)         | Nenhuma (apenas o estado atual)   | aⁿbⁿ (contagem ilimitada)                                             | Expressões regulares (Regex), análise léxicos em compiladores |
+| Tipo 2   | Linguagens livres de contexto         | Autômato com Pilha (PDA)            | Uma pilha (LIFO ilimitada)        | aⁿbⁿcⁿ (duas contagens simultâneas)                                   | Análise sintática em compiladores                             |
+| Tipo 1   | Linuguagens sensíveis ao contexto     | Autômato Linearmente Limitado (LBA) | Fita de comprimento finito        | Possui memória finita e proporcional ao tamanho da entrada            | Análise de linguagens naturais simples                        |
+| Tipo 0   | Linguagens recursivamente enumeráveis | Máquina de Turing                   | Fita ilimitada, leitura e escrita | Nenhuma linguagem computável — mas o Problema da Parada é indecidível | Computadores modernos e algoritmos gerais                     |
+
+### Apostila Explicativa
+
+
+![Linguagens Formais e Autômatos](./pdfs/Apostila_Linguagens_Formais_Automatos.pdf)
+
+---
 ## Linguagens de Programação
 
 As **linguagens de programação** são projetadas com um conjunto de **regras sintáticas e semânticas** para permitirem que *software* seja escrito de uma maneira legível para seres humanos (*human readable*).
