@@ -1,4 +1,4 @@
-# 1 - Conceitos Básicos da Estatística
+## Conceitos Básicos da Estatística
 
 **Estatística** é a ciência que se dedica a coletar, organizar, resumir, analisar e apresentar **dados**, que nada mais são do que conjuntos de observações. Estes dados podem subdivididos em diferentes tipos:
 - **Qualitativos:** identifica alguma qualidade, categoria ou característica, que não possa ser medida mas classificada.
@@ -7,7 +7,7 @@
     - **Contínuos**: podem assumir quaisquer valores numéricos reais, associados a uma escala contínua, representando mensuração (medida).
 O conjunto de indivíduos estudados em uma pesquisa é chamado de **população**, cujos subconjuntos são chamados de **amostra**. A coleção de dados relativos a todos os elementos de uma população é chamado de **censo**.
 
-## Ferramentas Gráficas
+### Ferramentas Gráficas
 
 Dentre as ferramentas que utilizamos para a análise e apresentação dos dados estão os **gráficos**, que nos permitem compilar de maneira clara o **comportamento e a relação das variáveis estudadas**. Dentre os tipos de ferramentas que mais utilizamos temos:
 - **Histograma**: utilizado para a analise da frequência (absoluta ou relativa) de dados quatitativos, distribuídos em classes, os quais podem ser representados em barras ou colunas
@@ -18,7 +18,7 @@ Dentre as ferramentas que utilizamos para a análise e apresentação dos dados 
 - **Gráfico de setores (ou de pizza)**: utilizado para a análise de dados qualitativos representados por cada setor, cuja área representa a frequência relativa deste dado.
 - **Gráfico de dispersão**: utilizado para a análise de dados quantitativos, no qual cada eixo representa uma variável diferente
 
-## Medidas de Tendência Central
+### Medidas de Tendência Central
 
 Buscam resumir todo o conjunto em um único número, que busca ser um ponto de equilíbrio dos dados.
 
@@ -37,7 +37,7 @@ $$
 - **Mediana**: é o **valor central** de um conjunto de dados ordenados (em ordem crescente ou decrescente). Se o número de dados do conjunto for ímpar a mediana é dada pelo valor central, se o número de dados for par, a mediana é dada pela média dos valores centrais
 - **Moda**: é o valor (ou os valores) que **mais se repete** em um conjunto de dados. Caso não haja um valor mais frequente no conjunto, este é denominado amodal.
 
-## Medidas de Dispersão
+### Medidas de Dispersão
 
 São indicadores do nível de variação dos dados.
 
@@ -67,14 +67,13 @@ $$
 
 
 ---
+## Análise Combinatória
 
-# 2 - Análise Combinatória e Probabilidade
-
-## Princípio Fundamental da Contagem
+### Princípio Fundamental da Contagem
 
 A forma mais básica de realizarmos uma análise de possíveis ocorrências de um determinado fenômeno é através do **Princípio Fundamental da Contagem**, segundo o qual, se um evento é composto por duas ou mais etapas sucessivas e independentes, o número de combinações possíveis é dado pelo produto entre as possibilidades de cada conjunto.
 
-## Permutações, Arranjos e Combinações
+### Permutações, Arranjos e Combinações
 
 - A **permutação** é utilizada quando queremos contar o número de possibilidades de formação de uma sequência (na qual a **ordem dos elementos é importante**) que contenha todos os elementos de um determinado conjunto com $n$ elementos. Sua fórmula é:
 
@@ -94,7 +93,7 @@ $$
 {C}_{(n, p)} = \binom{n}{p} = \frac{n!}{p!\cdot(n - p)!}
 $$
 
-
+---
 ## Probabilidade
 
 É utilizada quando desejamos mensurar a **chance de ocorrência** de algo. Para podermos trabalhar melhor com ela precisamos conhecer alguns conceitos:
@@ -137,12 +136,11 @@ $$
 $$
 
 ---
-
-# 3 - Distribuição de Probabilidade Discreta
+## Distribuição de Probabilidade Discreta
 
 Uma variável aleatória é uma variável **quantitativa** cujo resultado depende de **fatores aleatórios**, e para cada variável aleatória pode-se relacionar uma distribuição de probabilidade. Uma **variável aleatória discreta** tem seus **possíveis valores** descritos por uma distribuição de probabilidade discreta.
 
-## Distribuição de Bernoulli
+### Distribuição de Bernoulli
 
 É a distribuição discreta de espaço amostral {0, 1} em que 0 representa fracasso e 1, sucesso. Sendo $x$ uma variável aleatória com esta distribuição, temos a seguinte função de probabilidade em que $p$ é a probabilidade de sucesso, i.e., de $x = 1$:
 
@@ -150,9 +148,8 @@ $$
 P(x) = p^{x} \cdot q^{1-x}\\
 \text{onde } q = (1-p)
 $$
-    
 
-## Distribuição Binominal
+### Distribuição Binominal
 
 É a distribuição discreta que representa o número de sucessos numa sequência de $n$ tentativas,  tais que:
 - Cada tentativa têm apenas dois resultados possíveis: sucesso ou fracasso;
@@ -164,7 +161,7 @@ Se a variável aleatória $x$ tem essa distribuição temos que:
 $$
 {P(x)}= \binom{n}{x} \cdot {p}^{x}\cdot{q}^{n-x}
 $$
-    
+
 Onde $n$ é o número de tentativas realizadas, $p$ é a probabilidade de sucesso e $q$ a probabilidade de fracasso:
 
 Para esse tipo de distribuição temos que:
@@ -178,8 +175,7 @@ $$
 $$
 \sigma = \sqrt{npq}
 $$ 
-
-## Distribuição de Poisson
+### Distribuição de Poisson
 
 É a distribuição de probabilidade discreta que representa a probabilidade de ocorrência de um evento aleatório num dado intervalo de tempo, independente de quando ocorreu o último evento.
 
@@ -195,8 +191,8 @@ $$
 
 Onde $\lambda$ é o número esperado de ocorrências num dado intervalo de tempo, e $e$ é a base o logaritmo natural ou número de Euler, cujo valor é aproximadamente 2.7182818…
 
-
-# 4 - Distribuição de Probabilidade Contínua
+---
+## Distribuição de Probabilidade Contínua
 
 Uma distribuição de probabilidade contínua descreve as probabilidades dos possíveis valores de uma **variável aleatória contínua**.
 

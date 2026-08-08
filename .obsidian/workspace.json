@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linguagens e Compiladores.md",
+                "file": "Estatística e Probabilidade Aplicada.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linguagens e Compiladores"
+              "title": "Estatística e Probabilidade Aplicada"
             }
           }
         ]
@@ -187,11 +187,11 @@
   },
   "active": "07708d24554e1768",
   "lastOpenFiles": [
+    "Linguagens e Compiladores.md",
     "imgs/processo-de-compilacao.png",
     "imgs/Captura de tela 2026-08-07 221507.png",
     "Algoritmos e Programação.md",
     "Técnicas de Programação.md",
-    "Linguagens e Compiladores.md",
     "Arquitetura de Computadores.md",
     "Estatística e Probabilidade Aplicada.md",
     "imgs/Hierarquia_de_Chomsky.png",

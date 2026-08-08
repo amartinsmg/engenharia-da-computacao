@@ -401,7 +401,7 @@ Nesta etapa, a IR é convertida na linguagem de saída, normalmente **código de
 
 O exemplo da função de Fibonnaci ficaria assim na arquitetura x86:
 
-```x86asm
+```nasm
 fibonacci:
     cmp   edi, 0
     jle   .L_zero           ; Se n <= 0, salta para .L_zero
@@ -433,7 +433,7 @@ fibonacci:
 
 Outro exemplo seria com a arquitetura MIPS:
 
-```mipsasm
+```asm
 fibonacci:
     blez  $a0, .L_zero      ; Se n <= 0, vai para .L_zero
     li    $t0, 1

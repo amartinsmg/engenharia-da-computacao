@@ -1,13 +1,13 @@
 
 ## Linguagem C
 
-É uma linguagem compilada de propósito-geral, estruturada, imperativa e procedural, com um sistema de tipagem fraca, estática, manifesta e nominal que disponiliza acesso de baixo nível à memória. Foi criada em 1972 por Dennis Ritchie na AT&T Belll Labs para desenvolvimento do sistema operacional Unix. Atualmente continua sendo usada para o desenvolvimento de sistemas operacionais (especialmente *kernels*), *drivers* de dispositivo, compiladores e *softwares* aplicativos, sendo compativel com quase todas as arquiteturas computacionais.
+É uma linguagem de alto nível compilada de propósito-geral, estruturada, imperativa e procedural, com um sistema de tipagem fraca, estática, manifesta e nominal. Foi criada em 1972 por Dennis Ritchie na AT&T Belll Labs para desenvolvimento do sistema operacional Unix. Atualmente continua sendo usada para o desenvolvimento de sistemas operacionais (especialmente *kernels*), *drivers* de dispositivo, compiladores e *softwares* aplicativos, sendo compativel com quase todas as arquiteturas computacionais.
 
 É uma das linguagens de programação mais populares no mundo do desenvolvimento de *software*, tendo influenciado dezenas de outras linguagens (como C++, Java, JavaScript, PHP, Python e muitas outras) e estando presente desde de supercomputadores e computadores domésticos a microcontroladores e sistemas embarcados.
 
 ### Tipos de Dados em C
 
-### Tipos Primitivos
+#### Tipos Primitivos
 
 | **Tipo / Palavra-chave**  | **Tamanho Típico**                                    | **O que armazena?**                                                  |
 | ------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------- |
@@ -21,7 +21,7 @@
 | `double`                  | 8 *bytes*                                             | Ponto flutuante de precisão dupla ($\approx$ 15-17 casas).           |
 Adiconar o prefixo `unsigned` antes dos tipos inteieros (inclusive `char`) permite sobrar o limite máximo positivo da variável, mas remove sua capacidade de guardar valores negativos.
 
-### Tipos Derivados
+#### Tipos Derivados
 
 | **Categoria**            | **Sintaxe** | **O que faz?**                                                                                       |
 | ------------------------ | ----------- | ---------------------------------------------------------------------------------------------------- |
