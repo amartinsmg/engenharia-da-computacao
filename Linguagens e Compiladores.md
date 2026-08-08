@@ -157,44 +157,62 @@ As HLL que temos hoje são, em sua maioria, multiparadigma, suportando diversos 
 - **Modular**: divide um sistema grande em partes menores, independentes e reutilizáveis chamadas de **módulos** – presente em praticamente todas as linguagens hoje em dia.
 
 ---
-## *Front-End* – *Pipeline* de Análise
+## Compiladores
 
-Antes de ser compilado (ou interpretado) o **código-fonte**  precisa passar um *pipeline* de análise:
+Para compilarem o **código fonte** de um programa em um **código objeto**, um compilador passa pelas seguintes fases (ou pela maioria delas): análise (léxica, sinática e semântica), geração de código intermediário – ou representação intermediária (IR – *intermediate representation*) –, otimização e geração de código final. O conjunto das três últimas etapas também é chamado de **síntese**.
+
+É comum também a separação do compilador em duas interfaces distintas, o ***front-end*** – parte da análise e geração de IR –, que depende da HLL na qual o programa foi escrito; e o ***back-end***, que depende mais da arquitetura para a qual o programa será compilado.
+
+![Processo de Compilação](./imgs/processo-de-compilacao.png)
+
+Há ainda a separação no chamado ***middle-end***, que seria uma fase independente tanto da linguagem fonte (*front-end*) quanto da arquitetura objeto (*back-end*), na qual o compilador trabalharia apenas com a IR.
+
+### Pré-Processador
+
+Também chamado de pré-compilador (*precompiler*), vem antes do *front-end* do compilador. Suas funções acabam dependendo bastante de como foi implementado, mas o exemplo mais clássico acaba sendo o pré-processador de C/C++. Nestas linguagens, linhas que começam com `#` são diretivas de pré-processador. As principais operações realizadas por ele são:
+
+- **Inclusão de Arquivos** (`#include`);
+- **Definição de Macros e Constantes** (`#define`);
+- E **Compilação Condicional** (`#ifdef`, `#ifndef`, `#endif`): que permite incluir ou ignorar blocos inteiros de código com base em condições de ambiente (como sistema operacional ou `flags` de depuração).
+
+### *Front-End* – *Pipeline* de Análise
+
+O **_pipeline_ de análise** pelo qual um programa passa, é composte pelas seguintes fases:
 
 ```text
 Texto Bruto (Código-Fonte)
     ↓
-[ 1. Análise Léxica ] ─── (Gera Tokens)
+[ Análise Léxica ] ─── (Gera Tokens)
 	↓
-[ 2. Análise Sintática ] ─── (Monta a Árvore Sintática / AST)
+[ Análise Sintática ] ─── (Monta a Árvore Sintática / AST)
 	↓
-[ 3. Análise Semântica ] ─── (Valida Significados e Tipos)
+[ Análise Semântica ] ─── (Valida Significados e Tipos)
 	↓
 Restante da conversão
 ```
 
 #### Análise Léxica (*Lexing*)
 
-Lê o código-fonte caractere a caractere e separa as unidades mínimas com significado – os **_Tokens_**. Este processo é análogo ao de separar as palavras de uma frase em uma linguagem natural e é feito pelo componente chamado ***lexer*** ou ***scanner***.
+Lê o código-fonte caractere a caractere e separa as unidades mínimas com significado – os **_tokens_**. Este processo é análogo ao de separar as palavras de uma frase em uma linguagem natural e é feito pelo componente chamado ***lexer*** ou ***scanner***.
 
 ```text
 Exemplo:
 
-- Entrada: int total = preco + 10;
+- Entrada: int c = a + b;
 
 - Saída (Tokens):
     
-    1. [Palavra-chave: int]
+    1. [Palavra-chave: int ]
         
-    2. [Identificador: total]
+    2. [Identificador: c]
         
     3. [Operador: =]
         
-    4. [Identificador: preco]
+    4. [Identificador: a]
         
     5. [Operador: +]
         
-    6. [Número Inteiro: 10]
+    6. [Identificador: b]
         
     7. [Ponto-e-vírgula: ;]
 ```
@@ -209,16 +227,82 @@ Analisa a lista de _tokens_ extraída pelo *lexer* e verifica se ela segue as **
 ```text
 Exemplo:
 
-- Entrada: [Identificador: preco] [Operador: +] [Número Inteiro: 10]
+- Entrada:  [Identificador: total]  [Operador: =] [Identificador: preco] [Operador: +] [Número Inteiro: 10]
 
 - Saída (AST):
-  
-				  Operador (+)
-				 /            \
-		   Identificador    Número
-		       (preco)        (10)
+				      Operador (=)
+					/              \
+				   /                \
+			  Identificador        Operador
+			       (c)           /    (+)   \
+				             	/            \
+					    Identificador     Identificador
+					          (a)              (b)
 ```
 
 #### Análise Semântica
 
-Analisa a AST para garantir que seguem as **regras semânticas** da linguagem – i.e., garantir que tenham um significado lógico no contexto do programa. Dentre as verificações feitas nesta etapa são as de **escopo das variáveis** e a **verificação de tipos**. Comparando às linguagens naturais, é semelhante à verificação de um conjunto de frases formarem um texto lógico e coerente. Após esta análise é que a AST com as anotações semânticas é entregue para ser interpretada ou compilada.
+Analisa a AST para garantir que seguem as **regras semânticas** da linguagem – i.e., garantir que tenham um significado lógico no contexto do programa. Dentre as verificações feitas nesta etapa são as de **escopo das variáveis** e a **verificação de tipos**. Comparando às linguagens naturais, é semelhante à verificação de um conjunto de frases formarem um texto lógico e coerente. Esta fase define o tipo das variáveis (identificadores), registra o tamanho em *bytes*, garante que não haja duplicidade ou variáveis não declaradas num determinado escopo. Após esta análise, a AST e a **Tabela de Símbolos** são consultadas para a criação da IR (representação intermediária).
+
+Exemplo:
+
+| **Nome** | **Tipo**    | **Tamanho** | **Escopo**     |
+| -------- | ----------- | ----------- | -------------- |
+| `c`      | **integer** | 4 bytes     | Função `somar` |
+| `a`      | **integer** | 4 bytes     | Função `somar` |
+| `b`      | **integer** | 4 bytes     | Função `somar` |
+
+### *Middle-End* – Geração, Análise e Otimização da IR
+
+ Nesta fase, o compilador trabalha com a IR – um código abstrato de mais baixo nível – e faz uma nova fase de análise e de otmizações que independem da arquitetura. É nesta fase que o **grafo de fluxo de controle**  (CFG – *control-flow graph*) é gerado usando *labels* (rótulos) e *jumps* (desvios) para representar as estruturas de blocos estruturados presentes nas HLL. Dentre as otimizações realizadas nesta fase, estão:
+ 
+  - expansão de funções (`inline`),
+  - eliminação de código-morto (*dead-code*),
+  - otimização de *loops* e paralelismo automático.
+
+Atualmente, a infraestrutura de compiladores mais usada no mundo é a LLVM, que está presente em compiladores de diversas linguagens – como C/C++ (Clang), Rust, Swift – e permite a geração de código de máquina para diversas paltaformas com arquiteturas diferentes.
+
+```text
+	   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
+       │   Código C   │   │  Código Rust │   │ Código Swift │
+       └──────┬───────┘   └──────┬───────┘   └──────┬───────┘
+              │                  │                  │
+              └──────────────────┼──────────────────┘
+                                 ▼
+                         ┌───────────────┐
+                         │   Front-End   │
+                         │(Parsers / AST)│
+                         └───────┬───────┘
+                                 │
+                                 ▼
+                         ┌────────────-──┐
+                         │  Middle-End   │
+                         |    (LLVM)     |
+                         └───────┬────-──┘
+                                 │
+                                 ▼
+                         ┌───────────────┐
+                         │   Back-End    │
+                         │ (Target Gen)  │
+                         └───────┬───────┘
+                                 │
+              ┌──────────────────┼──────────────────┐
+              │                  │                  │
+              ▼                  ▼                  ▼
+       ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
+       │ Binário x86  │   │ Binário ARM  │   │ Binário MIPS │
+       │ (Servidores/ │   │  (Smartphones│   │ (Roteadores/ │
+       │    Desktops) │   │   e Apple S.)│   │ Embarcados)  │
+       └──────────────┘   └──────────────┘   └──────────────┘
+```
+
+Exemplo de LLVM IR para uma função que soma 2 inteiros:
+
+```asm
+define i32 @somar(i32 %a, i32 %b) {
+entry:
+  %0 = add nsw i32 %a, %b
+  ret i32 %0
+}
+```
+
