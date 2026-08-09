@@ -289,7 +289,7 @@ switch (c)
 
 ## Estruturas de Repetição
 
-As estruturas de repetição **permitem que um mesmo bloco de código seja executado mais de uma vez**, com o número de repetições podendo ser fixo ou estar vinculado a uma determinada condição, podendo ser **indeterminado**, mas **não infinito**. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou *loops*.
+As estruturas de repetição **permitem que um mesmo bloco de código seja executado mais de uma vez**, com o número de repetições podendo ser fixo ou estar vinculado a uma determinada condição, podendo ser **indeterminado**, mas **não infinito**. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou loops.
 
 ### Estrutura ENQUANTO
 

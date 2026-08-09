@@ -36,7 +36,7 @@ Uma **linguagem de programação** é um conjunto de **regras sintáticas e sem�
 
 Para solucionar a a complexidade da escrita e interpretabiliade das 1GL foram criadas as 2GL. Também chamdas de **linguagem de montagem** (*Assembly*), elas mapeiam as instruções das 1GL num conjunto de símbolos chamado de **mnemônicos**. Cada instrução das 2GL mapeiam exatamente uma instrução executada pelo hardware. Contudo, como os sistemas computacionais entendem apenas linguagem de máquina, o *Assembly* precisa passar por um programa chamado **montador** (*Assembler*) que converte esses mnemônicos em código binário.
 
-O próximo passo foi dado com o surgimento das linguagens de terceira geração (3GL), com a capacidade de abstrair as instruções em um formato mais legível para humanos (*human readable*). Também chamadas de **linguagens programação de alto-nível** (HLL – *High-Level Programming Languages*), as 3GL e as gerações seguintes, trazem uma maior abstração das particularidades do *hardware* e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
+O próximo passo foi dado com o surgimento das linguagens de terceira geração (3GL), com a capacidade de abstrair as instruções em um formato mais legível para humanos (*human readable*). Também chamadas de **linguagens programação de alto-nível** (HLL – *High-Level Programming Languages*), as 3GL e as gerações seguintes, trazem uma maior abstração das particularidades do hardware e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
 
 > Exemplos: C, C++, Fortran, Java, Python, JavaScript, Rust, Swift
 
@@ -49,13 +49,13 @@ São linguagens cujo arquivo de texto escrito pelo programador – chamado de **
 > São exemplos de linguagens interpretadas: Python, Perl,  PHP, Rust e JavaScript
 ### Linguagens Compiladas
 
-Nestas linguagens, o resultado do *pipeline* de análise é passado para um programa chamado **compilador** que o traduz num  programa em linguagem de máquina  – chamado **código-objeto** – **antes da execução** (*ahead-of-time*). Este código-objeto pode ser transformado num arquivo executável (que pode ser executado diretamente pelo sistema operacional) ou num arquivo de biblioteca (*library*).
+Nestas linguagens, o resultado do pipeline de análise é passado para um programa chamado **compilador** que o traduz num  programa em linguagem de máquina  – chamado **código-objeto** – **antes da execução** (*ahead-of-time*). Este código-objeto pode ser transformado num arquivo executável (que pode ser executado diretamente pelo sistema operacional) ou num arquivo de biblioteca (*library*).
 
 > São exemplos de linguagens compiladas: C, C++, Fortran, Rust, Go e Swift
 
 Como muitas vezes o resultado da compilação pode ser executado diretamente pelo SO, sem a necessidade de um programa intermediário, sua execução tende a ser mais rápida que a de um peograma interpretado.  Mais ainda, como o compilador analisa todo o programa antes dele ser executado, ele consegue fazer uma série de **otimizações**, que melhoram ainda mais o desempenho durante a execução.
 
-Contudo, estas linguagens tendem a ser menos portáveis, pois uma arquitetura de hardware ou um sistema operacional diferente, tendem a necessitar de um novo código objeto. Para melhorar sua portabilidade, algumas linguagens como Java, C# e VB.NET não são compiladas para código objeto mas para um **_portable code_** (*p-code* – código portátil) que é interpretado numa **máquina virtual** que faz a execução. Este  *p-code* "conversa" com o conjunto de instruções – consideravelmente compacto – de um processador hipotético/virtual. Como estes conjuntos de instruções  têm normalmente *opcodes* de 1 *byte*, são chamados também de **_bytecode_**.
+Contudo, estas linguagens tendem a ser menos portáveis, pois uma arquitetura de hardware ou um sistema operacional diferente, tendem a necessitar de um novo código objeto. Para melhorar sua portabilidade, algumas linguagens como Java, C# e VB.NET não são compiladas para código objeto mas para um **_portable code_** (*p-code* – código portátil) que é interpretado numa **máquina virtual** que faz a execução. Este  *p-code* "conversa" com o conjunto de instruções – consideravelmente compacto – de um processador hipotético/virtual. Como estes conjuntos de instruções  têm normalmente *opcodes* de 1 byte, são chamados também de **_bytecode_**.
 
 #### Compilação *Just-in-time* (JIT)
 
@@ -78,8 +78,8 @@ Um sistema de tipos é baseado nos **tipos de dados**, que representa o conjunto
 
 São os tipos mais fundamentais fornecidos pela linguagem e suportados, na maioria das vezes, pelo próprio conjunto de instruções da CPU. São eles:
 
-- **Inteiro**: representam números sem parte fracionária. Normalmente podem ter 8, 16, 32 ou 64 *bits* dedicados a sua representação. Podem ser assinados (*signed* – suportando números negativos) ou não assinados (*unsigned*);
-- **Ponto Flutuante** (*Floating-point*): representam números reais (podendo ou não conter parte fracionária). Normalmente tem 32 (*single precision*) ou 64 (*double precision*) *bits* de precisão, sendo representados seguindo as normas da IEEE 754 – que define como os *bits* são divididos para representar sinal, expoente e mantissa;
+- **Inteiro**: representam números sem parte fracionária. Normalmente podem ter 8, 16, 32 ou 64 bits dedicados a sua representação. Podem ser assinados (*signed* – suportando números negativos) ou não assinados (*unsigned*);
+- **Ponto Flutuante** (*Floating-point*): representam números reais (podendo ou não conter parte fracionária). Normalmente tem 32 (*single precision*) ou 64 (*double precision*) bits de precisão, sendo representados seguindo as normas da IEEE 754 – que define como os bits são divididos para representar sinal, expoente e mantissa;
 - **Booleanos**: representam valores lógicos – verdadeiro ou falso, *true* ou *false*;
 - **Caracteres**: representam símbolos individuais – que podem ser codificados em ASCII, UTF-8, UTF-16 etc – podendo representar sinais gráficos ou de controle (como quebra de linha, tabulação e outros).
 
@@ -114,13 +114,13 @@ Pode ser definida como o grau que uma linguagem desencoraja ou previne **erros d
 
 Em linguagens consideradas  **fracamente tipadas** – também chamadas de *type-unsafe* – tentam "adivinhar" o resultado esperado e realizam conversões de tipo automáticas, como o JavaScript e o PHP. Outras linguagens como C/C++ permitem manipulações de endereços brutos de memória (ponteiros), permitindo fazer *casting* (coerção) sem nenhuma verificação de tipos. Quanto maior a tipagem de uma linguagem, menor a chance de gerar resultados imprevisíveis e quebrar o programa.
 
-Algumas linguagens como Rust e Go tem uma segurança de tipos ainda maior a nível de compilador. Diferente de linguagens como Java e Python que promovem uma conversão implícita de tipos numéricos – or exemplo, permitindo que um número inteiro e um de ponto flutuante sejam somados, resultando num número de ponto flutuante –, estas linguagens obrigam que estas conversões sem feitas de maneira explícita, ou a compilação é abortada na análise semântica. Em Rust a segurança é ainda mais extrema, impedindo implícitas até entre inteiros de tamanhos diferentes (um inteiro de 32-*bits* e um de 64-*bits* não podem ser usados na mesma operação sem uma conversão explícita).
+Algumas linguagens como Rust e Go tem uma segurança de tipos ainda maior a nível de compilador. Diferente de linguagens como Java e Python que promovem uma conversão implícita de tipos numéricos – or exemplo, permitindo que um número inteiro e um de ponto flutuante sejam somados, resultando num número de ponto flutuante –, estas linguagens obrigam que estas conversões sem feitas de maneira explícita, ou a compilação é abortada na análise semântica. Em Rust a segurança é ainda mais extrema, impedindo implícitas até entre inteiros de tamanhos diferentes (um inteiro de 32-bits e um de 64-bits não podem ser usados na mesma operação sem uma conversão explícita).
 
 ### Propósitos de Uso e Paradigmas de Programação
 
 Quanto ao propósito, existem basicamente dois tipos de linguagens de programação:
 
-- **Linguagens de Propósito General** (GPL – *general-purpose languages*) – capazes de serem usadas para desenvolver *software* em diferentes domínios de aplicação. Sendo caracterizadas por serem **_Turing complete_** , i.e., podendo computar qualquer algoritmo teoricamente possível. São exemplos: C/C++, Java, Python, JavaScript, Rust, Go, Julia, dentre outros.
+- **Linguagens de Propósito General** (GPL – *general-purpose languages*) – capazes de serem usadas para desenvolver software em diferentes domínios de aplicação. Sendo caracterizadas por serem **_Turing complete_** , i.e., podendo computar qualquer algoritmo teoricamente possível. São exemplos: C/C++, Java, Python, JavaScript, Rust, Go, Julia, dentre outros.
 - **Linguagens de Domínio Específico** (DSL – *domain-specific language*) – feitas para resolver algum problema num domínio particular. São exemplos: SQL HTML, CSS, Expressões Regulares (Regex) e LaTex. Não são *Turing complete* e são consideradas puramente declarativas – indicando apenas o que deve ser feito.
 
 Já quanto ao paradigma, as linguagens de programação se dividem em dois ramos principais:
@@ -141,7 +141,7 @@ Já quanto ao paradigma, as linguagens de programação se dividem em dois ramos
 #### Paradigmas Imperativos
 
 Focam no modo como o problema deve ser resolvido, através de comandos que manipulam estados (variáveis, memória) de um processo. Ou seja, ele descreve  – passo a passo – o controle de fluxo (*control flow*) do programa.  São subtipos:
-- **Estruturado**: segue os princípios do paradigma imperativo, mas organiza o código em uma estrutura de blocos para organizar o *control flow*. Ele usa sequência, seleção (`if` – `else`) e interação (*loops*) para eliminar saltos randômicos ao longo do programa (`goto`).
+- **Estruturado**: segue os princípios do paradigma imperativo, mas organiza o código em uma estrutura de blocos para organizar o *control flow*. Ele usa sequência, seleção (`if` – `else`) e interação (loops) para eliminar saltos randômicos ao longo do programa (`goto`).
 - **Procedural**: segue os princípios do paradigma estruturado, organizando o código em procedimentos (*procedures*), também chamados de funções ou sub-rotinas, capazes de chamar uns aos outros e serem reutilizados.
 - **Orientado a Objetos**: deriva do procedural e se baseia em objetos que agrupam dados (atributos) e procedimentos (métodos). São seus pilares: encapsulamento, herança, polimorfismo e abstração.
 
@@ -177,9 +177,9 @@ Também chamado de pré-compilador (*precompiler*), vem antes do *front-end* do 
 - **Definição de Macros e Constantes** (`#define`);
 - E **Compilação Condicional** (`#ifdef`, `#ifndef`, `#endif`): que permite incluir ou ignorar blocos inteiros de código com base em condições de ambiente (como sistema operacional ou `flags` de depuração).
 
-### *Front-End* – *Pipeline* de Análise
+### *Front-End* – Pipeline de Análise
 
-O **_pipeline_ de análise** pelo qual um programa passa, é composte pelas seguintes fases:
+O **pipeline de análise** pelo qual um programa passa, é composte pelas seguintes fases:
 
 ```text
 Texto Bruto (Código-Fonte)
@@ -244,7 +244,7 @@ Exemplo:
 
 #### Análise Semântica
 
-Analisa a AST para garantir que seguem as **regras semânticas** da linguagem – i.e., garantir que tenham um significado lógico no contexto do programa. Dentre as verificações feitas nesta etapa são as de **escopo das variáveis** e a **verificação de tipos**. Comparando às linguagens naturais, é semelhante à verificação de um conjunto de frases formarem um texto lógico e coerente. Esta fase define o tipo das variáveis (identificadores), registra o tamanho em *bytes*, garante que não haja duplicidade ou variáveis não declaradas num determinado escopo. Após esta análise, a AST e a **Tabela de Símbolos** são consultadas para a criação da IR (representação intermediária).
+Analisa a AST para garantir que seguem as **regras semânticas** da linguagem – i.e., garantir que tenham um significado lógico no contexto do programa. Dentre as verificações feitas nesta etapa são as de **escopo das variáveis** e a **verificação de tipos**. Comparando às linguagens naturais, é semelhante à verificação de um conjunto de frases formarem um texto lógico e coerente. Esta fase define o tipo das variáveis (identificadores), registra o tamanho em bytes, garante que não haja duplicidade ou variáveis não declaradas num determinado escopo. Após esta análise, a AST e a **Tabela de Símbolos** são consultadas para a criação da IR (representação intermediária).
 
 Exemplo:
 
@@ -304,7 +304,7 @@ entry:
 }
 ```
 
-Para uma função mais complexa, com *loops* e desvios condicionais, como a seguinte função de Fibonacci (retornando o $n$-ésimo termo da sequência) com o seguinte código-fonte:
+Para uma função mais complexa, com loops e desvios condicionais, como a seguinte função de Fibonacci (retornando o $n$-ésimo termo da sequência) com o seguinte código-fonte:
 
 ```c
 int fibonacci(int n) {
@@ -386,12 +386,12 @@ ret_one:
 }
 ```
 
-As otimizações realizadas nesta fase são indentendes do *hardware* (*Target-Independent*), dentre elas estão:
+As otimizações realizadas nesta fase são indentendes do hardware (*Target-Independent*), dentre elas estão:
  
   - **Expansão de funções** (`inline`): removendo o custo de chamada das funções;
   - **Eliminação de código-morto** (*dead-code*): como blocos de código não usados ou váriaveis redundantes;
   - **Propagação e dobramento de constantes** (*constant propagation/folding*): com avaliação de prévia de expressões matemáticas (`2 + 2` vira `4`)
-  - **Otimização de *loops***: evitando um *overhead* de instruções de salto em laços curtos;
+  - **Otimização de loops**: evitando um *overhead* de instruções de salto em laços curtos;
   -  **Simplificação de fluxo** (*SimplifyCFG*): eliminação de saltos condicionais redundantes e união de blocos com apenas um salto entre si;
   - **Vetorização automática** (SIMD – *Single Instruction, Multiple Data* ou Instrução Única, Multiplos Dados).
 
@@ -468,9 +468,9 @@ Nesta fase, são feitas otimizações depenentes de hardware (*Target-Dependent*
 
 - **Alocação de Registradores** (*Register Allocation*) – diferente da IR que possui registradores virtuais ilimitados, o chip de uma CPU tem uma limitação física quanto ao número dos seus registradores físicos gerais, então o compilador precisa usar algoritmos (como o de coloração de grafos – *graph coloring*) para decidir quais variáveis ficarão nos registradores da CPU e quais ficarão temporariamente na memória principal.
 - **Seleção e Combinação de Instruções** (*Instruction Selection*) – uma CPU pode ter instruções especiais "2-em-1" ou "3-em-1" que executam mais de uma tarefa num mesmo ciclo. Ex: em vez de gerar duas instruções `mov` para copiar um dado e `add` para somar, o *back-end* pode usar a instrução x86 `lea` (*Load Effective Address*) para fazer a soma e o movimento ao mesmo tempo.
-- **Agendamento de Instruções** (*Instruction Scheduling*) – o back-end utiliza do paralelismo presente nos processadores modernos para reorganizar a ordem das instruções, e assim evitar as chamadas "bolhas" no *pipeline*. Isso permite que a CPU faça outros cálculos úteis enquanto espera um acesso à memória principal, por exemplo.
-- **Otimização de Janela** (*Peephole Otimization*) – analisa um pequena janela (ou "buraco de fechadura" - *peephole*) de 3 ou 4 instruções consecutivas e substitui por instruções mais eficientes. Por excemplo subtituindo a instrução `mov eax, 0` (de 5 *bytes*) pela instrução `xor eax, eax`, que acaba no mesmo resultado com uma instrução mais curta (2 *bytes*).
+- **Agendamento de Instruções** (*Instruction Scheduling*) – o back-end utiliza do paralelismo presente nos processadores modernos para reorganizar a ordem das instruções, e assim evitar as chamadas "bolhas" no pipeline. Isso permite que a CPU faça outros cálculos úteis enquanto espera um acesso à memória principal, por exemplo.
+- **Otimização de Janela** (*Peephole Otimization*) – analisa um pequena janela (ou "buraco de fechadura" - *peephole*) de 3 ou 4 instruções consecutivas e substitui por instruções mais eficientes. Por excemplo subtituindo a instrução `mov eax, 0` (de 5 bytes) pela instrução `xor eax, eax`, que acaba no mesmo resultado com uma instrução mais curta (2 bytes).
 
-Após aplicar estas otimizações, o programa é então convertido no **arquivo objeto**. Alguns compiladores convertem o programa para o Assembly desta arquitetura, que percisa então passar pelo **montador** para ser convertido em lingugem de máquina nativa do *hardware* alvo.
+Após aplicar estas otimizações, o programa é então convertido no **arquivo objeto**. Alguns compiladores convertem o programa para o Assembly desta arquitetura, que percisa então passar pelo **montador** para ser convertido em lingugem de máquina nativa do hardware alvo.
 
 Adicionalmente, para se tornar um arquivo executável – i.e., um programa que pode ser rodado diretamente pelo SO – ou num arquivo de biblioteca (*library*), o arquivo objeto precisa passar por outro programa, o **Ligador** (*Linker*) ou **Editor de Ligações**.  Ele cria um único arquivo final a partir de um ou mais arquivos obejtos e arquivos de biblioteca.

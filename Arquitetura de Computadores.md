@@ -28,7 +28,7 @@ Construído pelo Instituto de Estudos Avançados de Princeton (IAS), com projeto
 
 Os computadores baseados em válvulas termiônicas tinham três desvantagens principais: a baixa confiabilidade – causada por falhas nos contatos ou mesmo queima das válvulas –, alto custo energético e grande volume ocupado. Estes problemas foram resolvidos com a invenção e adoção do **transistor** durante a década de 1950.
 
-Os computadores transistorados trouxeram algumas novidades, dentre as quais os registradores de índices para controle de _loops_ e as unidades de ponto flutuante (para cálculos de números fracionais). Contudo, eram demasiadamente caros, sendo possuídos apenas por setores governamentais e universidades.
+Os computadores transistorados trouxeram algumas novidades, dentre as quais os registradores de índices para controle de loops e as unidades de ponto flutuante (para cálculos de números fracionais). Contudo, eram demasiadamente caros, sendo possuídos apenas por setores governamentais e universidades.
 
 ### Circuitos Integrados (CI)
 
@@ -43,9 +43,9 @@ Em novembro de 1971, a Intel lançou o 4004, o **primeiro microprocessador comer
 
 Um **computador** é uma máquina eletrônica capaz de sistematicamente coletar, armazenar, manipular e fornecer os resultados da manipulação de **dados**. Para processar os dados, o computador conta com um **conjunto de instruções** para produzir resultados completos com o mínimo de intervenção humana.
 
-Um sistema baseado em computador é composto por ***Hardware*** – a parte física do computador – e ***Software*** – a parte lógica, i.e., os programas que gerenciam o comportamento do Hardware.
+Um sistema baseado em computador é composto por **Hardware** – a parte física do computador – e **Software** – a parte lógica, i.e., os programas que gerenciam o comportamento do Hardware.
 
-### Componentes de *Hardware*
+### Componentes de Hardware
 
 Podemos dividi-los em 3 classes principais: CPU (Unidade Central de Processamento), memórias e unidades de entrada e saída.
 
@@ -59,9 +59,9 @@ Existem também os dispositivos que se encaixam em ambas categorias, p.ex., unid
 
 #### Memória
 
-Responsável pelo armazenamento dos dados e dos programas (instruções) para processá-los. A memória de um sistema computacional trabalha essencialmente com *bits*. Um *bit* pode assumir os valores de `0` ou `1`. Em termos físicos, componentes eletrônicos baseados em CMOS interpretam tensão entre 0 e 1/3 como valor 0, e de 2/3 a 1 como 1. Com isso, é possível reduzir substancialmente a propagação de erros causados por problemas elétricos, por exemplo.
+Responsável pelo armazenamento dos dados e dos programas (instruções) para processá-los. A memória de um sistema computacional trabalha essencialmente com bits. Um bit pode assumir os valores de `0` ou `1`. Em termos físicos, componentes eletrônicos baseados em CMOS interpretam tensão entre 0 e 1/3 como valor 0, e de 2/3 a 1 como 1. Com isso, é possível reduzir substancialmente a propagação de erros causados por problemas elétricos, por exemplo.
 
-Para representar informações mais complexas, os *bits* são combinados em um conjunto de oito, que recebe a denominação de *byte*. Um conjunto de 2 *bits* consegue armazenar até 2⁸ = 256 valores diferentes. A partir daí, conjuntos cada vez maiores podem ser feitos combinando um número cada vez maior de *bits*/*bytes*:
+Para representar informações mais complexas, os bits são combinados em um conjunto de oito, que recebe a denominação de byte. Um conjunto de 2 bits consegue armazenar até 2⁸ = 256 valores diferentes. A partir daí, conjuntos cada vez maiores podem ser feitos combinando um número cada vez maior de bits/bytes:
 
 | Nome     | Símbolo | Valor         |
 |----------|---------|---------------|
@@ -82,17 +82,17 @@ A CPU é composta pelos seguintes componentes:
 
 ![Representação da comunicação entre os componentes de hardware de um computador](./imgs/arquitetura-maquina-von-newmann.png)
 
-### Componentes de *Software*
+### Componentes de Software
 
-Um programa de computador pode ser definido como uma série de instruções, em forma inteligível pelo computador, preparada para obter certos resultados. Um programa individualmente pode ser considerado um *software*, porém esse termo também pode ser empregado para a designação de um grupo ou mesmo todo o conjunto dos programas de um computador.
+Um programa de computador pode ser definido como uma série de instruções, em forma inteligível pelo computador, preparada para obter certos resultados. Um programa individualmente pode ser considerado um software, porém esse termo também pode ser empregado para a designação de um grupo ou mesmo todo o conjunto dos programas de um computador.
 
-#### *Software* básico
+#### Software básico
 
-São *software* destinados à operação do computador, i.e., são eles que gerenciam os recursos do *hardware* e permitirem que outros programas possam ser executados.
+São software destinados à operação do computador, i.e., são eles que gerenciam os recursos do hardware e permitirem que outros programas possam ser executados.
 
 Dentre eles cabe destacar:
 
-- **Sistema Operacional** – SO: *software* principal que gerencia todo o funcionamento do computador. Dentre suas funções, cabe destacar:
+- **Sistema Operacional** – SO: software principal que gerencia todo o funcionamento do computador. Dentre suas funções, cabe destacar:
 	- Gerenciamento da memória
 	- Controle dos processos
 	- Controle de *input* e *output*
@@ -101,9 +101,9 @@ Dentre eles cabe destacar:
 	- Interpretação de comandos
 - ***Drivers* de dispositivos** – *Device divers*: responsáveis por intermediar a comunicação entre o SO e um componente de hardware, como adaptadores de vídeo, placas de rede, impressoras etc.
 
-#### *Software* aplicativo
+#### Software aplicativo
 
-Projetados para executar tarefas específicas para o usuário final. Dependem do *software* básico para seu funcionamento.
+Projetados para executar tarefas específicas para o usuário final. Dependem do software básico para seu funcionamento.
 
 Podemos citar:
 
@@ -216,20 +216,20 @@ A *Instruction Set Architecture* – ISA é um modelo abstrato que define como *
 
 É ela que define as:
 - **Conjunto de instruções**:  todas as instruções que uma CPU pode realizar (operações aritméticas, lógicas, controle de E/S, operações na memória);
-- **Formato das instruções**: o *layout* que define – a nível de *bit* – *opcodes*, operandos and modos de acesso;
+- **Formato das instruções**: o *layout* que define – a nível de bit – *opcodes*, operandos and modos de acesso;
 -  **Registradores**: número, tipo e função (propósito geral, porno-flutuante, função específica);
 - **Tipos de dados**: como inteiros, ponto-flutuante, vetores etc;
-- **Arquitetura de memória**: modos de endereçamento, *endianness* (modo como um computador organiza na memória pedaços de dados formados por mais de um *byte*), proteção de memória e suporte a memória virtual;
+- **Arquitetura de memória**: modos de endereçamento, *endianness* (modo como um computador organiza na memória pedaços de dados formados por mais de um byte), proteção de memória e suporte a memória virtual;
 - **Gerenciamento de interrupções e de exceções**: usados para gerenciar eventos assíncronos e condições de falha.
 
-Mesmo possuindo diferentes microarquiteturas, duas CPUs que compartilham a mesma ISA são capazes de executar os mesmos softwares, o que permite uma maior **portabilidade e abstração de *hardware***. Uma ISA pode ser estendida para suportar novas capacidades enquanto mantém **retrocompatibilidade** – permitindo melhora no *design* das CPUs sem quebrar os *softwares* já existentes.
+Mesmo possuindo diferentes microarquiteturas, duas CPUs que compartilham a mesma ISA são capazes de executar os mesmos softwares, o que permite uma maior **portabilidade e abstração de hardware**. Uma ISA pode ser estendida para suportar novas capacidades enquanto mantém **retrocompatibilidade** – permitindo melhora no *design* das CPUs sem quebrar os softwares já existentes.
 
 #### CISC *vs* RISC
 
 De acordo com o tipo de instrução, um computador pode ser:
 
 - **_Complex Instruction Set Computer_** (Computador de Conjunto de Instruções Complexo – CISC) – são baseados em **microprogramação**, uma técnica que utiliza um conjunto de instruções internos que traduz as instruções de máquina em tarefas que são efetivamente realizadas pelos circuitos da CPU. Cada instrução do código de máquina corresponde a várias instruções num nível ainda mais baixo.
-- **_Reduced Instruction Set Computer_** (Computador de Conjunto de Instruções Reduzido – RISC) – possuem um conjunto de instruções mais simples e menor, com cada instrução levando aproximadamente o mesmo tempo para ser executada. Não possuem microprogramação e cada instrução de máquina é diretamente executada pelo *hardware*. Como as instruções ativam os circuitos diretamente por portas lógicas (sem intermediários), sua execução torna-se mais rápida.
+- **_Reduced Instruction Set Computer_** (Computador de Conjunto de Instruções Reduzido – RISC) – possuem um conjunto de instruções mais simples e menor, com cada instrução levando aproximadamente o mesmo tempo para ser executada. Não possuem microprogramação e cada instrução de máquina é diretamente executada pelo hardware. Como as instruções ativam os circuitos diretamente por portas lógicas (sem intermediários), sua execução torna-se mais rápida.
 
 Muitos processadores modernos adotam uma implementação híbrida, na qual as instruções CISC são quebradas em micro-operações mais simples, executadas por núcleos internos no estilo RISC.
 #### Modelos de Organização dos Operandos
@@ -297,9 +297,9 @@ Exemplo de implementação de uma ISA com MIPS:
 
 Também chamada de organização do computador, a **microaquitetura** é a forma como a ISA é implementada fisicamente numa CPU específica. É o *design* interno do processador, como ele transforma as instruções em execução real.
 
-É ela que define como será a ULA, o **_datapath_** (caminho de dados – forma como os dados são transportados e processados dentro do processador), **memória cache**, **decodificação das instruções**, **_pipeline_**, **_branch prediction_** (predições de desvios), **execução _out-of-order_** (fora de ordem), dentre outros.
+É ela que define como será a ULA, o **_datapath_** (caminho de dados – forma como os dados são transportados e processados dentro do processador), **memória cache**, **decodificação das instruções**, **pipeline**, **_branch prediction_** (predições de desvios), **execução _out-of-order_** (fora de ordem), dentre outros.
 
-### Desempenho, *Multicore* e *Pipeline*
+### Desempenho, *Multicore* e Pipeline
 
 O desempenho de uma CPU depende basicamente de dois fatores: o número de **instruções por ciclo** (IPC) e da **frequência de _clock_**.
 
@@ -313,19 +313,19 @@ Com isso, é possível afirmarmos que o aumento da frequência de *clock* gera u
 
 Para tentar aumentar o desempenho de um sistema sem aumentar a frequência de *clock*, a indústria vem adotando algumas estratégias, dentre as quais:
 
-- Aumento de _bits_ da CPU;
-- Utilização de memória *cache*;
-- Utilização de *pipelines*;
+- Aumento de bits da CPU;
+- Utilização de memória cache;
+- Utilização de pipelines;
 - Tecnologias de _multithreading_;
 - Processadores _multicore_.
 
-O aumento do número de *bits* de um processador é um estratégia que busca aumentar o tamanho de cada **palavra** (*word*) processada por ele, i.e.,  qual o número de *bits* de dados que a CPU consegue processar numa única operação. Ela altera a largura dos registradores, do barramento de dados e do espaço de endereçamento do sistema. O que por sua vez, aumenta o número de dados processados pro cada ciclo.
+O aumento do número de bits de um processador é um estratégia que busca aumentar o tamanho de cada **palavra** (*word*) processada por ele, i.e.,  qual o número de bits de dados que a CPU consegue processar numa única operação. Ela altera a largura dos registradores, do barramento de dados e do espaço de endereçamento do sistema. O que por sua vez, aumenta o número de dados processados pro cada ciclo.
 
-A utilização de **memória *cache*** permite diminuir o número de acessos à memória principal do sistema. Ela é composta por uma hierarquia de memória que armazena os dados e instruções processados mais recentemente e aqueles que estão próximos. Como a velocidade de acesso a esta memória é bem superior à da memória principal, isto reduz o tempo que a CPU precisa ficar ociosa esperando que os dados e instruções sejam buscados.
+A utilização de **memória cache** permite diminuir o número de acessos à memória principal do sistema. Ela é composta por uma hierarquia de memória que armazena os dados e instruções processados mais recentemente e aqueles que estão próximos. Como a velocidade de acesso a esta memória é bem superior à da memória principal, isto reduz o tempo que a CPU precisa ficar ociosa esperando que os dados e instruções sejam buscados.
 
-O termo **_pipeline_** se refere a uma técnica que permite que várias instruções sejam sobrepostas e executadas simultaneamente. Como cada instrução depende de tarefas distintas – como a busca na memória, decodificação, processamento –, esta técnica permite que cada uma delas seja executada por uma parte diferente do *hardware* de forma paralela.
+O termo **pipeline** se refere a uma técnica que permite que várias instruções sejam sobrepostas e executadas simultaneamente. Como cada instrução depende de tarefas distintas – como a busca na memória, decodificação, processamento –, esta técnica permite que cada uma delas seja executada por uma parte diferente do hardware de forma paralela.
 
-A utilização de **_Multithreading_ Simultâneo** (SMT) consiste em utilizar um único núcleo de processamento (*core*) para gerenciar múltiplas linhas de execução. A nível de *hardware*, esta técnica dobra o número de registradores de uma CPU, mas mantém uma ULA e uma UC. Isto permite que, enquanto uma *thread* (tarefa) A aguarda dados serem buscados na memória principal, por exemplo, o *core* possa alternar para outra *thread* B que já tem os dados carregados, diminuindo assim o tempo que a CPU passa ociosa.
+A utilização de **_Multithreading_ Simultâneo** (SMT) consiste em utilizar um único núcleo de processamento (*core*) para gerenciar múltiplas linhas de execução. A nível de hardware, esta técnica dobra o número de registradores de uma CPU, mas mantém uma ULA e uma UC. Isto permite que, enquanto uma *thread* (tarefa) A aguarda dados serem buscados na memória principal, por exemplo, o *core* possa alternar para outra *thread* B que já tem os dados carregados, diminuindo assim o tempo que a CPU passa ociosa.
 
 Posteriormente, foram criados os **processadores multinúcleo** (*multicore*). Sua filosofia era, dividir as tarefas entre dois ou mais núcleos computacionais, i.e., entre mais de uma CPU no mesmo CI. Como a adoção desta estratégia causou um aumento na densidade de componentes no mesmo CI, para manter a capacidade de dissipação de calor, foi necessário o uso de *clocks* mais baixos. Embora a estratégia de *multicores* consiga trazer uma melhora de desempenho, ela não melhora o tempo de execução de cada núcleo, mas consegue melhora a **vazão** (*throughput*) do sistema  – i.e., o número de tarefas realizadas num dado intervalo de tempo.
 
