@@ -32,13 +32,13 @@ Criada pelo linguista Noam Chomsky no final da década de 1950 e organiza as lin
 ---
 ## Linguagens de Programação
 
-Uma **limguagem de programação** é um conjunto de **regras sintáticas e semânticas** que permitirem implementar um software. O primeiro tipo linguagem de programação a surgir foram as **linguagens de baixo nível** (*low-level*) que mapeiam exatamente as instruções de um determinado tipo de hardware. Se subdividem nas linguagens de pimeira geração (1GL) e de segunda geração (2GL). As 1GL são o próprio código de máquina, que para ser escrito diretamente é necessaŕio o uso de um editor hexadeciamal.
+Uma **linguagem de programação** é um conjunto de **regras sintáticas e semânticas** que permitirem implementar um software. O primeiro tipo linguagem de programação a surgir foram as **linguagens de baixo nível** (*low-level*) que mapeiam exatamente as instruções de um determinado tipo de hardware. Se subdividem nas linguagens de primeira geração (1GL) e de segunda geração (2GL). As 1GL são o próprio código de máquina, que pode ser escrito diretamente com o uso de um editor hexadeciamal.
 
-Para solucionar a a complexidade da escrita e interpretabiliade das 1GL foram criadas as 2GL. Também chamdas de **linguagem de montagem** (*Assembly*), elas mapeiam as instruções  das 1GL num conjunto de símbolos chamado de **mnemônicos**. Cada instrução das 2GL mapeiam exatamente uma instrução executada pelo hardware. Contudo, como os sistemas computacionais entendem apenas linguagem de máquina, o *Assembly* precisa passar por um programa chamado **montador** (*Assembler*) que converte esses mnemônicos em código binário.
+Para solucionar a a complexidade da escrita e interpretabiliade das 1GL foram criadas as 2GL. Também chamdas de **linguagem de montagem** (*Assembly*), elas mapeiam as instruções das 1GL num conjunto de símbolos chamado de **mnemônicos**. Cada instrução das 2GL mapeiam exatamente uma instrução executada pelo hardware. Contudo, como os sistemas computacionais entendem apenas linguagem de máquina, o *Assembly* precisa passar por um programa chamado **montador** (*Assembler*) que converte esses mnemônicos em código binário.
 
-O próximo passo foi dado com o surgimento das linugagens de terceira geração (3GL) e seguintes, que permitem abstrair as instruções em um formato mais legível para humanos (*human readable*). Também chamadas de **linguagens programação de alto-nível** (HLL  – *High-Level Programming Languages*), trazem uma maior abstração das particularidades do *hardware* e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
+O próximo passo foi dado com o surgimento das linguagens de terceira geração (3GL), com a capacidade de abstrair as instruções em um formato mais legível para humanos (*human readable*). Também chamadas de **linguagens programação de alto-nível** (HLL – *High-Level Programming Languages*), as 3GL e as gerações seguintes, trazem uma maior abstração das particularidades do *hardware* e permitem automatizar áreas mais complexas dos sistemas (como o gerenciamento de memória), além de permitirem uma maior portabilidade.
 
-> Exemplos: C, C++, Fortran, Java, Python, Rust, Perl, JavaScript
+> Exemplos: C, C++, Fortran, Java, Python, JavaScript, Rust, Swift
 
 Contudo, como os sistemas computacionais não conseguem compreender diretamente estas linguagens, elas precisam passar por algum processo de conversão ou tradução. Com isto, as HLL se dividem em **compiladas** e **interpretadas**.
 
