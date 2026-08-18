@@ -49,14 +49,13 @@ FIMALGORITMO
 
 Uma linguagem de programação é um **método padronizado por regras sintáticas e semânticas de implementação de um código fonte** para a criação de um programa de computador.
 
-
 Um programa de computador nada mais é do que um **conjunto de instruções a serem seguidas** pelo computador para a realização de uma tarefa, i.e., é a **implementação de um algoritmo** em alguma linguagem de programação.
 Esse exemplo da saudação pode ser transcrito para linguagens de programação como Pascal, C ou Java, como é possível ver nos exemplos a seguir:
 
 ```pascal
 PROGRAM OlaMundo;
 BEGIN
-	WRITELN('Olá, Mundo! ');
+	WriteLn('Olá, Mundo! ');
 END. 
 ```
 
@@ -89,8 +88,8 @@ public class OlaMundo{
 Do ponto de vista computacional os dados se dividem em três tipos:
 
 - **Tipo numérico**: se subdivide em:
-  - **Tipo inteiro**: aceita dados numéricos **inteiros**: positivos, negativos ou zero. Ex: 1, -34, 720;
-  - **Tipo real**: aceita dados numéricos **reais: inteiros ou fracionários**, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa, separando-se a parte inteira da fracionária por “.”, por isso, esses dados são chamados também de **números de ponto flutuante** (*floating point numbers*). Ex: 0.3, 5.0, -154.25.
+	- **Tipo inteiro**: aceita dados numéricos **inteiros**: positivos, negativos ou zero. Ex: 1, -34, 720;
+	- **Tipo real**: aceita dados numéricos **reais: inteiros ou fracionários**, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa, separando-se a parte inteira da fracionária por “.”, por isso, esses dados são chamados também de **números de ponto flutuante** (*floating point numbers*). Ex: 0.3, 5.0, -154.25.
 - **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex “a”, “3”, “F”, “@”, “\_”.
 - **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro ou falso**.
 
@@ -113,13 +112,13 @@ VAR
  de caracteres) e Boolean (dado lógico) *)
 BEGIN
 	//Entrada de dados
-  READLN (nome);
-  READLN (idade);
-  READLN (salario);
+  ReadLn(nome);
+  ReadLn(idade);
+  ReadLn(salario);
 	// Saída de dados
-  WRITELN ('nome: ', nome);
-  WRITELN ('idade: ', idade);
-  WRITELN ('salario: ', salario);
+  WriteLn('nome: ', nome);
+  WriteLn('idade: ', idade);
+  WriteLn('salario: ', salario);
 END.
 ```
 
@@ -190,9 +189,9 @@ BEGIN
 	a := 4 + 1; //5
 	b := -3;
 	c := a + b * 2; // -1
-	WRITELN(a > (b * c)); // VERDADEIRO
-	WRITELN((c <= a) AND (b > c)); // FALSO
-	WRITELN((a < b) OR (c <> 0)); // VERDADEIRO
+	WriteLn(a > (b * c)); // VERDADEIRO
+	WriteLn((c <= a) AND (b > c)); // FALSO
+	WriteLn((a < b) OR (c <> 0)); // VERDADEIRO
 END.
 ```
 
@@ -214,7 +213,7 @@ As estruturas de seleção **nos permitem escolher executar um determinado bloco
 É utilizada para testar uma condição antes de executar uma ação e, SE (*IF*) ela retornar um valor verdadeiro, ENTÃO (*THEN*) o bloco de código é executado, caso contrário, o fluxo de execução seguirá após o fim deste bloco.
 
 ```pascal
-   IF (a > 9) THEN WRITELN('a é maior que 9');
+   IF (a > 9) THEN WriteLn('a é maior que 9');
 ```
 
 ### Estrutura de Seleção Composta
@@ -223,8 +222,8 @@ Este tipo de estrutura de seleção é utilizada quando houver alternativas dife
 
 ```pascal
 IF (a > 10)
-    THEN WRITELN('a é maior que 10')
-    ELSE WRITELN('a é menor ou igual a 10');
+    THEN WriteLn('a é maior que 10')
+    ELSE WriteLn('a é menor ou igual a 10');
 ```
 
 ### Estrutura de Seleção Aninhada
@@ -235,10 +234,10 @@ IF (a > 10)
 IF (a > b) THEN
 BEGIN
     IF (a > c)
-    	THEN WRITELN('a é maior que b e c')
-    	ELSE WRITELN('a é maior que b mas não é maior que c');
+    	THEN WriteLn('a é maior que b e c')
+    	ELSE WriteLn('a é maior que b mas não é maior que c');
 END
-ELSE WRITELN('a não é maior que b');
+ELSE WriteLn('a não é maior que b');
 ```
 
 ### Estrutura de Seleção de Múltipla Escolha
@@ -247,17 +246,17 @@ ELSE WRITELN('a não é maior que b');
 
 ```pascal
 // Sucessão de SE'S
-IF (a = 1) THEN WRITELN('a é igual a 1')
-ELSE IF (a = 2) THEN WRITELN('a é igual a 2')
-ELSE IF (a = 3) THEN WRITELN('a é igual a 3')
-ELSE WRITELN('a é não é igual a 1, nem a 2, nem a 3');
+IF (a = 1) THEN WriteLn('a é igual a 1')
+ELSE IF (a = 2) THEN WriteLn('a é igual a 2')
+ELSE IF (a = 3) THEN WriteLn('a é igual a 3')
+ELSE WriteLn('a é não é igual a 1, nem a 2, nem a 3');
     
 // Estrutura CASO
 CASE b OF
-    1 : WRITELN('b é igual a 1');
-    2 : WRITELN('b é igual a 2');
-    3 : WRITELN('b é igual a 3');
-    ELSE WRITELN('b é não é igual a 1, nem a 2. nem a 3');
+    1 : WriteLn('b é igual a 1');
+    2 : WriteLn('b é igual a 2');
+    3 : WriteLn('b é igual a 3');
+    ELSE WriteLn('b é não é igual a 1, nem a 2. nem a 3');
 END;
 ```
 
@@ -300,7 +299,7 @@ a := 2;
 WHILE a < 100
     DO a := 2 * a;
 
-WRITELN(a); // 128
+WriteLn(a); // 128
 ```
 
 ### Estrutura FAÇA/ ENQUANTO
@@ -327,7 +326,7 @@ REPEAT
     a := 2 * a;
 UNTIL a > 100;
 
-WRITELN(a); // 128
+WriteLn(a); // 128
 ```
 
 ### Estrutura PARA/ ATÉ
@@ -339,7 +338,7 @@ a := 2;
 FOR i := 1 TO 6
     DO a := 2 * a;
 
-WRITELN(a); // 128
+WriteLn(a); // 128
 ```
 
 ---
@@ -363,9 +362,9 @@ Os valores armazenados dentro de um vetor **são armazenados na memória do comp
 VAR
     nums: ARRAY [1..10] OF Integer = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 BEGIN
-    WRITELN(nums[5]); // 5
+    WriteLn(nums[5]); // 5
     nums[7] := 0;
-    WRITELN(nums[7]); // 0
+    WriteLn(nums[7]); // 0
 END.
 ```
 
@@ -393,7 +392,7 @@ VAR
     matrix: ARRAY [0..2, 0..2] OF Integer;
 BEGIN
     matrix[0][0] := 1;
-    WRITELN(matrix[0][0]); // 1
+    WriteLn(matrix[0][0]); // 1
 END.
 ```
 
@@ -421,7 +420,7 @@ BEGIN
     	END;
     END;
 
-    WRITELN(matrix[1][1]); // 5
+    WriteLn(matrix[1][1]); // 5
 END.
 ```
 
@@ -435,4 +434,85 @@ for (row = 0; row < 3; row++)
     	matrix[row][col] = count++;
 
 printf("%d", matrix[1][1]); // 5
+```
+
+---
+## Sub-rotinas
+
+Uma sub-rotina (*subrotine*) é um **bloco de código para realizar uma determinada tarefa e que pode ser reutilizado**,. São bolocos menores de um programa maior, cujo propósito é o de realizar uma série de ações para completar alguma tarefa específica, podendo ser reuilizadas dentro do mesmo programa ou em outros programas.
+
+As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que forncecem a ela os dados necessários para a sua execução. Para executarmos uma sub-rotina, realizamos uma **chamada** (*call*) e definimos os valores que serão usados para cada parâmentro, os **argumentos** da sub-rotina.
+
+### Funções
+
+As **funções** (*functions*) são um tipo de sub-rotinas que **retornam um valor** quando ela é chamada. Isto é, ela recebe os dados de entrada (argumentos) e retorna algum dado como saída. São normalmente usadas para processar dados, realizar cálculos ou transformar entradas.
+
+```pascal
+PROGRANM Soma;
+FUNCTION Somar(a, b: Integer): Integer;
+BEGIN
+	Somar := a + b;
+END;
+VAR
+    x, y, z: Integer;
+BEGIN
+    x := 10;
+    y := 20;
+    z := Somar(x, y);
+    WriteLn(z); // 30
+END.
+```
+Linguagens como C, C++ e Java possum o conceito de **função principal** (*main function*), que é a função que inicia a execução do programa. Todas as outras funções são chamadas a partir dela.
+
+```c
+#include <stdio.h>
+
+int somar(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+    int x = 10;
+    int y = 20;
+    int z = somar(x, y);
+    printf("%d", z); // 30
+    return 0;
+}
+```
+
+### Procedimentos
+
+Os **procedimentos** (*procecures*) são outro tipo de sub-rotina que, diferente das funções, **não retonarm nenhum dado como saída**. São normalmente usadas para executar alguma ação ou gerar efeitos colaterais, como gravar dados em um banco ou imprimir uma mensagem na tela.
+
+```pascal
+PROGRAM BoasVindas;
+PROCEDURE ExibirBoasVindas(nome: String);
+BEGIN
+	WriteLn("Olá, ", nome, "! Seja bem-vindo!");
+END;
+VAR
+    nome: String;
+BEGIN
+    nome := "Giovanni";
+    ExibirBoasVindas(nome);
+END.
+```
+Em muitas linguagens, como C, Java, C#, entre outras, nçao possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procediemento que não retorna valor, são definidas funções com tipo `void`.
+
+```c
+#include <stdio.h>
+
+void exibirBoasVindas(char *nome)
+{
+	printf("Olá, %s! Seja bem-vindo!\n", nome);
+}
+
+int main()
+{
+    char nome[] = "Giovanni";
+    exibirBoasVindas(nome);
+    return 0;
+}
 ```

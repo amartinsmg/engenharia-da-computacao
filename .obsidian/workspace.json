@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b34aaa90f01c178c",
+        "id": "b6a747830eeaa24d",
         "type": "tabs",
         "children": [
           {
-            "id": "dae0e4213bda779c",
+            "id": "508ebd00415ea61b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linguagens e Compiladores.md",
+                "file": "Técnicas de Programação.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linguagens e Compiladores"
+              "title": "Técnicas de Programação"
             }
           }
         ]
@@ -185,16 +185,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "dae0e4213bda779c",
+  "active": "508ebd00415ea61b",
   "lastOpenFiles": [
+    "Algoritmos e Programação.md",
     "Técnicas de Programação.md",
-    "Sistemas Digitais.md",
     "Linguagens e Compiladores.md",
+    "Arquitetura de Computadores.md",
     "Estatística e Probabilidade Aplicada.md",
+    "Sistemas Digitais.md",
     "imgs/processo-de-compilacao.png",
     "imgs/Captura de tela 2026-08-07 221507.png",
-    "Algoritmos e Programação.md",
-    "Arquitetura de Computadores.md",
     "imgs/Hierarquia_de_Chomsky.png",
     "imgs/Unconfirmed 124390.crdownload",
     "pdfs/Apostila_Linguagens_Formais_Automatos.pdf",

@@ -1,4 +1,4 @@
-
+ 
 ## Linguagem C
 
 É uma linguagem de alto nível compilada de propósito-geral, estruturada, imperativa e procedural, com um sistema de tipagem fraca, estática, manifesta e nominal. Foi criada em 1972 por Dennis Ritchie na AT&T Belll Labs para desenvolvimento do sistema operacional Unix. Atualmente continua sendo usada para o desenvolvimento de sistemas operacionais (especialmente *kernels*), *drivers* de dispositivo, compiladores e softwares aplicativos, sendo compativel com quase todas as arquiteturas computacionais.
