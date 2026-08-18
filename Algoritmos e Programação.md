@@ -1,38 +1,36 @@
 ## Introdução à Lógica de Programação
 
-O termo lógica está profundamente ligado à **coerência** e à **racionalidade**, sendo uma de suas responsabilidades, **determinar se uma operação é ou não é válida**. A lógica de programação utiliza esta estrutura de pensamento na **programação de computadores**, principalmente através da construção de **algoritmos**.
+O termo lógica está profundamente ligado à coerência e à racionalidade, sendo uma de suas responsabilidades, determinar se uma operação é ou não é válida. A **lógica de programação** utiliza esta estrutura de pensamento na programação de computadores, principalmente através da construção de algoritmos.
 
-Os **algoritmos** são **conjuntos finitos de etapas** que devem ser executadas para a realização de uma **tarefa**, e.g., uma receita de bolo que traz os ingredientes e os passos para o seu preparo.
-
-No contexto da programação de computadores, os algoritmos são utilizados para dizer ao computador as **instruções** que devem ser realizadas para que um determinado problema seja resolvido. Sua finalidade é a **representação** mais fiel **do raciocínio envolvido na lógica de programação**.
+Os algoritmos são **conjuntos finitos de etapas que devem ser executadas** para a realização de uma tarefa, e.g., uma receita de bolo que traz os ingredientes e os passos para o seu preparo. No contexto da programação de computadores, os algoritmos são utilizados para dizer ao computador as instruções que devem ser realizadas para que um determinado problema seja resolvido. **Sua finalidade é a representação mais fiel do raciocínio envolvido na lógica de programação.**
 
 ### Construção de Algoritmos
 
 A construção de algoritmos é um **passo importante**, pois uma vez compreendido seu funcionamento, este pode ser **traduzido para qualquer linguagem de programação**. Para se construir um algoritmo, devem ser seguidos os seguintes passos:
 
 1. **Compreender o problema** e definir os pontos mais importantes;
-2. **Definir os dados de entrada**: os dados que serão inseridos no computador;
+2. **Definir os dados de entrada** – os dados que serão inseridos no computador;
 3. **Definir o processamento desses dados**, i.e., através de que operações o computador processará esses dados;
-4. **Definir os dados de saída**: os dados que serão retornados pelo computador;
-5. **Construir o algoritmo** propriamente dito. Para a construção do algoritmo, temos três tipos de representações mais utilizadas:
+4. **Definir os dados de saída** – os dados que serão retornados pelo computador;
+5. **Construir o algoritmo** propriamente dito.
+
+Para a construção do algoritmo, temos três tipos de representações mais utilizadas:
 
 #### Linguagem natural
 
-Consiste em analisar o programa e descrever os passos a serem seguidos para sua solução utilizando linguagem natural, i.e., a nossa **língua nativa**, que utilizamos para nos comunicar uns com os outros. Ex:
+Consiste em analisar o programa e descrever os passos a serem seguidos para sua solução utilizando linguagem natural, i.e., a nossa língua nativa, que utilizamos para nos comunicar uns com os outros. Ex:
 
 > Passo único: escreva “Olá, Mundo!” na tela do usuário
 
 #### Fluxograma
 
-Trata-se da descrição dos passos para a solução de um problema utilizando **símbolos gráficos pré-estabelecidos**. Ex:
+Trata-se da descrição dos passos para a solução de um problema utilizando **símbolos gráficos pré-estabelecidos**. Exemplo de fluxograma para escrever uma saudação na tela:
 
 ![Exemplo de fluxograma para escrever uma saudação na tela](imgs/fluxograma.png)
 
-Exemplo de fluxograma para escrever uma saudação na tela
+Simbologia utilizada em fluxogramas:
 
 ![Simbologia utilizada em fluxogramas](imgs/fluxograma-1.png)
-
-Simbologia utilizada em fluxogramas
 
 #### Pseudocódigo
 
@@ -45,12 +43,14 @@ INICIO
 FIMALGORITMO
 ```
 
-### Linguagens de Programação e Programas
+---
+## Linguagens de Programação e Programas
 
 Uma linguagem de programação é um **método padronizado por regras sintáticas e semânticas de implementação de um código fonte** para a criação de um programa de computador.
 
-Um programa de computador nada mais é do que um **conjunto de instruções a serem seguidas** pelo computador para a realização de uma tarefa, i.e., é a **implementação de um algoritmo** em alguma linguagem de programação.
-Esse exemplo da saudação pode ser transcrito para linguagens de programação como Pascal, C ou Java, como é possível ver nos exemplos a seguir:
+Um **programa de computador** nada mais é do que um **conjunto de instruções a serem seguidas** pelo computador para a realização de uma tarefa, i.e., é a **implementação de um algoritmo** em alguma linguagem de programação.
+
+Esse exemplo da saudação pode ser transcrito para diferentes linguagens de programação – e.g., Pascal, C ou Java – como é possível ver nos exemplos a seguir:
 
 ```pascal
 PROGRAM OlaMundo;
@@ -79,24 +79,21 @@ public class OlaMundo{
 
 ### Entrada e Saída
 
-- Os **dados que serão inseridos** no computador para que ele possa processá-los são a nossa **entrada**. Para a obtenção desses dados são utilizados os **comandos de entrada**.
-- Os **dados que são retornados** pelo computador após o processamento são chamados de **saída**. Para a entrega desses dados são utilizados os **comandos de saída**.
-- As formas mais comuns de entrada e saída de dados são, respectivamente, os valores digitados pelos usuários e os dados exibidos na tela pelo computador.
+Os dados que serão inseridos no computador para que ele possa processá-los são a nossa **entrada**. Os dados que são retornados pelo computador após o processamento são chamados de **saída**. Para a obtenção dos dados e a posterior a entrega dos resultados são utilizados, respetivamente os comandos de entrada e de saída. As formas mais comuns de entrada e saída de dados são, respectivamente, os valores digitados pelos usuários e os dados exibidos na tela pelo computador.
 
 ### Tipos de Dados
 
 Do ponto de vista computacional os dados se dividem em três tipos:
 
 - **Tipo numérico**: se subdivide em:
-	- **Tipo inteiro**: aceita dados numéricos **inteiros**: positivos, negativos ou zero. Ex: 1, -34, 720;
-	- **Tipo real**: aceita dados numéricos **reais: inteiros ou fracionários**, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa, separando-se a parte inteira da fracionária por “.”, por isso, esses dados são chamados também de **números de ponto flutuante** (*floating point numbers*). Ex: 0.3, 5.0, -154.25.
+	- **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: 1, -34, 720;
+	- **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa, separando-se a parte inteira da fracionária por “.”, por isso, esses dados são chamados também de **números de ponto flutuante** (*floating point numbers*). Ex: 0.3, 5.0, -154.25.
 - **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex “a”, “3”, “F”, “@”, “\_”.
 - **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro ou falso**.
 
-## Variáveis e constantes
+### Variáveis e constantes
 
-Um programa utiliza **espaços da memória** do computador para o **armazenamento dos dados** que serão, foram ou estão sendo processados. Todos os dados armazenados pelo computador, o são em **formato numérico binário**, i.e., através de zeros (0) e uns (1), inclusive letras e outros caracteres.
-
+Um programa utiliza espaços da **memória** do computador para o armazenamento dos dados que serão, foram ou estão sendo processados. Todos os dados armazenados pelo computador, o são em **formato numérico binário**, i.e., através de zeros (`0`) e uns (`1`), inclusive letras e outros caracteres.
 
 **Variáveis e constantes são endereços da memória** do computador que possuem **identificador** (nome), **tipo** e **valor**, com cada uma delas podendo armazenar somente um valor de cada vez. A diferença entre elas é que a **variável permite que seu valor seja alterado** no decorrer do processamento, enquanto que a constante não.
 
@@ -110,6 +107,9 @@ VAR
 (* Os tipos de dados em Pascal são Integer (número inteiro),
  Real (número real), Char (um caractere), String (encadeamento
  de caracteres) e Boolean (dado lógico) *)
+CONST
+	//  Declração de constantes
+	PI = 3.1415;
 BEGIN
 	//Entrada de dados
   ReadLn(nome);
@@ -119,26 +119,28 @@ BEGIN
   WriteLn('nome: ', nome);
   WriteLn('idade: ', idade);
   WriteLn('salario: ', salario);
+  WriteLn('pi: ', PI);
 END.
 ```
 
-### Operadores
+---
+## Operadores
 
-São componentes que nos permitem **processar os dados** no decorrer do nosso programa.
+São componentes que nos permitem processar os dados no decorrer do nosso programa.
 
 #### Operador de Assimilamento
 
-O operador de assimilamento (:= ou =) **atribui à variável** à sua esquerda **o valor** à sua direita
+O operador de assimilamento (`:=` ou `=`) atribui à variável à sua esquerda o valor à sua direita
 
 #### Operadores Aritméticos
 
 Permitem a realização de operações aritméticas, como adição, subtração, divisão etc:
 
-- **Adição**: +
-- **Subtração**: -
-- **Multiplicação**: *
-- **Divisão**: /
-- **Módulo ou Resto da Divisão**: MOD ou %
+- **Adição**: `+`
+- **Subtração**: `-`
+- **Multiplicação**: `*`
+- **Divisão**: `/`
+- **Módulo ou Resto da Divisão**: `MOD` ou `%`
 
 Seguem a seguinte ordem de precedência:
 
@@ -150,12 +152,12 @@ Seguem a seguinte ordem de precedência:
 
 Permitem a comparação entre dois valores:
 
-- **Igualdade** (= ou \==): verifica se dois valores são iguais;
-- **Desigualdade** (<> ou !=): verifica se dois valores são diferentes;
-- **Maior que** (>): verifica se o valor à sua esquerda é maior que o valor à sua direita;
-- **Menor que** (<): verifica se o valor à sua esquerda é menor que o valor à sua direita;
-- **Maior que ou igual a** (>=): verifica se o valor à sua esquerda é maior ou igual ao valor à sua direita;
-- **Menor que ou igual a** (<=): verifica se o valor à sua esquerda é menor ou igual ao valor à sua direita.
+- **Igualdade** (`=` ou `==`): verifica se dois valores são iguais;
+- **Desigualdade** (`<>` ou `!=`): verifica se dois valores são diferentes;
+- **Maior que** (`>`): verifica se o valor à sua esquerda é maior que o valor à sua direita;
+- **Menor que** (`<`): verifica se o valor à sua esquerda é menor que o valor à sua direita;
+- **Maior que ou igual a** (`>=`): verifica se o valor à sua esquerda é maior ou igual ao valor à sua direita;
+- **Menor que ou igual a** (`<=`): verifica se o valor à sua esquerda é menor ou igual ao valor à sua direita.
 
 Os operadores aritméticos têm precedência sobre os operadores relacionais.
 
@@ -163,11 +165,11 @@ Os operadores aritméticos têm precedência sobre os operadores relacionais.
 
 Permitem associar expressões que estabelecem comparações entre valores:
 
-- **E** (AND ou &&): retorna verdadeiro se ambos operandos forem verdadeiros;
-- **OU** (OR ou ||): retorna verdadeiro se pelo menos um dos operandos for verdadeiro;
-- **NÃO** (NOT ou !): retorna verdadeiro se o valor for falso e falso se este for verdadeiro.
+- **E** (`AND` ou `&&`): retorna verdadeiro se ambos operandos forem verdadeiros;
+- **OU** (`OR` ou `||`): retorna verdadeiro se pelo menos um dos operandos for verdadeiro;
+- **NÃO** (`NOT` ou `!`): retorna verdadeiro se o valor for falso e falso se este for verdadeiro.
 
-Obedecem à seguinte ordem de precedência: NOT - AND - OR
+Obedecem à seguinte ordem de precedência: `NOT` - `AND` - `OR`
 
 Os operadores obedecem à seguinte ordem de precedência:
 
@@ -180,7 +182,7 @@ Os operadores obedecem à seguinte ordem de precedência:
 - Operador OU
 - Operadores de assimilação
 
-Em Pascal o operador AND tem a mesma precedência dos operadores \*, / e MOD e o operador OU dos operadores + e -.
+Em Pascal o operador `AND` tem a mesma precedência dos operadores `*`, `/` e `MOD` e o operador `OR` dos operadores `+` e `-`.
 
 ```pascal
 PROGRAM Operators;
@@ -195,22 +197,20 @@ BEGIN
 END.
 ```
 
-### Estrutura Sequencial
+## Estrutura Sequencial
 
-Quando um algoritmo é executado, este segue uma **estutura linear**, de cima para baixo e da esquerda para a direita, i.e., **as ações são executadas na mesma ordem em que foram escritas.** **Cada ação é separada da próxima por um ponto e vírgula** (;), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
-
+Quando um algoritmo é executado, este segue uma **estutura linear**, de cima para baixo e da esquerda para a direita, i.e., as ações são executadas na mesma ordem em que foram escritas – seguindo a **ordem de precedência** dos operadores. Cada ação é separada da próxima por um ponto e vírgula (`;`), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
 
 Esta ordem sequencial de execução do algoritmo pode, no entanto, ser alterada, permitindo que um determinado bloco de código seja executado somente se uma condição for satisfeita, ou que outro bloco seja repetido diversas vezes.
 
 ---
-
 ## Estruturas de Seleção
 
-As estruturas de seleção **nos permitem escolher executar um determinado bloco de código quando uma condição**, representada por expressões lógicas ou relacionais, **é ou não satisfeita**, i.e., elas permitem decidir qual caminho nosso algoritmo seguirá com base em um teste lógico.
+As estruturas de seleção nos permitem escolher executar um determinado bloco de código quando uma condição, representada por expressões lógicas ou relacionais, é ou não satisfeita, i.e., elas permitem decidir qual caminho nosso algoritmo seguirá com base em um teste lógico.
 
 ### Estrutura de Seleção Simples
 
-É utilizada para testar uma condição antes de executar uma ação e, SE (*IF*) ela retornar um valor verdadeiro, ENTÃO (*THEN*) o bloco de código é executado, caso contrário, o fluxo de execução seguirá após o fim deste bloco.
+É utilizada para testar uma condição antes de executar uma ação e, SE (`IF`) ela retornar um valor verdadeiro, ENTÃO (`THEN`) o bloco de código é executado, caso contrário, o fluxo de execução seguirá após o fim deste bloco.
 
 ```pascal
    IF (a > 9) THEN WriteLn('a é maior que 9');
@@ -218,7 +218,7 @@ As estruturas de seleção **nos permitem escolher executar um determinado bloco
 
 ### Estrutura de Seleção Composta
 
-Este tipo de estrutura de seleção é utilizada quando houver alternativas diferentes que dependam da mesma condição: SE (*IF*) ela retornar um valor verdadeiro, ENTÃO (*THEN*) um bloco de código é executado, SENÃO (*ELSE*), outro bloco diferente é executado.
+Este tipo de estrutura de seleção é utilizada quando houver alternativas diferentes que dependam da mesma condição: SE ela retornar um valor verdadeiro, ENTÃO um bloco de código é executado, SENÃO (`ELSE`), outro bloco diferente é executado.
 
 ```pascal
 IF (a > 10)
@@ -242,7 +242,7 @@ ELSE WriteLn('a não é maior que b');
 
 ### Estrutura de Seleção de Múltipla Escolha
 
-É utilizada quando um programa possui diversas opções de execução. Este tipo de seleção pode ser feita através da sucessão de estruturas de seleção SE ou através da estrutura CASO (*CASE*), que permite testar um valor definindo alvos a serem atingidos para que cada opção de código possa ser executada, podendo-se também adicionar uma instrução a ser executada caso nenhum dos alvos seja atingido.
+É utilizada quando um programa possui diversas opções de execução. Este tipo de seleção pode ser feita através da sucessão de estruturas de seleção SE ou através da estrutura CASO (`CASE`), que permite testar um valor definindo alvos a serem atingidos para que cada opção de código possa ser executada, podendo-se também adicionar uma instrução a ser executada caso nenhum dos alvos seja atingido.
 
 ```pascal
 // Sucessão de SE'S
@@ -260,7 +260,7 @@ CASE b OF
 END;
 ```
 
-Em muitas linguagens, como é o caso do C, a estrutura CASO recebe outros nomes como ESCOLHA (s*witch*), no qual há instruções para cada CASO (*case*), i.e., cada possível valor, e uma para um valor PADRÃO (*default*), caso nenhum deles seja atingido.
+Em muitas linguagens, como é o caso do C, a estrutura CASO recebe outros nomes como ESCOLHA (`switch`), no qual há instruções para cada CASO (`case`), i.e., cada possível valor, e uma para um valor PADRÃO (`default`) , caso nenhum deles seja atingido.
 
 ```c
 if (a == b)
@@ -286,13 +286,13 @@ switch (c)
 
 ---
 
-## Estruturas de Repetição
+## Estruturas de Repetição – Loops
 
-As estruturas de repetição **permitem que um mesmo bloco de código seja executado mais de uma vez**, com o número de repetições podendo ser fixo ou estar vinculado a uma determinada condição, podendo ser **indeterminado**, mas **não infinito**. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou loops.
+As estruturas de repetição permitem que um mesmo bloco de código seja executado mais de uma vez, com o número de repetições podendo ser fixo ou estar vinculado a uma determinada condição, podendo ser indeterminado, mas não infinito. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou loops.
 
 ### Estrutura ENQUANTO
 
-Esta estrutura permite que um bloco de código seja executado ENQUANTO (*WHILE*) uma determinada condição retorna verdadeiro.
+Esta estrutura permite que um bloco de código seja executado ENQUANTO (`WHILE`) uma determinada condição retorna verdadeiro.
 
 ```pascal
 a := 2;
@@ -304,7 +304,7 @@ WriteLn(a); // 128
 
 ### Estrutura FAÇA/ ENQUANTO
 
-Em algumas linguagens, como o C, esta estrutura está presente. Ela indica ao algoritmo que FAÇA (*do*) uma ação, i.e., que execute um determinado bloco de código, ENQUANTO (*while*) uma condição for verdadeira. A principal diferença desta estrutura para a estrutura ENQUANTO é que o bloco de código é executado a primeira vez, e só então a condição é testada, i.e., o código **é executado pelo menos uma vez,** mesmo que a condição já seja falsa.
+Em algumas linguagens, como o C, esta estrutura está presente. Ela indica ao algoritmo que FAÇA (`do`) uma ação, i.e., que execute um determinado bloco de código, ENQUANTO (`while`) uma condição for verdadeira. A principal diferença desta estrutura para a estrutura ENQUANTO é que o bloco de código é executado a primeira vez, e só então a condição é testada, i.e., o código **é executado pelo menos uma vez,** mesmo que a condição já seja falsa.
 
 ```c
 int a = 2;
@@ -318,7 +318,7 @@ printf("%d", a); // 128
 
 ### Estrutura REPITA/ ATÉ QUE
 
-Em outras linguagens, como o Pascal, existe esta estrutura, que permite que se REPITA (*REPEAT*) a execução um determinado bloco de código ATÉ QUE (*UNTIL*) uma determinada condição seja satisfeita. Assim como a estrutura FAÇA/ ENQUANTO, esta estrutura **executa o código pelo menos uma vez**, a diferença é o loop é executado **enquanto a condição retorna um valor falso**.
+Em outras linguagens, como o Pascal, existe esta estrutura, que permite que se REPITA (`REPEAT`) a execução um determinado bloco de código ATÉ QUE (`UNTIL`) uma determinada condição seja satisfeita. Assim como a estrutura FAÇA/ ENQUANTO, esta estrutura **executa o código pelo menos uma vez**, a diferença é o loop é executado **enquanto a condição retorna um valor falso**.
 
 ```pascal
 a := 2;
@@ -331,7 +331,7 @@ WriteLn(a); // 128
 
 ### Estrutura PARA/ ATÉ
 
-Esta estrutura permite repetirmos um bloco de código um número específico de vezes PARA (*FOR*) uma variável que vai de um valor $x$ ATÉ (*TO*) um valor $y$.
+Esta estrutura permite repetirmos um bloco de código um número específico de vezes, PARA (`FOR`) uma variável $x$ que vai de um valor $y$ ATÉ (`TO`) um valor $z$.
 
 ```pascal
 a := 2;
@@ -345,7 +345,7 @@ WriteLn(a); // 128
 
 ## Vetores e Matrizes
 
-Um vetor ou array é uma **sequência de valores do mesmo tipo, referenciadas por um identificador** (nome) **único**.
+Um vetor ou array é uma **sequência de valores do mesmo tipo, referenciadas por um identificador (nome) único**.
 
 ```pascal
 VAR
@@ -356,7 +356,7 @@ VAR
 int nums[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 ```
 
-Os valores armazenados dentro de um vetor **são armazenados na memória do computador de forma sequencial**, i.e., um após o outro. Assim, **cada elemento pode ser acessado** **com o auxílio de um** número inteiro dado como **índice**.
+Os valores armazenados dentro de um vetor são armazenados na memória do computador de **forma sequencia**l, i.e., um após o outro. Assim, cada elemento pode ser acessado com o auxílio de um número inteiro dado como **índice**.
 
 ```pascal
 VAR
@@ -368,7 +368,7 @@ BEGIN
 END.
 ```
 
-Algumas linguagens como o C, tem seus vetores **indexados a partir da posição 0**, i.e., o primeiro valor dentro do vetor é acessado pelo índice 0 e último pelo índice $n-1$, em um vetor no qual $n$ é o seu número de elementos.
+Algumas linguagens como o C, tem seus vetores **indexados a partir da posição `0`**, i.e., o primeiro valor dentro do vetor é acessado pelo índice `0` e último pelo índice $n-1$, em um vetor no qual $n$ é o seu número de elementos.
 
 ```c
 int nums[5] = {1, 2, 3, 4, 5};
@@ -377,7 +377,7 @@ printf("%d\n", nums[0]); // 1
 printf("%d\n", nums[4]); // 5
 ```
 
-Outras linguagens, como a Lua, tem seus elementos indexados a partir da posição 1, sendo o primeiro item acessado pelo índice 1 e o último pelo índice $n$, em um vetor com $n$ elementos. Outras como o Pascal permitem indexar um array com qualquer tipo de dado enumerado, permitindo-nos escolher o índice inicial do vetor.
+Outras linguagens, como a Lua, tem seus elementos indexados a partir da posição `1`, sendo o primeiro item acessado pelo índice `1` e o último pelo índice $n$, em um vetor com $n$ elementos. Outras como o Pascal permitem indexar um array com qualquer tipo de dado enumerado, permitindo-nos escolher o índice inicial do vetor.
 
 ```pascal
 VAR
@@ -385,7 +385,7 @@ VAR
     nums2: ARRAY [1..10] OF Integer;
 ```
 
-Como um vetor é um conjunto de valores do mesmo tipo acessados através do mesmo identificador, uma matriz é um conjuntos de vetores acessados pelo mesmo identificador, i.e., **uma matriz é um vetor de vetores ou um vetor multi-dimensional**. Cada elemento da matriz pode ser acessado através de um índice para cada uma das dimensões dela, e.g., para um vetor bidimensional utilizamos 2 índices para acessar cada elemento.
+Como um vetor é um conjunto de valores do mesmo tipo acessados através do mesmo identificador, uma matriz é um conjuntos de vetores acessados pelo mesmo identificador, i.e., uma matriz é um vetor de vetores ou um vetor **multi-dimensional**. Cada elemento da matriz pode ser acessado através de um índice para cada uma das dimensões dela, e.g., para um vetor bidimensional utilizamos 2 índices para acessar cada elemento.
 
 ```pascal
 VAR
@@ -411,8 +411,10 @@ VAR
 BEGIN
     count := 1;
 
+	// Percorre o vetor externo
     FOR row := 0 TO 2 DO
     BEGIN
+		// Percorre o vetor interno
     	FOR col := 0 TO 2 DO
     	BEGIN
     		matrix[row][col] := count;
@@ -429,9 +431,10 @@ int matrix[3][3];
 int count, row, col;
 count = 1;
 
-for (row = 0; row < 3; row++)
+for (row = 0; row < 3; row++){ 
     for (col = 0; col < 3; col++)
     	matrix[row][col] = count++;
+} 
 
 printf("%d", matrix[1][1]); // 5
 ```
@@ -439,16 +442,17 @@ printf("%d", matrix[1][1]); // 5
 ---
 ## Sub-rotinas
 
-Uma sub-rotina (*subrotine*) é um **bloco de código para realizar uma determinada tarefa e que pode ser reutilizado**,. São bolocos menores de um programa maior, cujo propósito é o de realizar uma série de ações para completar alguma tarefa específica, podendo ser reuilizadas dentro do mesmo programa ou em outros programas.
+Uma sub-rotina (*subrotine*) é um **bloco de código para realizar uma determinada tarefa e que pode ser reutilizado**. Elas são blocos menores de um programa maior, cujo propósito é o de realizar uma série de ações para completar alguma tarefa específica, podendo ser reuilizadas dentro do mesmo programa ou em outros programas.
 
 As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que forncecem a ela os dados necessários para a sua execução. Para executarmos uma sub-rotina, realizamos uma **chamada** (*call*) e definimos os valores que serão usados para cada parâmentro, os **argumentos** da sub-rotina.
 
 ### Funções
 
-As **funções** (*functions*) são um tipo de sub-rotinas que **retornam um valor** quando ela é chamada. Isto é, ela recebe os dados de entrada (argumentos) e retorna algum dado como saída. São normalmente usadas para processar dados, realizar cálculos ou transformar entradas.
+As funções (*functions*) são um tipo de sub-rotinas que **retornam um valor** quando ela é chamada. Isto é, ela recebe os dados de entrada (argumentos) e retorna algum dado como saída. São normalmente usadas para processar dados, realizar cálculos ou transformar entradas.
 
 ```pascal
 PROGRANM Soma;
+// Declação de uma função
 FUNCTION Somar(a, b: Integer): Integer;
 BEGIN
 	Somar := a + b;
@@ -467,11 +471,13 @@ Linguagens como C, C++ e Java possum o conceito de **função principal** (*main
 ```c
 #include <stdio.h>
 
+// Declaração de uma função
 int somar(int a, int b)
 {
     return a + b;
 }
 
+// Declaração da função principal
 int main()
 {
     int x = 10;
@@ -484,10 +490,11 @@ int main()
 
 ### Procedimentos
 
-Os **procedimentos** (*procecures*) são outro tipo de sub-rotina que, diferente das funções, **não retonarm nenhum dado como saída**. São normalmente usadas para executar alguma ação ou gerar efeitos colaterais, como gravar dados em um banco ou imprimir uma mensagem na tela.
+Os procedimentos (*procecures*) são outro tipo de sub-rotina que, diferente das funções, **não retonarm nenhum dado como saída**. São normalmente usadas para executar alguma ação ou gerar efeitos colaterais, como gravar dados em um banco ou imprimir uma mensagem na tela.
 
 ```pascal
 PROGRAM BoasVindas;
+// Declação de um procedimento
 PROCEDURE ExibirBoasVindas(nome: String);
 BEGIN
 	WriteLn("Olá, ", nome, "! Seja bem-vindo!");
@@ -499,11 +506,12 @@ BEGIN
     ExibirBoasVindas(nome);
 END.
 ```
-Em muitas linguagens, como C, Java, C#, entre outras, nçao possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procediemento que não retorna valor, são definidas funções com tipo `void`.
+Em muitas linguagens, como C, Java, C#, entre outras, não possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procediemento que não retorna valor, são definidas funções com tipo `void`.
 
 ```c
 #include <stdio.h>
 
+// Declaração de uma função void
 void exibirBoasVindas(char *nome)
 {
 	printf("Olá, %s! Seja bem-vindo!\n", nome);
