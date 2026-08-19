@@ -99,6 +99,9 @@ Um programa utiliza espaços da **memória** do computador para o armazenamento 
 
 ```pascal
 PROGRAM EntradaESaida;
+CONST
+	//  Declaração de constantes
+	PI = 3.1415926535;
 VAR
 	// Declaração de variáveis
 	idade: Integer;
@@ -107,9 +110,6 @@ VAR
 (* Os tipos de dados em Pascal são Integer (número inteiro),
  Real (número real), Char (um caractere), String (encadeamento
  de caracteres) e Boolean (dado lógico) *)
-CONST
-	//  Declração de constantes
-	PI = 3.1415;
 BEGIN
 	//Entrada de dados
   ReadLn(nome);
@@ -451,7 +451,7 @@ As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáve
 As funções (*functions*) são um tipo de sub-rotinas que **retornam um valor** quando ela é chamada. Isto é, ela recebe os dados de entrada (argumentos) e retorna algum dado como saída. São normalmente usadas para processar dados, realizar cálculos ou transformar entradas.
 
 ```pascal
-PROGRANM Soma;
+PROGRAM Soma;
 // Declação de uma função
 FUNCTION Somar(a, b: Integer): Integer;
 BEGIN
