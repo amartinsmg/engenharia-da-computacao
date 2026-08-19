@@ -497,12 +497,12 @@ PROGRAM BoasVindas;
 // Declação de um procedimento
 PROCEDURE ExibirBoasVindas(nome: String);
 BEGIN
-	WriteLn("Olá, ", nome, "! Seja bem-vindo!");
+	WriteLn('Olá, ', nome, '! Seja bem-vindo!');
 END;
 VAR
     nome: String;
 BEGIN
-    nome := "Giovanni";
+    nome := 'Giovanni';
     ExibirBoasVindas(nome);
 END.
 ```
@@ -523,4 +523,47 @@ int main()
     exibirBoasVindas(nome);
     return 0;
 }
+```
+
+### Escopo de Variáveis
+
+O **escopo** de uma variável é definido pelas regiões do programa onde ela é definida e pode ser acessada. Fora dessa região, o acesso a ela não é permitido. Em Pascal, e na maioria das linugagens de programação, há três formas de se declarar uma variável:
+
+- Na definição dos **parâmetros** de uma sub-rotina;
+- Dentro de uma sob-rotina, que é chamada de **variável local**;
+- Fora de todas sub-rotinas, que é chamada de **variável global**.
+
+Variáveis locais e parâmetros só podem ter seus  valores acessados dentro da sub-rotina na qual foram criados. Já as vaiáveis globais podem ser acessadas por qualquer sub-rotina e de fora delas (no programa principal).
+
+```pascal
+PROGRAM EscopoDeVariaveis;
+VAR
+	// Declaração de variáveis globais
+	incrementador: Integer;
+	x: Integer;
+
+PROCEDURE Incrementar;
+BEGIN
+	incrementador := incrementador + 1;
+END;
+
+PROCEDURE SomarEImprimir(a,b: Integer);
+VAR
+	// Declaração de variável local
+	x: Integer;
+BEGIN
+	x := a + b;
+	WriteLn('valor de x: ', x);
+END;
+
+BEGIN
+	incrementador := 0;
+	x := 10;
+	WriteLn('valor de incrementador: ', incrementador); // 0
+	Incrementar();
+	WriteLn('valor de incrementador: ', incrementador); // 1
+	WriteLn('valor de x: ', x); // 10
+	SomarEImprimir(25, 5);      // 30
+	WriteLn('valor de x: ', x); // 10
+END.
 ```
