@@ -442,9 +442,9 @@ printf("%d", matrix[1][1]); // 5
 ---
 ## Sub-rotinas
 
-Uma sub-rotina (*subrotine*) é um bloco de código com identificador próprio usado para **realizar uma determinada tarefa** e que **pode ser reutilizado**. Elas são partes de um programa maior e podem ser reuilizadas dentro do mesmo programa ou em outros.
+Uma sub-rotina (*subrotine*) é um bloco de código com identificador próprio usado para **realizar uma determinada tarefa**, e que **é executado ao receber uma chamada** (*call*). Elas são partes de um programa maior e podem ser reutilizadas dentro do mesmo programa ou de outros.
 
-As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que fornecem a ela os dados necessários para a sua execução. Para executarmos uma sub-rotina, realizamos uma **chamada** (*call*) e definimos os valores que serão usados para cada parâmentro – os **argumentos** da sub-rotina.
+As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que fornecem a ela os dados necessários para a sua execução. Ao executarmos uma sub-rotina, definimos os valores que serão usados para cada parâmentro – os **argumentos** – na sua chamada.
 
 ### Funções
 
@@ -525,9 +525,10 @@ int main()
 }
 ```
 
-### Escopo de Variáveis
+---
+## Escopo de Variáveis
 
-O **escopo** de uma variável é definido pelas regiões do programa onde ela é definida e pode ser acessada. Fora dessa região, o acesso a ela não é permitido. Em Pascal, e na maioria das linugagens de programação, há três formas de se declarar uma variável:
+O **escopo** de uma variável é definido pela região do programa onde ela é definida e delimita onde ela pode ser acessada. Fora dessa região, o acesso a ela não é permitido. Em Pascal, e na maioria das linugagens de programação, há três formas de se declarar uma variável:
 
 - Na definição dos **parâmetros** de uma sub-rotina;
 - Dentro de uma sob-rotina, que é chamada de **variável local**;
