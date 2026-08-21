@@ -1,40 +1,15 @@
  
-## Linguagem C
+## A Linguagem C
 
 É uma linguagem de alto nível compilada de propósito-geral, estruturada, imperativa e procedural, criada em 1972 por Dennis Ritchie na AT&T Belll Labs para desenvolvimento do sistema operacional Unix. Atualmente continua sendo usada para o desenvolvimento de sistemas operacionais (especialmente *kernels*), *drivers* de dispositivo, compiladores e softwares aplicativos, sendo compativel com quase todas as arquiteturas computacionais.
 
 É uma das linguagens de programação mais populares no mundo do desenvolvimento de software, tendo influenciado dezenas de outras linguagens (como C++, Java, C#, JavaScript, PHP, Python e muitas outras) e estando presente desde de supercomputadores e computadores domésticos a microcontroladores e sistemas embarcados.
 
-Por se tratar de uma linguagem estruturada, o código-fonte em C pode ser delimitado por blocos lógicos que seguem os seguintes pilares:
+### Tipos de Dados Primitivos
 
-- **Sequência**: execução linear dos comandos;
-- **Seleção**: desvios condicionais – estruturas de seleção;
-- **Iteração**: laços de repetição – estruturas de repetição.
+O sistema de tipagem de C é considerado fraco, pois permite certas coersões silenciosas, especialmente quando se trabalha com ponteiros. Quanto às demais características do sistema de tipo, pode ser classicada como estática, manifesta e nominal.
 
-Cada comando é delimitado por ponto-e-vírgula (`;`), e cada bloco, por sua vez,  é delimitado por um par de chaves: `{ }`. Isso facilita o agrupamento lógico e a organização visual do código, além de ajudar a delimitar o escopo das variáveis. Variáveis criadas dentro de um bloco só podem ser acessadas no seu interior.
-
-Como uma linguagem procedural, as sub-rotinas são uma parte importante do desenvolvimento usando C. A função `main` é o ponto de partida de qualquer programa em C, é a partir dela que as demais sub-rotinas são chamadas e executadas.
-
-```c
-#include <stdio.h>
-
-int main() {
-	// Imprime a frase "Olá, Mundo!" no console
-    printf("Olá, Mundo! \n");
-	
-    return 0;
-}
-```
-
-Linhas inicidas por `#` em C são diretivas para o pré-processador da linguagem, que  conduz alguns processos antes de mandar o código fonte ao compilador. Os comentários são trechos ignorados pelo compilador (muitas vezes eliminados pelo próprio pré-processador) e podem ser usados para explicar o código e se comunicar com outros desenvolvedores. Comentáios de uma única linha começam com `//`, já blocos de comentário são delimitados por `/* ... */`.
-
-### Variáveis e Tipos de Dados
-
-As variáveis em C podem ter seus nomes (identificadores) formados por letras, números e `_` (sublinha), desde que comece por uma letra ou `_`. Certos nomes são reservados pela linguagem e não podem ser usados como identificadores. Por se tratar de uma linguagem com sensibilidade de caso (*case sensitive*), letras maiúsculas e minusculas são tratadas como distintas nos nomes das variáveis e palavras chaves. I.e., uma variavel chamada `operando` é diferente de outra chamada `OPERANDO` ou `Operando`.
-
-O sistema de tipagem de C é considerado fraco, pois permite certas coersões implicitas, especialmente quando se trabalha com ponteiros. Quanto às demais características do sistema de tipo, pode ser classicada como estática, manifesta e nominal.
-
-#### Tipos Primitivos
+A linguagem C conta com apenas 5 tipos básicos de dados:
 
 | **Tipo / Palavra-chave** | **Tamanho Típico** | **O que armazena?**                                                  |
 | ------------------------ | ------------------ | -------------------------------------------------------------------- |
@@ -53,16 +28,12 @@ Os modificadores são:
 - `short` – usado para indicar que deve ser alocado um espaço menor na memória para este dado. Normalmente usado para representar inteiros de 16 bits.
 - `long` – usado para indicar que deve ser alocado um espaço maior na memória para este dado. Pode ser usado também com o tipo `double`.
 - `long long` – usado para indicar que deve ser alocado um espaço de pelo menos 64 bits para esta variável.
-#### Tipos Derivados
 
-| **Categoria**            | **Sintaxe** | **O que faz?**                                                                                       |
-| ------------------------ | ----------- | ---------------------------------------------------------------------------------------------------- |
-| **Ponteiro (*Pointer*)** | `*`         | Armazena o **endereço de memória** de outra variável ou função. Base para alocação dinâmica.         |
-| **Vetor (*Array*)**      | `[]`        | Coleção contígua na memória de elementos do **mesmo tipo**.                                          |
-| **Estrutura (*Struct*)** | `struct`    | Agrupa variáveis de **tipos diferentes** em um único bloco, criando um tipo personalizado.           |
-| **União (*Union*)**      | `union`     | Agrupa variáveis, mas **todas dividem o mesmo espaço na memória**. Ocupa o tamanho do maior membro.  |
-| **Enumeração (*Enum*)**  | `enum`      | Cria um conjunto de **constantes inteiras com nomes legíveis**, facilitando a leitura do código.     |
-| **Apelido de Tipo**      | `typedef`   | Não cria um tipo novo, mas dá um **nome alternativo** a um tipo já existente para encurtar sintaxes. |
+### Variáveis
+
+As variáveis e funções em C podem ter seus nomes (identificadores) formados por letras, números e `_` (sublinha), desde que comece por uma letra ou `_`. Certos nomes são reservados pela linguagem e não podem ser usados como identificadores (como `while`, `return` e `int`, por exemplo). Por se tratar de uma linguagem com sensibilidade de caso (*case sensitive*), letras maiúsculas e minusculas são tratadas como distintas nos nomes das variáveis e palavras chaves. I.e., uma variavel chamada `operando` é diferente de outra chamada `OPERANDO` ou `Operando`.
+
+Em C, cada comando é delimitado por ponto-e-vírgula (`;`), e cada bloco, por sua vez,  é delimitado por um par de chaves: `{ }`. Isso facilita o agrupamento lógico e a organização visual do código, além de ajudar a delimitar o escopo das variáveis. Variáveis criadas dentro de um bloco só podem ser acessadas no seu interior, são chamadas de **variáveis locais**. Enquanto que as variáveis declaradas fora de qualquer bloco, e que portanto podem ser acessadas por qualquer parte do programa, são chamadas de **variáveis globais**.
 
 ### Operadores
 
@@ -127,8 +98,18 @@ Os operadores aritméticos e os opradores bit a bit (exceto o NOT bit a bit / `~
 - `&&`  
 - `||`  
 - `? : (operador ternário)`   
-- `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`, `&=`, `^=`, `|=`,  
-- 
+- `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`, `&=`, `^=`, `|=`
+
+
+---
+## Estruturas de Controle
+
+Por se tratar de uma linguagem estruturada, o código-fonte em C pode ser delimitado por blocos lógicos que seguem os seguintes pilares:
+
+- **Sequência**: execução linear dos comandos;
+- **Seleção**: desvios condicionais – estruturas de seleção;
+- **Iteração**: laços de repetição – estruturas de repetição.
+
 ### Estruturas de Condicionais
 
 A estrutura de seleção mais básica de seleção é a estrutra `if / else` que contém as seguintes declarações
@@ -193,7 +174,21 @@ for (expression1; expression2; expression3) {
 ```
 C tem ainda as palavras reservadas `break` e `continue` que, usadas junto com estruturas condicionais, permitem alterar o comportamento de um loop em determinadas condições. A palavra `break` –  assim como no `switch` –  permite sair mais cedo de um loop, interrompendo sua execução. A palavra `continue` permite pular uma iteração de um loop, i.e., ele para a execução do bloco de código – ,no caso de um loop `for` executa a terceira expressão –  e verifica se a condição para a execução do loop ainda é satisteita para  executar novamente o bloco.
 
-### Funções
+---
+## Funções
+
+Como uma linguagem procedural, as sub-rotinas são uma parte importante do desenvolvimento usando C. A função `main` é o ponto de partida de qualquer programa em C, é a partir dela que as demais sub-rotinas são chamadas e executadas.
+
+```c
+#include <stdio.h>
+
+int main() {
+	// Imprime a frase "Olá, Mundo!" no console
+    printf("Olá, Mundo! \n");
+	
+    return 0;
+}
+```
 
 As funções são o único tipo de sub-rotina presentes em C. Elas são definidas especificando-se o tipo de dado retornado por elas ou `void` caso não seja retornado nenhum dado. Defini-se também o tipo de dado de cada um dos seus parâmetros e o bloco que será executado quando a função for chamada.
 
@@ -214,3 +209,13 @@ int fibonacci(int n) {
 }
 ```
 
+---
+## Ponteiros e Tipos Compostos
+
+---
+## Pré-Processador e  Modificadores
+
+Linhas inicidas por `#` em C são diretivas para o pré-processador da linguagem, que  realiza alguns processos antes de mandar o código fonte ao compilador. Os comentários são trechos ignorados pelo compilador (muitas vezes eliminados pelo próprio pré-processador) e podem ser usados para explicar o código e se comunicar com outros desenvolvedores. Comentáios de uma única linha começam com `//`, já blocos de comentário são delimitados por `/* ... */`.
+
+---
+## Bibliotecas e Arquivos de Cabeçalho
