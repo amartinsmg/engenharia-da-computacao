@@ -88,8 +88,8 @@ Os dados que serão inseridos no computador para que ele possa processá-los sã
 Do ponto de vista computacional os dados se dividem em três tipos:
 
 - **Tipo numérico**: se subdivide em:
-    	- **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: `1`, `-34`, `720`;
-    	- **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa – separando-se a parte inteira da fracionária por `.` – e representados internamente usando o formato de **números de ponto flutuante** (*floating point numbers*). Ex: `0.3`, `5.0`, `-154.25`.
+	- **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: `1`, `-34`, `720`;
+	- **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa – separando-se a parte inteira da fracionária por `.` – e representados internamente usando o formato de **números de ponto flutuante** (*floating point numbers*). Ex: `0.3`, `5.0`, `-154.25`.
 - **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex: `"a"`, `"3"`, `“F”`, `“@”`, `“_”`.
 - **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro** (*true*) ou **falso** (*false*).
 
