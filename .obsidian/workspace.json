@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmos e Programação.md",
+                "file": "Técnicas de Programação.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmos e Programação"
+              "title": "Técnicas de Programação"
             }
           }
         ]
@@ -187,8 +187,8 @@
   },
   "active": "5f1303d37e95ca80",
   "lastOpenFiles": [
-    "Técnicas de Programação.md",
     "Algoritmos e Programação.md",
+    "Técnicas de Programação.md",
     "Linguagens e Compiladores.md",
     "Sistemas Digitais.md",
     "Estatística e Probabilidade Aplicada.md",

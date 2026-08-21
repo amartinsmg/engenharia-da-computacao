@@ -5,6 +5,8 @@
 
 É uma das linguagens de programação mais populares no mundo do desenvolvimento de software, tendo influenciado dezenas de outras linguagens (como C++, Java, C#, JavaScript, PHP, Python e muitas outras) e estando presente desde de supercomputadores e computadores domésticos a microcontroladores e sistemas embarcados.
 
+Em C, cada comando é delimitado por ponto-e-vírgula (`;`), e cada bloco, por sua vez,  é delimitado por um par de chaves: `{ }`. Isso facilita o agrupamento lógico e a organização visual do código, além de ajudar a delimitar o escopo das variáveis. Linhas inicidas por `#` em C são diretivas para o pré-processador da linguagem, que  realiza alguns processos antes de mandar o código fonte ao compilador. Os comentários são trechos ignorados pelo compilador (muitas vezes eliminados pelo próprio pré-processador) e podem ser usados para explicar o código e se comunicar com outros desenvolvedores. Comentáios de uma única linha começam com `//`, já blocos de comentário são delimitados por `/* ... */`.
+
 ### Tipos de Dados Primitivos
 
 O sistema de tipagem de C é considerado fraco, pois permite certas coersões silenciosas, especialmente quando se trabalha com ponteiros. Quanto às demais características do sistema de tipo, pode ser classicada como estática, manifesta e nominal.
@@ -33,7 +35,7 @@ Os modificadores são:
 
 As variáveis e funções em C podem ter seus nomes (identificadores) formados por letras, números e `_` (sublinha), desde que comece por uma letra ou `_`. Certos nomes são reservados pela linguagem e não podem ser usados como identificadores (como `while`, `return` e `int`, por exemplo). Por se tratar de uma linguagem com sensibilidade de caso (*case sensitive*), letras maiúsculas e minusculas são tratadas como distintas nos nomes das variáveis e palavras chaves. I.e., uma variavel chamada `operando` é diferente de outra chamada `OPERANDO` ou `Operando`.
 
-Em C, cada comando é delimitado por ponto-e-vírgula (`;`), e cada bloco, por sua vez,  é delimitado por um par de chaves: `{ }`. Isso facilita o agrupamento lógico e a organização visual do código, além de ajudar a delimitar o escopo das variáveis. Variáveis criadas dentro de um bloco só podem ser acessadas no seu interior, são chamadas de **variáveis locais**. Enquanto que as variáveis declaradas fora de qualquer bloco, e que portanto podem ser acessadas por qualquer parte do programa, são chamadas de **variáveis globais**.
+Variáveis criadas dentro de um bloco só podem ser acessadas dentro deste bloco, são chamadas, por isso, de **variáveis locais**. Enquanto que as variáveis declaradas fora de qualquer bloco, e que portanto podem ser acessadas por qualquer parte do programa, são chamadas de **variáveis globais**.
 
 ### Operadores
 
@@ -213,9 +215,7 @@ int fibonacci(int n) {
 ## Ponteiros e Tipos Compostos
 
 ---
-## Pré-Processador e  Modificadores
-
-Linhas inicidas por `#` em C são diretivas para o pré-processador da linguagem, que  realiza alguns processos antes de mandar o código fonte ao compilador. Os comentários são trechos ignorados pelo compilador (muitas vezes eliminados pelo próprio pré-processador) e podem ser usados para explicar o código e se comunicar com outros desenvolvedores. Comentáios de uma única linha começam com `//`, já blocos de comentário são delimitados por `/* ... */`.
+## Literais, Macros e  Modificadores
 
 ---
 ## Bibliotecas e Arquivos de Cabeçalho
