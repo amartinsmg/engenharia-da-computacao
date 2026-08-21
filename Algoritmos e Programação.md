@@ -20,7 +20,9 @@ Para a construção do algoritmo, temos três tipos de representações mais uti
 
 Consiste em analisar o programa e descrever os passos a serem seguidos para sua solução utilizando linguagem natural, i.e., a nossa língua nativa, que utilizamos para nos comunicar uns com os outros. Ex:
 
-> Passo único: escreva “Olá, Mundo!” na tela do usuário
+```text
+Passo único: escreva “Olá, Mundo!” na tela do usuário
+```
 
 #### Fluxograma
 
@@ -34,7 +36,7 @@ Simbologia utilizada em fluxogramas:
 
 #### Pseudocódigo
 
-Trata-se da descrição dos passos para a resolução de um problema utilizando-se **regras predefinidas**. É o método que nos permite representar o fluxo de execução do nosso algoritmo com **maior clareza**. Um exemplo desse tipo de pseudocódido é o Portugol. Ex:
+Trata-se da descrição dos passos para a resolução de um problema utilizando-se **regras predefinidas**. É o método que nos permite representar o fluxo de execução do nosso algoritmo com **maior clareza**. Um exemplo de pseudocódido é o Portugol. Ex:
 
 ```text
 ALGORITMO "OlaMundo"
@@ -86,10 +88,10 @@ Os dados que serão inseridos no computador para que ele possa processá-los sã
 Do ponto de vista computacional os dados se dividem em três tipos:
 
 - **Tipo numérico**: se subdivide em:
-	- **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: 1, -34, 720;
-	- **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa, separando-se a parte inteira da fracionária por “.”, por isso, esses dados são chamados também de **números de ponto flutuante** (*floating point numbers*). Ex: 0.3, 5.0, -154.25.
-- **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex “a”, “3”, “F”, “@”, “\_”.
-- **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro ou falso**.
+    	- **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: `1`, `-34`, `720`;
+    	- **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa – separando-se a parte inteira da fracionária por `.` – e representados internamente usando o formato de **números de ponto flutuante** (*floating point numbers*). Ex: `0.3`, `5.0`, `-154.25`.
+- **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex: `"a"`, `"3"`, `“F”`, `“@”`, `“_”`.
+- **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro** (*true*) ou **falso** (*false*).
 
 ### Variáveis e constantes
 
@@ -528,7 +530,7 @@ int main()
 ---
 ## Escopo de Variáveis
 
-O **escopo** de uma variável é definido pela região do programa onde ela é definida e delimita onde ela pode ser acessada. Fora dessa região, o acesso a ela não é permitido. Em Pascal, e na maioria das linugagens de programação, há três formas de se declarar uma variável:
+O **escopo** de uma variável é definido pela região do programa onde ela é definida e delimita onde ela pode ser acessada. Fora dessa região, o acesso a ela não é permitido. Em Pascal, há três formas de se declarar uma variável:
 
 - Na definição dos **parâmetros** de uma sub-rotina;
 - Dentro de uma sob-rotina, que é chamada de **variável local**;
