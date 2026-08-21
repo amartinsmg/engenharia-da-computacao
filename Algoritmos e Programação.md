@@ -442,9 +442,9 @@ printf("%d", matrix[1][1]); // 5
 ---
 ## Sub-rotinas
 
-Uma sub-rotina (*subrotine*) é um **bloco de código para realizar uma determinada tarefa e que pode ser reutilizado**. Elas são blocos menores de um programa maior, cujo propósito é o de realizar uma série de ações para completar alguma tarefa específica, podendo ser reuilizadas dentro do mesmo programa ou em outros programas.
+Uma sub-rotina (*subrotine*) é um bloco de código com identificador próprio usado para **realizar uma determinada tarefa** e que **pode ser reutilizado**. Elas são partes de um programa maior e podem ser reuilizadas dentro do mesmo programa ou em outros.
 
-As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que forncecem a ela os dados necessários para a sua execução. Para executarmos uma sub-rotina, realizamos uma **chamada** (*call*) e definimos os valores que serão usados para cada parâmentro, os **argumentos** da sub-rotina.
+As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que fornecem a ela os dados necessários para a sua execução. Para executarmos uma sub-rotina, realizamos uma **chamada** (*call*) e definimos os valores que serão usados para cada parâmentro – os **argumentos** da sub-rotina.
 
 ### Funções
 
@@ -466,7 +466,7 @@ BEGIN
     WriteLn(z); // 30
 END.
 ```
-Linguagens como C, C++ e Java possum o conceito de **função principal** (*main function*), que é a função que inicia a execução do programa. Todas as outras funções são chamadas a partir dela.
+Linguagens como C, C++ e Java possuem o conceito de **função principal** (*main function*), que é a função que inicia a execução do programa. Todas as outras sub-rotinas são chamadas a partir dela.
 
 ```c
 #include <stdio.h>
@@ -506,7 +506,7 @@ BEGIN
     ExibirBoasVindas(nome);
 END.
 ```
-Em muitas linguagens, como C, Java, C#, entre outras, não possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procediemento que não retorna valor, são definidas funções com tipo `void`.
+Muitas linguagens, como C, Java, C#, entre outras, não possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procediemento que não retorna valor, são definidas funções com tipo `void`.
 
 ```c
 #include <stdio.h>
