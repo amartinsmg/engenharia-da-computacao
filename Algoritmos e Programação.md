@@ -2,7 +2,7 @@
 
 O termo lógica está profundamente ligado à coerência e à racionalidade, sendo uma de suas responsabilidades, determinar se uma operação é ou não é válida. A **lógica de programação** utiliza esta estrutura de pensamento na programação de computadores, principalmente através da construção de algoritmos.
 
-Os algoritmos são **conjuntos finitos de etapas que devem ser executadas** para a realização de uma tarefa, e.g., uma receita de bolo que traz os ingredientes e os passos para o seu preparo. No contexto da programação de computadores, os algoritmos são utilizados para dizer ao computador as instruções que devem ser realizadas para que um determinado problema seja resolvido. **Sua finalidade é a representação mais fiel do raciocínio envolvido na lógica de programação.**
+Os algoritmos são **conjuntos finitos de etapas que devem ser executadas** para a realização de uma tarefa. Um exemplo de algoritmo que usamos no nosso cotidiano é uma receita de bolo, que traz os ingredientes e os passos para o seu preparo. No contexto da programação de computadores, os algoritmos são utilizados para dizer ao computador as instruções que devem ser realizadas para que um determinado problema seja resolvido. **Sua finalidade é a representação mais fiel do raciocínio envolvido na lógica de programação.**
 
 ### Construção de Algoritmos
 
@@ -36,7 +36,7 @@ Simbologia utilizada em fluxogramas:
 
 #### Pseudocódigo
 
-Trata-se da descrição dos passos para a resolução de um problema utilizando-se **regras predefinidas**. É o método que nos permite representar o fluxo de execução do nosso algoritmo com **maior clareza**. Um exemplo de pseudocódido é o Portugol. Ex:
+Trata-se da descrição dos passos para a resolução de um problema utilizando-se **regras predefinidas**. É o método que nos permite representar o fluxo de execução do nosso algoritmo com **maior clareza**. Um exemplo de pseudocódigo é o Portugol. Ex:
 
 ```text
 ALGORITMO "OlaMundo"
@@ -52,7 +52,7 @@ Uma linguagem de programação é um **método padronizado por regras sintática
 
 Um **programa de computador** nada mais é do que um **conjunto de instruções a serem seguidas** pelo computador para a realização de uma tarefa, i.e., é a **implementação de um algoritmo** em alguma linguagem de programação.
 
-Esse exemplo da saudação pode ser transcrito para diferentes linguagens de programação – e.g., Pascal, C ou Java – como é possível ver nos exemplos a seguir:
+Esse exemplo da saudação pode ser transcrito para diferentes linguagens de programação – como Pascal, C ou Java – como é possível ver nos exemplos a seguir:
 
 ```pascal
 PROGRAM OlaMundo;
@@ -87,15 +87,16 @@ Os dados que serão inseridos no computador para que ele possa processá-los sã
 
 Do ponto de vista computacional os dados se dividem em três tipos:
 
-- **Tipo numérico**: se subdivide em:
-	- **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: `1`, `-34`, `720`;
-	- **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa – separando-se a parte inteira da fracionária por `.` – e representados internamente usando o formato de **números de ponto flutuante** (*floating point numbers*). Ex: `0.3`, `5.0`, `-154.25`.
-- **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex: `"a"`, `"3"`, `“F”`, `“@”`, `“_”`.
-- **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro** (*true*) ou **falso** (*false*).
+* **Tipo numérico**: se subdivide em:
+
+  * **Tipo inteiro**: aceita dados numéricos inteiros: positivos, negativos ou zero. Ex: `1`, `-34`, `720`;
+  * **Tipo real**: aceita dados numéricos reais: inteiros ou fracionários, positivos, negativos ou zero. Esses números são representados seguindo-se a notação inglesa – separando-se a parte inteira da fracionária por `.` –, e representados internamente usando o formato de **números de ponto flutuante** (*floating point numbers*). Ex: `0.3`, `5.0`, `-154.25`.
+* **Tipo literal**: aceita **caracteres**, i.e., letras, números e símbolos especiais. Ex: `"a"`, `"3"`, `“F”`, `“@”`, `“&”`.
+* **Tipo lógico ou booleano**: representam apenas dois valores possíveis: **verdadeiro** (*true*) ou **falso** (*false*).
 
 ### Variáveis e constantes
 
-Um programa utiliza espaços da **memória** do computador para o armazenamento dos dados que serão, foram ou estão sendo processados. Todos os dados armazenados pelo computador, o são em **formato numérico binário**, i.e., através de zeros (`0`) e uns (`1`), inclusive letras e outros caracteres.
+Um programa utiliza espaços da **memória** do computador para o armazenamento dos dados que serão, foram ou estão sendo processados. Todos os dados são armazenados pelo computador em **formato numérico binário**, i.e., através de zeros (`0`) e uns (`1`), inclusive letras e outros caracteres.
 
 **Variáveis e constantes são endereços da memória** do computador que possuem **identificador** (nome), **tipo** e **valor**, com cada uma delas podendo armazenar somente um valor de cada vez. A diferença entre elas é que a **variável permite que seu valor seja alterado** no decorrer do processamento, enquanto que a constante não.
 
@@ -112,21 +113,20 @@ VAR
 (* Os tipos de dados em Pascal são Integer (número inteiro),
  Real (número real), Char (um caractere), String (encadeamento
  de caracteres) e Boolean (dado lógico) *)
+
 BEGIN
 	//Entrada de dados
-  ReadLn(nome);
-  ReadLn(idade);
-  ReadLn(salario);
+	ReadLn(nome);
+	ReadLn(idade);
+	ReadLn(salario);
 	// Saída de dados
-  WriteLn('nome: ', nome);
-  WriteLn('idade: ', idade);
-  WriteLn('salario: ', salario);
-  WriteLn('pi: ', PI);
+	WriteLn('nome: ', nome);
+	WriteLn('idade: ', idade);
+	WriteLn('salario: ', salario);
+	WriteLn('pi: ', PI);
 END.
 ```
-
----
-## Operadores
+### Operadores
 
 São componentes que nos permitem processar os dados no decorrer do nosso programa.
 
@@ -138,28 +138,28 @@ O operador de assimilamento (`:=` ou `=`) atribui à variável à sua esquerda o
 
 Permitem a realização de operações aritméticas, como adição, subtração, divisão etc:
 
-- **Adição**: `+`
-- **Subtração**: `-`
-- **Multiplicação**: `*`
-- **Divisão**: `/`
-- **Módulo ou Resto da Divisão**: `MOD` ou `%`
+* **Adição**: `+`
+* **Subtração**: `-`
+* **Multiplicação**: *`
+* **Divisão**: `/`
+* **Módulo ou Resto da Divisão**: `MOD` ou `%`
 
 Seguem a seguinte ordem de precedência:
 
-- Operações entre parênteses;
-- Multiplicação, Divisão e Módulo da Divisão;
-- Adição e Subtração.
+* Operações entre parênteses;
+* Multiplicação, Divisão e Módulo da Divisão;
+* Adição e Subtração.
 
 #### Operadores Relacionais
 
 Permitem a comparação entre dois valores:
 
-- **Igualdade** (`=` ou `==`): verifica se dois valores são iguais;
-- **Desigualdade** (`<>` ou `!=`): verifica se dois valores são diferentes;
-- **Maior que** (`>`): verifica se o valor à sua esquerda é maior que o valor à sua direita;
-- **Menor que** (`<`): verifica se o valor à sua esquerda é menor que o valor à sua direita;
-- **Maior que ou igual a** (`>=`): verifica se o valor à sua esquerda é maior ou igual ao valor à sua direita;
-- **Menor que ou igual a** (`<=`): verifica se o valor à sua esquerda é menor ou igual ao valor à sua direita.
+* **Igualdade** (`=` ou `==`): verifica se dois valores são iguais;
+* **Desigualdade** (`<>` ou `!=`): verifica se dois valores são diferentes;
+* **Maior que** (`>`): verifica se o valor à sua esquerda é maior que o valor à sua direita;
+* **Menor que** (`<`): verifica se o valor à sua esquerda é menor que o valor à sua direita;
+* **Maior que ou igual a** (`>=`): verifica se o valor à sua esquerda é maior ou igual ao valor à sua direita;
+* **Menor que ou igual a** (`<=`): verifica se o valor à sua esquerda é menor ou igual ao valor à sua direita.
 
 Os operadores aritméticos têm precedência sobre os operadores relacionais.
 
@@ -167,22 +167,22 @@ Os operadores aritméticos têm precedência sobre os operadores relacionais.
 
 Permitem associar expressões que estabelecem comparações entre valores:
 
-- **E** (`AND` ou `&&`): retorna verdadeiro se ambos operandos forem verdadeiros;
-- **OU** (`OR` ou `||`): retorna verdadeiro se pelo menos um dos operandos for verdadeiro;
-- **NÃO** (`NOT` ou `!`): retorna verdadeiro se o valor for falso e falso se este for verdadeiro.
+* **E** (`AND` ou `&&`): retorna verdadeiro se ambos operandos forem verdadeiros;
+* **OU** (`OR` ou `||`): retorna verdadeiro se pelo menos um dos operandos for verdadeiro;
+* **NÃO** (`NOT` ou `!`): retorna verdadeiro se o valor for falso e falso se este for verdadeiro.
 
 Obedecem à seguinte ordem de precedência: `NOT` - `AND` - `OR`
 
 Os operadores obedecem à seguinte ordem de precedência:
 
-- Parênteses mais internos
-- Operador NÃO
-- Multiplicação, divisão e módulo
-- Adição e subtração
-- Operadores relacionais
-- Operador E
-- Operador OU
-- Operadores de assimilação
+* Parênteses mais internos
+* Operador NÃO
+* Multiplicação, divisão e módulo
+* Adição e subtração
+* Operadores relacionais
+* Operador E
+* Operador OU
+* Operadores de assimilação
 
 Em Pascal o operador `AND` tem a mesma precedência dos operadores `*`, `/` e `MOD` e o operador `OR` dos operadores `+` e `-`.
 
@@ -199,9 +199,10 @@ BEGIN
 END.
 ```
 
+---
 ## Estrutura Sequencial
 
-Quando um algoritmo é executado, este segue uma **estutura linear**, de cima para baixo e da esquerda para a direita, i.e., as ações são executadas na mesma ordem em que foram escritas – seguindo a **ordem de precedência** dos operadores. Cada ação é separada da próxima por um ponto e vírgula (`;`), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
+Quando um algoritmo é executado, este segue uma **estrutura linear**, de cima para baixo e da esquerda para a direita, i.e., as ações são executadas na mesma ordem em que foram escritas – seguindo a **ordem de precedência** dos operadores. Cada ação é separada da próxima por um ponto e vírgula (`;`), i.e., sempre que o algoritmo encontra um `;` ele entende que o aquele comando foi encerrado e o que vem a seguir é um novo comando.
 
 Esta ordem sequencial de execução do algoritmo pode, no entanto, ser alterada, permitindo que um determinado bloco de código seja executado somente se uma condição for satisfeita, ou que outro bloco seja repetido diversas vezes.
 
@@ -273,21 +274,20 @@ else
 switch (c)
 {
     case 1:
-    	printf("c é igual a 1");
+    	printf("c é igual a 1 \n");
     	break;
     case 2:
-    	printf("c é igual a 2");
+    	printf("c é igual a 2 \n");
     	break;
     case 3:
-    	printf("c é igual a 3");
+    	printf("c é igual a 3 \n");
     	break;
     default:
-    	printf("c é não é igual a 1, nem a 2, nem a 3");
+    	printf("c é não é igual a 1, nem a 2, nem a 3 \n");
 }
 ```
 
 ---
-
 ## Estruturas de Repetição – Loops
 
 As estruturas de repetição permitem que um mesmo bloco de código seja executado mais de uma vez, com o número de repetições podendo ser fixo ou estar vinculado a uma determinada condição, podendo ser indeterminado, mas não infinito. As estruturas que permitem a criação deste tipo de algoritmo são chamadas de laços de repetição ou loops.
@@ -344,7 +344,6 @@ WriteLn(a); // 128
 ```
 
 ---
-
 ## Vetores e Matrizes
 
 Um vetor ou array é uma **sequência de valores do mesmo tipo, referenciadas por um identificador (nome) único**.
@@ -438,15 +437,15 @@ for (row = 0; row < 3; row++){
     	matrix[row][col] = count++;
 } 
 
-printf("%d", matrix[1][1]); // 5
+printf("%d\n", matrix[1][1]); // 5
 ```
 
 ---
 ## Sub-rotinas
 
-Uma sub-rotina (*subrotine*) é um bloco de código com identificador próprio usado para **realizar uma determinada tarefa**, e que **é executado ao receber uma chamada** (*call*). Elas são partes de um programa maior e podem ser reutilizadas dentro do mesmo programa ou de outros.
+Uma sub-rotina (*subroutine*) é um bloco de código com identificador próprio usado para **realizar uma determinada tarefa**, e que **é executado ao receber uma chamada** (*call*). Elas são partes de um programa maior e podem ser reutilizadas dentro do mesmo programa ou de outros.
 
-As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que fornecem a ela os dados necessários para a sua execução. Ao executarmos uma sub-rotina, definimos os valores que serão usados para cada parâmentro – os **argumentos** – na sua chamada.
+As rub-rotinas normalmente contém seus **parâmetros** (*parameters*), variáveis usadas como entrada e que fornecem a ela os dados necessários para a sua execução. Ao executarmos uma sub-rotina, definimos os valores que serão usados para cada parâmetro – os **argumentos** – na sua chamada.
 
 ### Funções
 
@@ -454,7 +453,7 @@ As funções (*functions*) são um tipo de sub-rotinas que **retornam um valor**
 
 ```pascal
 PROGRAM Soma;
-// Declação de uma função
+// Declaração de uma função
 FUNCTION Somar(a, b: Integer): Integer;
 BEGIN
 	Somar := a + b;
@@ -468,6 +467,7 @@ BEGIN
     WriteLn(z); // 30
 END.
 ```
+
 Linguagens como C, C++ e Java possuem o conceito de **função principal** (*main function*), que é a função que inicia a execução do programa. Todas as outras sub-rotinas são chamadas a partir dela.
 
 ```c
@@ -485,14 +485,14 @@ int main()
     int x = 10;
     int y = 20;
     int z = somar(x, y);
-    printf("%d", z); // 30
+    printf("%d\n", z); // 30
     return 0;
 }
 ```
 
 ### Procedimentos
 
-Os procedimentos (*procecures*) são outro tipo de sub-rotina que, diferente das funções, **não retonarm nenhum dado como saída**. São normalmente usadas para executar alguma ação ou gerar efeitos colaterais, como gravar dados em um banco ou imprimir uma mensagem na tela.
+Os procedimentos (*procedures*) são outro tipo de sub-rotina que, diferente das funções, **não retornam nenhum dado como saída**. São normalmente usadas para executar alguma ação ou gerar efeitos colaterais, como gravar dados em um banco ou imprimir uma mensagem na tela.
 
 ```pascal
 PROGRAM BoasVindas;
@@ -508,7 +508,8 @@ BEGIN
     ExibirBoasVindas(nome);
 END.
 ```
-Muitas linguagens, como C, Java, C#, entre outras, não possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procediemento que não retorna valor, são definidas funções com tipo `void`.
+
+Muitas linguagens, como C, Java, C#, entre outras, não possuem o conceito separado de procedimento. Ou seja, toda sub-rotina é tratada como uma função. Assim, para criar o equivalente a um procedimento que não retorna valor, são definidas funções com tipo `void`.
 
 ```c
 #include <stdio.h>
@@ -532,9 +533,9 @@ int main()
 
 O **escopo** de uma variável é definido pela região do programa onde ela é definida e delimita onde ela pode ser acessada. Fora dessa região, o acesso a ela não é permitido. Em Pascal, há três formas de se declarar uma variável:
 
-- Na definição dos **parâmetros** de uma sub-rotina;
-- Dentro de uma sob-rotina, que é chamada de **variável local**;
-- Fora de todas sub-rotinas, que é chamada de **variável global**.
+* Na definição dos **parâmetros** de uma sub-rotina;
+* Dentro de uma sob-rotina, que é chamada de **variável local**;
+* Fora de todas sub-rotinas, que é chamada de **variável global**.
 
 Variáveis locais e parâmetros só podem ter seus  valores acessados dentro da sub-rotina na qual foram criados. Já as vaiáveis globais podem ser acessadas por qualquer sub-rotina e de fora delas (no programa principal).
 
@@ -570,3 +571,4 @@ BEGIN
 	WriteLn('valor de x: ', x); // 10
 END.
 ```
+
